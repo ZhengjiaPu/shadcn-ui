@@ -350,6 +350,12 @@ export const examples: Registry = [
     files: ["example/command-dialog.tsx"],
   },
   {
+    name: "comment-demo",
+    type: "components:example",
+    registryDependencies: ["card", "button", "use-toast", "toaster", "avatar", "label", "textarea"],
+    files: ["example/comment-demo.tsx"],
+  },
+  {
     name: "context-menu-demo",
     type: "components:example",
     registryDependencies: ["context-menu"],

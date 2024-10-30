@@ -1149,6 +1149,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "comment-demo": {
+      name: "comment-demo",
+      type: "components:example",
+      registryDependencies: ["card","button","use-toast","toaster","avatar","label","textarea"],
+      component: React.lazy(() => import("@/registry/default/example/comment-demo")),
+      source: "",
+      files: ["registry/default/example/comment-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "context-menu-demo": {
       name: "context-menu-demo",
       type: "components:example",
@@ -4710,6 +4721,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/command-dialog")),
       source: "",
       files: ["registry/new-york/example/command-dialog.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "comment-demo": {
+      name: "comment-demo",
+      type: "components:example",
+      registryDependencies: ["card","button","use-toast","toaster","avatar","label","textarea"],
+      component: React.lazy(() => import("@/registry/new-york/example/comment-demo")),
+      source: "",
+      files: ["registry/new-york/example/comment-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -8279,6 +8301,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "comment-demo": {
+      name: "comment-demo",
+      type: "components:example",
+      registryDependencies: ["card","button","use-toast","toaster","avatar","label","textarea"],
+      component: React.lazy(() => import("@/registry/sydney/example/comment-demo")),
+      source: "",
+      files: ["registry/sydney/example/comment-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "context-menu-demo": {
       name: "context-menu-demo",
       type: "components:example",
@@ -11840,6 +11873,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/unsw/example/command-dialog")),
       source: "",
       files: ["registry/unsw/example/command-dialog.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "comment-demo": {
+      name: "comment-demo",
+      type: "components:example",
+      registryDependencies: ["card","button","use-toast","toaster","avatar","label","textarea"],
+      component: React.lazy(() => import("@/registry/unsw/example/comment-demo")),
+      source: "",
+      files: ["registry/unsw/example/comment-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
