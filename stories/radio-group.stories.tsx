@@ -18,22 +18,27 @@ export default {
     label1: {
       control: { type: "text" },
       defaultValue: "Default",
+      description: "Label text for the first radio option.",
     },
     label2: {
       control: { type: "text" },
       defaultValue: "Comfortable",
+      description: "Label text for the second radio option.",
     },
     label3: {
       control: { type: "text" },
       defaultValue: "Compact",
+      description: "Label text for the third radio option.",
     },
     groupLabel: {
       control: { type: "text" },
       defaultValue: "Notify me about...",
+      description: "Label for the entire radio group.",
     },
     buttonText: {
       control: { type: "text" },
       defaultValue: "Submit",
+      description: "Text displayed on the form submission button.",
     },
     labelFontSize: {
       control: { type: "select" },
@@ -46,6 +51,7 @@ export default {
         "text-2xl",
       ],
       defaultValue: "text-base",
+      description: "Sets the font size for radio option labels.",
     },
     buttonFontSize: {
       control: { type: "select" },
@@ -58,11 +64,12 @@ export default {
         "text-2xl",
       ],
       defaultValue: "text-base",
+      description: "Sets the font size for the form submission button text.",
     },
   },
 } as ComponentMeta<typeof RadioGroup>
 
-// 基本的 RadioGroup 模板
+// Basic RadioGroup template
 const Template: ComponentStory<typeof RadioGroup> = (args) => (
   <div>
     <RadioGroup>
@@ -108,19 +115,18 @@ Default.argTypes = {
   },
   buttonFontSize: {
     table: {
-      disable: true, // 在 Default 中隐藏 buttonFontSize 控件
+      disable: true, // Hides buttonFontSize control in Default
     },
   },
 }
 
-// RadioGroupForm 变体
+// RadioGroupForm variant
 export const Form: ComponentStory<typeof RadioGroupForm> = (args) => {
-  const methods = useForm() // 使用 useForm 创建表单方法
+  const methods = useForm() // Create form methods using useForm
 
   return (
     <FormProvider {...methods}>
-      {" "}
-      {/* 使用 FormProvider 包裹组件 */}
+      {/* Wrap component with FormProvider */}
       <RadioGroupForm
         label1={args.label1}
         label2={args.label2}

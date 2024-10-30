@@ -26,24 +26,25 @@ import {
   DropdownMenuTrigger,
 } from "@/registry/default/ui/dropdown-menu"
 
-const labels = [
-  "feature",
-  "bug",
-  "enhancement",
-  "documentation",
-  "design",
-  "question",
-  "maintenance",
-]
-
-export default function ComboboxDropdownMenu() {
-  const [label, setLabel] = React.useState("feature")
+export default function ComboboxDropdownMenu({
+  initialLabel = "feature",
+  labels = [
+    "feature",
+    "bug",
+    "enhancement",
+    "documentation",
+    "design",
+    "question",
+    "maintenance",
+  ],
+}) {
+  const [label, setLabel] = React.useState(initialLabel)
   const [open, setOpen] = React.useState(false)
 
   return (
     <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
       <p className="text-sm font-medium leading-none">
-        <span className="mr-2 rounded-lg bg-orange-600 px-2 py-1 text-xs text-primary-foreground">
+        <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground">
           {label}
         </span>
         <span className="text-muted-foreground">Create a new project</span>

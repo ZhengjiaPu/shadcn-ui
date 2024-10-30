@@ -81,7 +81,9 @@ export default function RadioGroupForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="hover:bg-orange-600 hover:text-white">
+          Submit
+        </Button>
       </form>
     </Form>
   )
