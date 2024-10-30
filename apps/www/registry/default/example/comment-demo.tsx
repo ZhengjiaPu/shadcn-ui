@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import { Forward, Heart, MessageCircleMore } from "lucide-react"
+import React, { useState } from "react";
+import { Forward, Heart, MessageCircleMore } from "lucide-react";
 
-import { Avatar, AvatarImage } from "@/registry/default/ui/avatar"
-import { Button } from "@/registry/default/ui/button"
-import { Card, CardContent, CardHeader } from "@/registry/default/ui/card"
-import { Label } from "@/registry/default/ui/label"
-import { Textarea } from "@/registry/default/ui/textarea"
-import { Toaster } from "@/registry/default/ui/toaster"
-import { useToast } from "@/registry/default/ui/use-toast"
+import { Avatar, AvatarImage } from "@/registry/default/ui/avatar";
+import { Button } from "@/registry/default/ui/button";
+import { Card, CardContent, CardHeader } from "@/registry/default/ui/card";
+import { Label } from "@/registry/default/ui/label";
+import { Textarea } from "@/registry/default/ui/textarea";
+import { Toaster } from "@/registry/default/ui/toaster";
+import { useToast } from "@/registry/default/ui/use-toast";
 
 export function BasicComment() {
   const initialMessage = {
@@ -20,34 +20,34 @@ export function BasicComment() {
     likes: 156,
     comments: 156,
     shares: 2,
-  }
+  };
 
-  const [message, setMessage] = useState(initialMessage)
-  const [isTextareaActive, setIsTextareaActive] = useState(false)
-  const [commentText, setCommentText] = useState("")
-  const { toast } = useToast()
+  const [message, setMessage] = useState(initialMessage);
+  const [isTextareaActive, setIsTextareaActive] = useState(false);
+  const [commentText, setCommentText] = useState("");
+  const { toast } = useToast();
 
-  const incrementStat = (stat) => {
+  const incrementStat = (stat: 'likes' | 'comments' | 'shares') => {
     if (stat === "comments") {
-      setIsTextareaActive(!isTextareaActive) // Toggle textarea visibility
-      setCommentText("") // Reset the comment text
+      setIsTextareaActive(!isTextareaActive); // Toggle textarea visibility
+      setCommentText(""); // Reset the comment text
     } else {
-      setMessage((prev) => ({ ...prev, [stat]: prev[stat] + 1 }))
+      setMessage((prev) => ({ ...prev, [stat]: prev[stat] + 1 }));
     }
-  }
+  };
 
   const postComment = () => {
     if (commentText.trim()) {
       toast({
         title: "You have successfully posted your comment:",
         description: commentText,
-      })
+      });
 
-      setMessage((prev) => ({ ...prev, comments: prev.comments + 1 }))
-      setIsTextareaActive(false)
-      setCommentText("")
+      setMessage((prev) => ({ ...prev, comments: prev.comments + 1 }));
+      setIsTextareaActive(false);
+      setCommentText("");
     }
-  }
+  };
 
   return (
     <>
@@ -152,7 +152,7 @@ export function BasicComment() {
         </CardContent>
       </Card>
     </>
-  )
+  );
 }
 
-export default BasicComment
+export default BasicComment;

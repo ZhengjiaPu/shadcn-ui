@@ -352,7 +352,15 @@ export const examples: Registry = [
   {
     name: "comment-demo",
     type: "components:example",
-    registryDependencies: ["card", "button", "use-toast", "toaster", "avatar", "label", "textarea"],
+    registryDependencies: [
+      "card",
+      "button",
+      "use-toast",
+      "toaster",
+      "avatar",
+      "label",
+      "textarea",
+    ],
     files: ["example/comment-demo.tsx"],
   },
   {
