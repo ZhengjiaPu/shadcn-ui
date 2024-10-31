@@ -2,13 +2,8 @@ import { Button } from "@/registry/sydney/ui/button"
 
 export function EnhancedLink() {
   return (
-    <Button asChild>
-      <a
-        href="https://www.sydney.edu.au/"
-        className="bg-usydOrange hover:bg-usydOrangeDark"
-      >
-        Read More →
-      </a>
+    <Button asChild className="bg-orange-600 hover:bg-orange-700">
+      <a href="https://www.sydney.edu.au/">Read More →</a>
     </Button>
   )
 }

@@ -1,4 +1,3 @@
-import { Button } from "@/registry/sydney/ui/button"
 import {
   Card,
   CardContent,
@@ -17,9 +16,12 @@ export function ExpandLink() {
         </CardHeader>
         <CardDescription></CardDescription>
         <CardFooter>
-          <Button asChild>
-            <a href="https://www.sydney.edu.au/">Read more ↓</a>
-          </Button>
+          <a
+            href="https://www.sydney.edu.au/"
+            className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
+          >
+            Read more ↓
+          </a>
         </CardFooter>
       </CardContent>
     </Card>
