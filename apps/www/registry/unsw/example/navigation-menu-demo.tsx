@@ -56,15 +56,17 @@ const components: { title: string; href: string; description: string }[] = [
 export default function NavigationMenuDemo() {
   return (
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList className="bg-white text-black rounded-none">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-white text-black hover:bg-blue-600 hover:text-white transition-colors duration-300 rounded-none data-[state=open]:bg-blue-600 data-[state=open]:text-white">
+            Getting started
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end bg-white p-6 no-underline outline-none hover:bg-blue-600 hover:text-white transition-colors rounded-none"
                     href="/"
                   >
                     <Icons.logo className="h-6 w-6" />
@@ -92,9 +94,11 @@ export default function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-white text-black hover:bg-blue-600 hover:text-white transition-colors duration-300 rounded-none data-[state=open]:bg-blue-600 data-[state=open]:text-white">
+            Components
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
@@ -109,7 +113,12 @@ export default function NavigationMenuDemo() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "bg-white text-black hover:bg-blue-600 hover:text-white transition-colors duration-300 rounded-none data-[state=open]:bg-blue-600 data-[state=open]:text-white"
+              )}
+            >
               Documentation
             </NavigationMenuLink>
           </Link>
@@ -129,7 +138,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-600 hover:text-white rounded-none",
             className
           )}
           {...props}
