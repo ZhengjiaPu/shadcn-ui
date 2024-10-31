@@ -1424,6 +1424,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "input-with-number": {
+      name: "input-with-number",
+      type: "components:example",
+      registryDependencies: ["input"],
+      component: React.lazy(() => import("@/registry/default/example/input-with-number")),
+      source: "",
+      files: ["registry/default/example/input-with-number.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "input-with-phonenumber": {
+      name: "input-with-phonenumber",
+      type: "components:example",
+      registryDependencies: ["input","button","dropdown-menu"],
+      component: React.lazy(() => import("@/registry/default/example/input-with-phonenumber")),
+      source: "",
+      files: ["registry/default/example/input-with-phonenumber.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "input-otp-demo": {
       name: "input-otp-demo",
       type: "components:example",
@@ -4985,6 +5007,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/input-with-text")),
       source: "",
       files: ["registry/new-york/example/input-with-text.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "input-with-number": {
+      name: "input-with-number",
+      type: "components:example",
+      registryDependencies: ["input"],
+      component: React.lazy(() => import("@/registry/new-york/example/input-with-number")),
+      source: "",
+      files: ["registry/new-york/example/input-with-number.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "input-with-phonenumber": {
+      name: "input-with-phonenumber",
+      type: "components:example",
+      registryDependencies: ["input","button","dropdown-menu"],
+      component: React.lazy(() => import("@/registry/new-york/example/input-with-phonenumber")),
+      source: "",
+      files: ["registry/new-york/example/input-with-phonenumber.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -8554,6 +8598,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "input-with-number": {
+      name: "input-with-number",
+      type: "components:example",
+      registryDependencies: ["input"],
+      component: React.lazy(() => import("@/registry/sydney/example/input-with-number")),
+      source: "",
+      files: ["registry/sydney/example/input-with-number.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "input-with-phonenumber": {
+      name: "input-with-phonenumber",
+      type: "components:example",
+      registryDependencies: ["input","button","dropdown-menu"],
+      component: React.lazy(() => import("@/registry/sydney/example/input-with-phonenumber")),
+      source: "",
+      files: ["registry/sydney/example/input-with-phonenumber.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "input-otp-demo": {
       name: "input-otp-demo",
       type: "components:example",
@@ -12115,6 +12181,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/unsw/example/input-with-text")),
       source: "",
       files: ["registry/unsw/example/input-with-text.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "input-with-number": {
+      name: "input-with-number",
+      type: "components:example",
+      registryDependencies: ["input"],
+      component: React.lazy(() => import("@/registry/unsw/example/input-with-number")),
+      source: "",
+      files: ["registry/unsw/example/input-with-number.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "input-with-phonenumber": {
+      name: "input-with-phonenumber",
+      type: "components:example",
+      registryDependencies: ["input","button","dropdown-menu"],
+      component: React.lazy(() => import("@/registry/unsw/example/input-with-phonenumber")),
+      source: "",
+      files: ["registry/unsw/example/input-with-phonenumber.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

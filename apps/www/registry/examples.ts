@@ -504,6 +504,18 @@ export const examples: Registry = [
     files: ["example/input-with-text.tsx"],
   },
   {
+    name: "input-with-number",
+    type: "components:example",
+    registryDependencies: ["input"],
+    files: ["example/input-with-number.tsx"],
+  },
+  {
+    name: "input-with-phonenumber",
+    type: "components:example",
+    registryDependencies: ["input", "button", "dropdown-menu"],
+    files: ["example/input-with-phonenumber.tsx"],
+  },
+  {
     name: "input-otp-demo",
     type: "components:example",
     registryDependencies: ["input-otp"],
