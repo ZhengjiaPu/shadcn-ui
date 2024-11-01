@@ -52,7 +52,9 @@ export default function TabsDemo() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button className="bg-orange-600">Save changes</Button>
+            <Button className="bg-orange-600 hover:!bg-orange-700 text-white">
+              Save changes
+            </Button>
           </CardFooter>
         </Card>
       </TabsContent>
@@ -75,7 +77,9 @@ export default function TabsDemo() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button className="bg-orange-600">Save password</Button>
+            <Button className="bg-orange-600 hover:!bg-orange-700 text-white">
+              Save password
+            </Button>
           </CardFooter>
         </Card>
       </TabsContent>

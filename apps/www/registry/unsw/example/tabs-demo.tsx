@@ -19,10 +19,48 @@ import {
 export default function TabsDemo() {
   return (
     <Tabs defaultValue="account" className="w-[400px]">
-      <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="account">Account</TabsTrigger>
-        <TabsTrigger value="password">Password</TabsTrigger>
+      <TabsList className="flex space-x-4 border-b border-gray-300">
+        <TabsTrigger
+          value="account"
+          className="
+            text-gray-500 hover:text-black 
+            data-[state=active]:text-black 
+            data-[state=active]:font-bold 
+            data-[state=active]:border 
+            data-[state=active]:border-blue-500 
+            data-[state=active]:rounded-none
+            px-4 py-2"
+        >
+          Dashboard
+        </TabsTrigger>
+        <TabsTrigger
+          value="monitoring"
+          className="
+            text-gray-500 hover:text-black 
+            data-[state=active]:text-black 
+            data-[state=active]:font-bold 
+            data-[state=active]:border 
+            data-[state=active]:border-blue-500 
+            data-[state=active]:rounded-none
+            px-4 py-2"
+        >
+          Monitoring
+        </TabsTrigger>
+        <TabsTrigger
+          value="activity"
+          className="
+            text-gray-500 hover:text-black 
+            data-[state=active]:text-black 
+            data-[state=active]:font-bold 
+            data-[state=active]:border 
+            data-[state=active]:border-blue-500 
+            data-[state=active]:rounded-none
+            px-4 py-2"
+        >
+          Activity
+        </TabsTrigger>
       </TabsList>
+
       <TabsContent value="account">
         <Card>
           <CardHeader>
@@ -42,31 +80,30 @@ export default function TabsDemo() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save changes</Button>
+            <Button className="bg-blue-500 hover:bg-blue-700 text-white rounded-none px-4 py-2">
+              Save changes
+            </Button>
           </CardFooter>
         </Card>
       </TabsContent>
-      <TabsContent value="password">
+
+      <TabsContent value="monitoring">
         <Card>
           <CardHeader>
-            <CardTitle>Password</CardTitle>
+            <CardTitle>Monitoring</CardTitle>
             <CardDescription>
-              Change your password here. After saving, you'll be logged out.
+              Monitor system metrics and performance.
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-2">
-            <div className="space-y-1">
-              <Label htmlFor="current">Current password</Label>
-              <Input id="current" type="password" />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="new">New password</Label>
-              <Input id="new" type="password" />
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button>Save password</Button>
-          </CardFooter>
+        </Card>
+      </TabsContent>
+
+      <TabsContent value="activity">
+        <Card>
+          <CardHeader>
+            <CardTitle>Activity</CardTitle>
+            <CardDescription>Review recent activity and logs.</CardDescription>
+          </CardHeader>
         </Card>
       </TabsContent>
     </Tabs>
