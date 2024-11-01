@@ -52,7 +52,11 @@ export default function InputForm() {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input
+                  placeholder="shadcn"
+                  {...field}
+                  className="border border-blue-600 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600" // IBM style for input
+                />
               </FormControl>
               <FormDescription>
                 This is your public display name.
@@ -61,7 +65,12 @@ export default function InputForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button
+          type="submit"
+          className="bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50" // IBM style for button
+        >
+          Submit
+        </Button>
       </form>
     </Form>
   )
