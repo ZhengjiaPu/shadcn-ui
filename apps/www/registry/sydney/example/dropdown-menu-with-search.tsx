@@ -12,9 +12,10 @@ import {
 } from "@/registry/sydney/ui/dropdown-menu"
 
 export function DropdownMenuSelect() {
+  // Explicitly define the type as string[]
   const [selectedOptions, setSelectedOptions] = React.useState<string[]>([])
-  const [searchTerm, setSearchTerm] = React.useState<string>("")
-  const [open, setOpen] = React.useState<boolean>(false)
+  const [searchTerm, setSearchTerm] = React.useState("")
+  const [open, setOpen] = React.useState(false)
 
   const toggleOption = (option: string) => {
     setSelectedOptions((prev) =>
@@ -45,7 +46,11 @@ export function DropdownMenuSelect() {
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" onClick={handleTriggerClick}>
+        <Button
+          variant="outline"
+          onClick={handleTriggerClick}
+          className="hover:bg-orange-600 hover:text-white"
+        >
           {getButtonLabel()}
         </Button>
       </DropdownMenuTrigger>

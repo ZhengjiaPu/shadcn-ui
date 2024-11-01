@@ -22,7 +22,12 @@ export function DropdownMenuwithDividers() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">{selectedCar}</Button>
+        <Button
+          variant="outline"
+          className="hover:bg-orange-600 hover:text-white"
+        >
+          {selectedCar}
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Chinese Cars</DropdownMenuLabel>

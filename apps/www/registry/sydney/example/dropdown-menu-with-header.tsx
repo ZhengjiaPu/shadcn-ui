@@ -15,6 +15,7 @@ import {
 export function DropdownMenuwithHeader() {
   const userEmail = "nzha9876@uni.sydney.edu.au"
 
+  // Explicitly define the type as string[]
   const [selectedOptions, setSelectedOptions] = React.useState<string[]>([])
 
   const toggleOption = (option: string) => {
@@ -33,7 +34,12 @@ export function DropdownMenuwithHeader() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">{getButtonLabel()}</Button>
+        <Button
+          variant="outline"
+          className="hover:bg-orange-500 hover:text-white"
+        >
+          {getButtonLabel()}
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Signed in as</DropdownMenuLabel>

@@ -13,39 +13,123 @@ export default {
   title: "Components/DropdownMenu",
   component: DropdownMenuDemo,
   argTypes: {
-    // 全局禁用所有控件
-    defaultOption1: { table: { disable: true } },
-    defaultOption2: { table: { disable: true } },
-    defaultOption3: { table: { disable: true } },
-    defaultOption4: { table: { disable: true } },
-    checkboxOption1: { table: { disable: true } },
-    checkboxOption2: { table: { disable: true } },
-    checkboxOption3: { table: { disable: true } },
-    appearanceLabel: { table: { disable: true } },
-    panelLabel: { table: { disable: true } },
-    radioOption1: { table: { disable: true } },
-    radioOption2: { table: { disable: true } },
-    radioOption3: { table: { disable: true } },
-    chineseCarsLabel: { table: { disable: true } },
-    germanCarsLabel: { table: { disable: true } },
-    dividerOption1: { table: { disable: true } },
-    dividerOption2: { table: { disable: true } },
-    dividerOption3: { table: { disable: true } },
-    dividerOption4: { table: { disable: true } },
-    searchOption1: { table: { disable: true } },
-    searchOption2: { table: { disable: true } },
-    searchOption3: { table: { disable: true } },
-    searchOption4: { table: { disable: true } },
-    headerLabel: { table: { disable: true } },
-    userEmail: { table: { disable: true } },
-    headerOption1: { table: { disable: true } },
-    headerOption2: { table: { disable: true } },
-    headerOption3: { table: { disable: true } },
-    headerOption4: { table: { disable: true } },
+    defaultOption1: {
+      table: { disable: false },
+      description: "Text for the first default dropdown option.",
+    },
+    defaultOption2: {
+      table: { disable: false },
+      description: "Text for the second default dropdown option.",
+    },
+    defaultOption3: {
+      table: { disable: false },
+      description: "Text for the third default dropdown option.",
+    },
+    defaultOption4: {
+      table: { disable: false },
+      description: "Text for the fourth default dropdown option.",
+    },
+    checkboxOption1: {
+      table: { disable: false },
+      description: "Text for the first checkbox dropdown option.",
+    },
+    checkboxOption2: {
+      table: { disable: false },
+      description: "Text for the second checkbox dropdown option.",
+    },
+    checkboxOption3: {
+      table: { disable: false },
+      description: "Text for the third checkbox dropdown option.",
+    },
+    appearanceLabel: {
+      table: { disable: false },
+      description: "Label text for appearance-related checkbox options.",
+    },
+    panelLabel: {
+      table: { disable: false },
+      description: "Label for the radio group panel section.",
+    },
+    radioOption1: {
+      table: { disable: false },
+      description: "Text for the first radio group option.",
+    },
+    radioOption2: {
+      table: { disable: false },
+      description: "Text for the second radio group option.",
+    },
+    radioOption3: {
+      table: { disable: false },
+      description: "Text for the third radio group option.",
+    },
+    chineseCarsLabel: {
+      table: { disable: false },
+      description: "Label for Chinese car options in the divider dropdown.",
+    },
+    germanCarsLabel: {
+      table: { disable: false },
+      description: "Label for German car options in the divider dropdown.",
+    },
+    dividerOption1: {
+      table: { disable: false },
+      description: "Text for the first divider dropdown option.",
+    },
+    dividerOption2: {
+      table: { disable: false },
+      description: "Text for the second divider dropdown option.",
+    },
+    dividerOption3: {
+      table: { disable: false },
+      description: "Text for the third divider dropdown option.",
+    },
+    dividerOption4: {
+      table: { disable: false },
+      description: "Text for the fourth divider dropdown option.",
+    },
+    searchOption1: {
+      table: { disable: false },
+      description: "Text for the first search dropdown option.",
+    },
+    searchOption2: {
+      table: { disable: false },
+      description: "Text for the second search dropdown option.",
+    },
+    searchOption3: {
+      table: { disable: false },
+      description: "Text for the third search dropdown option.",
+    },
+    searchOption4: {
+      table: { disable: false },
+      description: "Text for the fourth search dropdown option.",
+    },
+    headerLabel: {
+      table: { disable: false },
+      description:
+        "Label text for the header section of the dropdown with header.",
+    },
+    userEmail: {
+      table: { disable: false },
+      description: "User email displayed in the dropdown with header.",
+    },
+    headerOption1: {
+      table: { disable: false },
+      description: "Text for the first header dropdown option.",
+    },
+    headerOption2: {
+      table: { disable: false },
+      description: "Text for the second header dropdown option.",
+    },
+    headerOption3: {
+      table: { disable: false },
+      description: "Text for the third header dropdown option.",
+    },
+    headerOption4: {
+      table: { disable: false },
+      description: "Text for the fourth header dropdown option.",
+    },
   },
 } as ComponentMeta<typeof DropdownMenuDemo>
 
-// Default 变体
+// Default variant
 const DefaultTemplate: ComponentStory<typeof DropdownMenuDemo> = (args) => (
   <DropdownMenuDemo
     option1={args.defaultOption1}
@@ -63,14 +147,8 @@ Default.args = {
   defaultOption3: "License",
   defaultOption4: "Signout",
 }
-Default.argTypes = {
-  defaultOption1: { table: { disable: false } },
-  defaultOption2: { table: { disable: false } },
-  defaultOption3: { table: { disable: false } },
-  defaultOption4: { table: { disable: false } },
-}
 
-// Checkboxes 变体
+// Checkboxes variant
 const CheckboxesTemplate: ComponentStory<typeof DropdownMenuCheckboxes> = (
   args
 ) => (
@@ -90,14 +168,8 @@ Checkboxes.args = {
   checkboxOption2: "Activity Bar",
   checkboxOption3: "Panel",
 }
-Checkboxes.argTypes = {
-  appearanceLabel: { table: { disable: false } },
-  checkboxOption1: { table: { disable: false } },
-  checkboxOption2: { table: { disable: false } },
-  checkboxOption3: { table: { disable: false } },
-}
 
-// Radio Group 变体
+// Radio Group variant
 const RadioGroupTemplate: ComponentStory<typeof DropdownMenuRadioGroupDemo> = (
   args
 ) => (
@@ -117,14 +189,8 @@ RadioGroup.args = {
   radioOption2: "Bottom",
   radioOption3: "Right",
 }
-RadioGroup.argTypes = {
-  panelLabel: { table: { disable: false } },
-  radioOption1: { table: { disable: false } },
-  radioOption2: { table: { disable: false } },
-  radioOption3: { table: { disable: false } },
-}
 
-// With icons 变体
+// With icons variant
 const WithIconsTemplate: ComponentStory<typeof DropdownMenuwithIcon> = () => (
   <DropdownMenuwithIcon />
 )
@@ -132,7 +198,7 @@ const WithIconsTemplate: ComponentStory<typeof DropdownMenuwithIcon> = () => (
 export const WithIcons = WithIconsTemplate.bind({})
 WithIcons.storyName = "With icons"
 
-// With divider 变体
+// With divider variant
 const DividerTemplate: ComponentStory<typeof DropdownMenuwithDividers> = (
   args
 ) => (
@@ -156,16 +222,8 @@ WithDivider.args = {
   dividerOption3: "Mercedes",
   dividerOption4: "Audi",
 }
-WithDivider.argTypes = {
-  chineseCarsLabel: { table: { disable: false } },
-  germanCarsLabel: { table: { disable: false } },
-  dividerOption1: { table: { disable: false } },
-  dividerOption2: { table: { disable: false } },
-  dividerOption3: { table: { disable: false } },
-  dividerOption4: { table: { disable: false } },
-}
 
-// With search 变体
+// With search variant
 const WithSearchTemplate: ComponentStory<typeof DropdownMenuSelect> = (
   args
 ) => (
@@ -185,14 +243,8 @@ WithSearch.args = {
   searchOption3: "License",
   searchOption4: "Signout",
 }
-WithSearch.argTypes = {
-  searchOption1: { table: { disable: false } },
-  searchOption2: { table: { disable: false } },
-  searchOption3: { table: { disable: false } },
-  searchOption4: { table: { disable: false } },
-}
 
-// With header 变体
+// With header variant
 const WithHeaderTemplate: ComponentStory<typeof DropdownMenuwithHeader> = (
   args
 ) => (
@@ -215,12 +267,4 @@ WithHeader.args = {
   headerOption2: "Support",
   headerOption3: "License",
   headerOption4: "Signout",
-}
-WithHeader.argTypes = {
-  headerLabel: { table: { disable: false } },
-  userEmail: { table: { disable: false } },
-  headerOption1: { table: { disable: false } },
-  headerOption2: { table: { disable: false } },
-  headerOption3: { table: { disable: false } },
-  headerOption4: { table: { disable: false } },
 }

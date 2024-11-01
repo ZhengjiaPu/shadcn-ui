@@ -31,25 +31,25 @@ import {
 } from "@/registry/default/ui/popover"
 import { toast } from "@/registry/default/ui/use-toast"
 
-const languages = [
-  { label: "English", value: "en" },
-  { label: "French", value: "fr" },
-  { label: "German", value: "de" },
-  { label: "Spanish", value: "es" },
-  { label: "Portuguese", value: "pt" },
-  { label: "Russian", value: "ru" },
-  { label: "Japanese", value: "ja" },
-  { label: "Korean", value: "ko" },
-  { label: "Chinese", value: "zh" },
-] as const
-
 const FormSchema = z.object({
   language: z.string({
     required_error: "Please select a language.",
   }),
 })
 
-export default function ComboboxForm() {
+export default function ComboboxForm({
+  languages = [
+    { label: "English", value: "en" },
+    { label: "French", value: "fr" },
+    { label: "German", value: "de" },
+    { label: "Spanish", value: "es" },
+    { label: "Portuguese", value: "pt" },
+    { label: "Russian", value: "ru" },
+    { label: "Japanese", value: "ja" },
+    { label: "Korean", value: "ko" },
+    { label: "Chinese", value: "zh" },
+  ],
+}) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   })
@@ -131,9 +131,7 @@ export default function ComboboxForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="hover:bg-orange-600 hover:text-white">
-          Submit
-        </Button>
+        <Button type="submit">Submit</Button>
       </form>
     </Form>
   )
