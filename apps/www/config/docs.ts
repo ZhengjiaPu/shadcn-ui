@@ -173,6 +173,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Comment",
+          href: "/docs/components/comment",
+          items: [],
+        },
+        {
           title: "Context Menu",
           href: "/docs/components/context-menu",
           items: [],
