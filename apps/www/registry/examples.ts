@@ -482,6 +482,36 @@ export const examples: Registry = [
     files: ["example/hover-card-demo.tsx"],
   },
   {
+    name: "image-gallery-demo",
+    type: "components:example",
+    registryDependencies: ["image-gallery"],
+    files: ["example/image-gallery-demo.tsx"],
+  },
+  {
+    name: "image-gallery-masonry-grid",
+    type: "components:example",
+    registryDependencies: ["image-gallery", "masonry-grid"],
+    files: ["example/image-gallery-masonry-grid.tsx"],
+  },
+  {
+    name: "image-gallery-with-carousel",
+    type: "components:example",
+    registryDependencies: ["image-gallery", "with-carousel"],
+    files: ["image-gallery-with-carousel.tsx"],
+  },
+  {
+    name: "image-gallery-with-preview",
+    type: "components:example",
+    registryDependencies: ["image-gallery", "with-preview"],
+    files: ["example/image-gallery-with-preview.tsx"],
+  },
+  {
+    name: "image-gallery-with-tab",
+    type: "components:example",
+    registryDependencies: ["image-gallery", "with-tab"],
+    files: ["image-gallery-with-tab.tsx"],
+  },
+  {
     name: "input-demo",
     type: "components:example",
     registryDependencies: ["input"],

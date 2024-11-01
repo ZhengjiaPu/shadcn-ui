@@ -223,6 +223,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Image Gallery",
+          href: "/docs/components/image-gallery",
+          items: [],
+        },
+        {
           title: "Input",
           href: "/docs/components/input",
           items: [],
