@@ -56,19 +56,26 @@ const invoices = [
 
 export default function TableDemo() {
   return (
-    <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
-      <TableHeader>
+    <Table className="shadow-lg">
+      <TableCaption className="text-gray-600">
+        A list of your recent invoices.
+      </TableCaption>
+      <TableHeader className="bg-gray-200">
         <TableRow>
-          <TableHead className="w-[100px]">Invoice</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>Method</TableHead>
-          <TableHead className="text-right">Amount</TableHead>
+          <TableHead className="font-bold text-black">Invoice</TableHead>
+          <TableHead className="font-bold text-black">Status</TableHead>
+          <TableHead className="font-bold text-black">Method</TableHead>
+          <TableHead className="font-bold text-black text-right">
+            Amount
+          </TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {invoices.map((invoice) => (
-          <TableRow key={invoice.invoice}>
+          <TableRow
+            key={invoice.invoice}
+            className="bg-white text-gray-600 hover:bg-gray-200 hover:text-black"
+          >
             <TableCell className="font-medium">{invoice.invoice}</TableCell>
             <TableCell>{invoice.paymentStatus}</TableCell>
             <TableCell>{invoice.paymentMethod}</TableCell>
@@ -76,10 +83,14 @@ export default function TableDemo() {
           </TableRow>
         ))}
       </TableBody>
-      <TableFooter>
+      <TableFooter className="bg-gray-200">
         <TableRow>
-          <TableCell colSpan={3}>Total</TableCell>
-          <TableCell className="text-right">$2,500.00</TableCell>
+          <TableCell colSpan={3} className="font-bold text-black">
+            Total
+          </TableCell>
+          <TableCell className="text-right font-bold text-black">
+            $2,500.00
+          </TableCell>
         </TableRow>
       </TableFooter>
     </Table>

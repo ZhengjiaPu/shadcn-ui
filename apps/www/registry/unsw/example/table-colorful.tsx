@@ -56,22 +56,22 @@ const invoices = [
 
 export default function TableDemo() {
   return (
-    <Table className="border border-orange-500">
-      <TableCaption className="text-orange-600">
+    <Table className="shadow-md border border-gray-300 rounded-lg">
+      <TableCaption className="text-gray-700">
         A list of your recent invoices.
       </TableCaption>
       <TableHeader>
-        <TableRow className="bg-orange-100">
-          <TableHead className="w-[100px] border-b border-orange-500 text-orange-800">
+        <TableRow className="bg-blue-100">
+          <TableHead className="w-[100px] text-black font-semibold border-b border-blue-300">
             Invoice
           </TableHead>
-          <TableHead className="border-b border-orange-500 text-orange-800">
+          <TableHead className="text-black font-semibold border-b border-blue-300">
             Status
           </TableHead>
-          <TableHead className="border-b border-orange-500 text-orange-800">
+          <TableHead className="text-black font-semibold border-b border-blue-300">
             Method
           </TableHead>
-          <TableHead className="text-right border-b border-orange-500 text-orange-800">
+          <TableHead className="text-right text-black font-semibold border-b border-blue-300">
             Amount
           </TableHead>
         </TableRow>
@@ -80,29 +80,29 @@ export default function TableDemo() {
         {invoices.map((invoice) => (
           <TableRow
             key={invoice.invoice}
-            className="hover:bg-orange-50 even:bg-orange-100"
+            className="bg-white hover:bg-blue-50 even:bg-gray-50"
           >
-            <TableCell className="font-medium border-b border-orange-300">
+            <TableCell className="font-medium text-gray-800 border-b border-gray-300">
               {invoice.invoice}
             </TableCell>
-            <TableCell className="border-b border-orange-300">
+            <TableCell className="text-gray-800 border-b border-gray-300">
               {invoice.paymentStatus}
             </TableCell>
-            <TableCell className="border-b border-orange-300">
+            <TableCell className="text-gray-800 border-b border-gray-300">
               {invoice.paymentMethod}
             </TableCell>
-            <TableCell className="text-right border-b border-orange-300">
+            <TableCell className="text-right text-gray-800 border-b border-gray-300">
               {invoice.totalAmount}
             </TableCell>
           </TableRow>
         ))}
       </TableBody>
       <TableFooter>
-        <TableRow className="bg-orange-200">
-          <TableCell colSpan={3} className="font-semibold text-orange-800">
+        <TableRow className="bg-blue-100">
+          <TableCell colSpan={3} className="font-semibold text-black">
             Total
           </TableCell>
-          <TableCell className="text-right font-semibold text-orange-800">
+          <TableCell className="text-right font-semibold text-black">
             $2,500.00
           </TableCell>
         </TableRow>
