@@ -1787,6 +1787,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "statistic-demo": {
+      name: "statistic-demo",
+      type: "components:example",
+      registryDependencies: ["statistic","button"],
+      component: React.lazy(() => import("@/registry/default/example/statistic-demo")),
+      source: "",
+      files: ["registry/default/example/statistic-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "statistic-incard": {
+      name: "statistic-incard",
+      type: "components:example",
+      registryDependencies: ["statistic","card","icons"],
+      component: React.lazy(() => import("@/registry/default/example/statistic-incard")),
+      source: "",
+      files: ["registry/default/example/statistic-incard.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "switch-demo": {
       name: "switch-demo",
       type: "components:example",
@@ -5370,6 +5392,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/sonner-demo")),
       source: "",
       files: ["registry/new-york/example/sonner-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "statistic-demo": {
+      name: "statistic-demo",
+      type: "components:example",
+      registryDependencies: ["statistic","button"],
+      component: React.lazy(() => import("@/registry/new-york/example/statistic-demo")),
+      source: "",
+      files: ["registry/new-york/example/statistic-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "statistic-incard": {
+      name: "statistic-incard",
+      type: "components:example",
+      registryDependencies: ["statistic","card","icons"],
+      component: React.lazy(() => import("@/registry/new-york/example/statistic-incard")),
+      source: "",
+      files: ["registry/new-york/example/statistic-incard.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -8961,6 +9005,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "statistic-demo": {
+      name: "statistic-demo",
+      type: "components:example",
+      registryDependencies: ["statistic","button"],
+      component: React.lazy(() => import("@/registry/sydney/example/statistic-demo")),
+      source: "",
+      files: ["registry/sydney/example/statistic-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "statistic-incard": {
+      name: "statistic-incard",
+      type: "components:example",
+      registryDependencies: ["statistic","card","icons"],
+      component: React.lazy(() => import("@/registry/sydney/example/statistic-incard")),
+      source: "",
+      files: ["registry/sydney/example/statistic-incard.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "switch-demo": {
       name: "switch-demo",
       type: "components:example",
@@ -12544,6 +12610,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/unsw/example/sonner-demo")),
       source: "",
       files: ["registry/unsw/example/sonner-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "statistic-demo": {
+      name: "statistic-demo",
+      type: "components:example",
+      registryDependencies: ["statistic","button"],
+      component: React.lazy(() => import("@/registry/unsw/example/statistic-demo")),
+      source: "",
+      files: ["registry/unsw/example/statistic-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "statistic-incard": {
+      name: "statistic-incard",
+      type: "components:example",
+      registryDependencies: ["statistic","card","icons"],
+      component: React.lazy(() => import("@/registry/unsw/example/statistic-incard")),
+      source: "",
+      files: ["registry/unsw/example/statistic-incard.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
