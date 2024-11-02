@@ -127,6 +127,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Browser Window",
+          href: "/docs/components/browserwindow",
+          items: [],
+        },
+        {
           title: "Button",
           href: "/docs/components/button",
           items: [],

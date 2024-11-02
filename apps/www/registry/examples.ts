@@ -146,6 +146,12 @@ export const examples: Registry = [
     files: ["example/breadcrumb-with-border.tsx"],
   },
   {
+    name: "browserwindow-demo",
+    type: "components:example",
+    registryDependencies: ["browserwindow"],
+    files: ["example/browserwindow-demo.tsx"],
+  },
+  {
     name: "button-demo",
     type: "components:example",
     registryDependencies: ["button"],
