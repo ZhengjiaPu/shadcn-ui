@@ -28,7 +28,9 @@ export function LargeHeaderCard() {
         </CardDescription>
       </div>
       <div className="text-right ml-6">
-        <Button className="mt-2 py-1 px-4">Explore your study options →</Button>
+        <Button className="mt-2 py-1 px-4 bg-blue-500 hover:bg-blue-700 text-white">
+          Explore your study options →
+        </Button>
       </div>
     </Card>
   )

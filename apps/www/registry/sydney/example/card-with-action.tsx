@@ -36,7 +36,9 @@ export function EnquirySubmittedCard() {
           <br /> you as soon as we can.
         </p>
       </CardContent>
-      <Button className="py-2 px-4 mt-2">Return to Page</Button>
+      <Button className="py-2 px-4 mt-2 bg-orange-500 hover:bg-orange-700 text-white">
+        Return to Page
+      </Button>
     </Card>
   )
 }

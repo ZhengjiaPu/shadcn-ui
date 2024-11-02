@@ -20,7 +20,7 @@ export function CardWithNormal() {
           Submit a partnership enquiry or make a donation by contacting the
           University revenue team.
         </CardDescription>
-        <Button className="w-full py-2 px-4 bg-orange-500 hover:bg-orange-700 text-white">
+        <Button className="w-full py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white">
           Explore more →
         </Button>
       </CardContent>

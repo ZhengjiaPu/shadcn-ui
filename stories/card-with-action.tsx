@@ -1,0 +1,43 @@
+import * as React from "react";
+import Image from "next/image";
+import { Button } from "@/registry/default/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/default/ui/card";
+
+import checkMarkIcon from "./check-mark.png";
+
+type EnquirySubmittedCardProps = {
+  title?: string;
+  message?: string;
+  buttonText?: string;
+};
+
+export function EnquirySubmittedCard({
+  title = "Enquiry Submitted",
+  message = "Thank you for your enquiry. We will get back to you as soon as we can.",
+  buttonText = "Return to Page",
+  imageSrc ="data:image/png;base64,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",
+}: EnquirySubmittedCardProps) {
+  return (
+    <Card className="max-w-md mx-auto bg-white rounded-lg shadow-sm overflow-hidden p-4 text-center flex flex-col items-center justify-center">
+      <div className="flex justify-center items-center w-full">
+        <Image
+          src={imageSrc}
+          alt="Checkmark"
+          width={50}
+          height={50}
+        />
+      </div>
+      <CardTitle className="text-lg font-semibold my-2 mt-4">
+        {title}
+      </CardTitle>
+      <CardContent className="mb-4 mt-4">
+        <p className="text-sm">
+          {message}
+        </p>
+      </CardContent>
+      <Button className="py-2 px-4 mt-2">{buttonText}</Button>
+    </Card>
+  );
+}
+
+export default EnquirySubmittedCard;

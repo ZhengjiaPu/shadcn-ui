@@ -37,7 +37,7 @@ export default function CardDemo({ className, ...props }: CardProps) {
         <CardDescription>You have 3 unread messages.</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div className=" flex items-center space-x-4 rounded-md border p-4">
+        <div className="flex items-center space-x-4 rounded-md border p-4">
           <BellRing />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -69,8 +69,8 @@ export default function CardDemo({ className, ...props }: CardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">
-          <Check className="mr-2 h-4 w-4" /> Mark all as read
+        <Button className="w-full py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white">
+          <Check className="mr-2 h-4 w-4" />Mark all as read
         </Button>
       </CardFooter>
     </Card>
