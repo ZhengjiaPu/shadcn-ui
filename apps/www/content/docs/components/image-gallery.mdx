@@ -1,16 +1,27 @@
 ---
 title: Image gallery
 description: Presents a collection of images in a visually appealing grid layout.
-featured: true
 component: true
 links:
-  doc: https://www.radix-ui.com/docs/primitives/components/image-gallery
-  api: https://www.radix-ui.com/docs/primitives/components/image-gallery
+  storybook: http://localhost:6006/?path=/docs/components-image-gallery--docs
 ---
 
 <ComponentPreview
   name="image-gallery-demo"
   description="A gallery dynamically displays images in three columns regardless of the screen size."
+/>
+
+## Introduction
+
+The Image Gallery component offers a versatile solution for displaying a series of images in a structured, grid-like format. Designed to dynamically adjust according to screen size and orientation, the gallery offers users a responsive and interactive way to view collections. With built-in options for carousels, previews, tabs, and masonry grids, this component allows for seamless integration and customization in various applications, from simple galleries to complex interactive displays.
+
+The component comes with styling that supports hover and focus states for enhanced accessibility and visual feedback during interactions. Whether showcasing images in a traditional grid or a visually engaging masonry layout, the Image Gallery provides a flexible, user-friendly experience suitable for various interface needs.
+
+## Demo
+
+<ComponentPreview
+  name="image-gallery-demo"
+  description="A gallery that dynamically displays images in three columns regardless of screen size."
 />
 
 ## Installation
@@ -21,7 +32,10 @@ links:
   <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
+
 <TabsContent value="cli">
+
+Run the following command:
 
 ```bash
 npx shadcn-ui@latest add image-gallery
@@ -36,14 +50,15 @@ npx shadcn-ui@latest add image-gallery
 <Step>Install the following dependencies:</Step>
 
 ```bash
-
+npm install embla-carousel-autoplay
+# Add any other required libraries or dependencies here
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>Copy and paste the Image Gallery component code into your project:</Step>
 
 <ComponentSource name="image-gallery" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>Update the import paths as needed to match your project setup.</Step>
 
 </Steps>
 
@@ -51,42 +66,47 @@ npx shadcn-ui@latest add image-gallery
 
 </Tabs>
 
-## Usage
+## Variants
 
-```tsx
+### Gallery with Carousel
 
-```
-
-```tsx
-
-```
-
-## Examples
-
-### With Carousel
+The carousel variant provides a sequential, scrollable view of images. With autoplay and manual controls, this layout is perfect for showcasing images in a focused, interactive manner.
 
 <ComponentPreview
   name="image-gallery-with-carousel"
-  description="An image gallery with carousel."
+  description="An image gallery with carousel functionality."
 />
 
-### With PreView
+### Gallery with Preview
+
+The preview variant displays a selected image in an enlarged view with thumbnails below for easy navigation. This layout is particularly useful for detailed image inspection and provides an intuitive way to navigate through a collection.
 
 <ComponentPreview
   name="image-gallery-with-preview"
-  description="An image gallery with preview."
+  description="An image gallery with a preview option for larger image views."
 />
 
-### With Tab
+### Gallery with Tabs
+
+Organize images by category with the tabbed gallery variant. This structure allows users to switch between categories, offering a practical solution for thematic collections.
 
 <ComponentPreview
   name="image-gallery-with-tab"
-  description="An image gallery with tab."
+  description="An image gallery with categorized tabs for organized viewing."
 />
 
-### Masonry Grid
+### Masonry Grid Gallery
+
+The masonry grid variant arranges images in a staggered format, creating a fluid, visually appealing layout. This is an excellent choice for collections with images of varying dimensions, offering a modern, dynamic presentation.
 
 <ComponentPreview
   name="image-gallery-masonry-grid"
-  description="A masonry grid gallery."
+  description="A masonry grid layout for a visually engaging image gallery."
 />
+
+## Version History
+
+| Version | Editor      | Reviewer  | Date       | Description       | Status    |
+| ------- | ----------- | --------- | ---------- | ----------------- | --------- |
+| v1.0    | Xinyu Chen | Xinyu Chen | 09/04/2024 | React version | Completed |
+| v2.0    | Yilin Xiang | Yihan Zhao | 02/11/2024 | Updated version | Published |
