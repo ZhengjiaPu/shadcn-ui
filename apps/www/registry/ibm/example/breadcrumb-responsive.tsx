@@ -1,6 +1,8 @@
 "use client"
+
 import * as React from "react"
 import Link from "next/link"
+
 import { useMediaQuery } from "@/hooks/use-media-query"
 import {
   Breadcrumb,
@@ -47,7 +49,10 @@ export default function BreadcrumbResponsive() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href={items[0].href} className="text-blue-600 hover:text-blue-800 hover:underline">
+          <BreadcrumbLink
+            href={items[0].href}
+            className="text-blue-600 hover:text-blue-800 hover:underline"
+          >
             {items[0].label}
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -65,7 +70,10 @@ export default function BreadcrumbResponsive() {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="start">
                     {items.slice(1, -2).map((item, index) => (
-                      <DropdownMenuItem key={index} className="text-blue-600 hover:text-blue-800 hover:underline">
+                      <DropdownMenuItem
+                        key={index}
+                        className="text-blue-600 hover:text-blue-800 hover:underline"
+                      >
                         <Link href={item.href ? item.href : "#"}>
                           {item.label}
                         </Link>

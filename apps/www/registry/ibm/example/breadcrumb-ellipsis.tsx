@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -14,7 +15,10 @@ export default function BreadcrumbCollapsed() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink asChild className="text-blue-600 hover:text-blue-800 hover:underline">
+          <BreadcrumbLink
+            asChild
+            className="text-blue-600 hover:text-blue-800 hover:underline"
+          >
             <Link href="/">Home</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -24,13 +28,18 @@ export default function BreadcrumbCollapsed() {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink asChild className="text-blue-600 hover:text-blue-800 hover:underline">
+          <BreadcrumbLink
+            asChild
+            className="text-blue-600 hover:text-blue-800 hover:underline"
+          >
             <Link href="/docs/components">Components</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className="text-blue-600 hover:text-blue-800 hover:underline">Breadcrumb</BreadcrumbPage>
+          <BreadcrumbPage className="text-blue-600 hover:text-blue-800 hover:underline">
+            Breadcrumb
+          </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

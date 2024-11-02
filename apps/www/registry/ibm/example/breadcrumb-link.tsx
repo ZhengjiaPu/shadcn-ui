@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -25,7 +26,9 @@ export default function BreadcrumbWithCustomSeparator() {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className="text-blue-600 hover:text-blue-800 hover:underline">Breadcrumb</BreadcrumbPage>
+          <BreadcrumbPage className="text-blue-600 hover:text-blue-800 hover:underline">
+            Breadcrumb
+          </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
