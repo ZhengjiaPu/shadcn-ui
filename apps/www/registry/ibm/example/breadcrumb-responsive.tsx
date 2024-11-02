@@ -1,8 +1,6 @@
 "use client"
-
 import * as React from "react"
 import Link from "next/link"
-
 import { useMediaQuery } from "@/hooks/use-media-query"
 import {
   Breadcrumb,
@@ -12,8 +10,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
-import { Button } from "@/registry/default/ui/button"
+} from "@/registry/new-york/ui/breadcrumb"
+import { Button } from "@/registry/new-york/ui/button"
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +21,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/default/ui/drawer"
+} from "@/registry/new-york/ui/drawer"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from "@/registry/new-york/ui/dropdown-menu"
 
 const items = [
   { href: "#", label: "Home" },
@@ -49,7 +47,9 @@ export default function BreadcrumbResponsive() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href={items[0].href}>{items[0].label}</BreadcrumbLink>
+          <BreadcrumbLink href={items[0].href} className="text-blue-600 hover:text-blue-800 hover:underline">
+            {items[0].label}
+          </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         {items.length > ITEMS_TO_DISPLAY ? (
@@ -58,14 +58,14 @@ export default function BreadcrumbResponsive() {
               {isDesktop ? (
                 <DropdownMenu open={open} onOpenChange={setOpen}>
                   <DropdownMenuTrigger
-                    className="flex items-center gap-1"
+                    className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline"
                     aria-label="Toggle menu"
                   >
                     <BreadcrumbEllipsis className="h-4 w-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="start">
                     {items.slice(1, -2).map((item, index) => (
-                      <DropdownMenuItem key={index}>
+                      <DropdownMenuItem key={index} className="text-blue-600 hover:text-blue-800 hover:underline">
                         <Link href={item.href ? item.href : "#"}>
                           {item.label}
                         </Link>
@@ -90,7 +90,7 @@ export default function BreadcrumbResponsive() {
                         <Link
                           key={index}
                           href={item.href ? item.href : "#"}
-                          className="py-1 text-sm"
+                          className="py-1 text-sm text-blue-600 hover:text-blue-800 hover:underline"
                         >
                           {item.label}
                         </Link>
@@ -113,15 +113,15 @@ export default function BreadcrumbResponsive() {
             {item.href ? (
               <>
                 <BreadcrumbLink
-                  asChild
-                  className="max-w-20 truncate md:max-w-none"
+                  href={item.href}
+                  className="text-blue-600 hover:text-blue-800 hover:underline max-w-20 truncate md:max-w-none"
                 >
-                  <Link href={item.href}>{item.label}</Link>
+                  {item.label}
                 </BreadcrumbLink>
                 <BreadcrumbSeparator />
               </>
             ) : (
-              <BreadcrumbPage className="max-w-20 truncate md:max-w-none">
+              <BreadcrumbPage className="text-blue-600 hover:text-blue-800 hover:underline max-w-20 truncate md:max-w-none">
                 {item.label}
               </BreadcrumbPage>
             )}

@@ -1,5 +1,4 @@
 import Link from "next/link"
-
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -22,11 +21,12 @@ export function BreadcrumbBasic() {
   const { toast } = useToast()
   const buttonText = "Normal Show Toast"
   return (
-    <Breadcrumb className="border border-black pr-2">
+    <Breadcrumb>
       <BreadcrumbList>
         <Toaster />
         <BreadcrumbItem>
           <BreadcrumbLink
+            className="text-blue-600 hover:text-blue-800 hover:underline"
             onClick={() => {
               console.log(buttonText, "has clicked")
               toast({ description: "Home." })
@@ -43,28 +43,13 @@ export function BreadcrumbBasic() {
               <span className="sr-only">Toggle menu</span>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
-              <DropdownMenuItem
-                onClick={() => {
-                  console.log(buttonText, "has clicked")
-                  toast({ description: "Documentation." })
-                }}
-              >
+              <DropdownMenuItem className="text-blue-600 hover:text-blue-800 hover:underline">
                 Documentation
               </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => {
-                  console.log(buttonText, "has clicked")
-                  toast({ description: "Themes." })
-                }}
-              >
+              <DropdownMenuItem className="text-blue-600 hover:text-blue-800 hover:underline">
                 Themes
               </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => {
-                  console.log(buttonText, "has clicked")
-                  toast({ description: "GitHub." })
-                }}
-              >
+              <DropdownMenuItem className="text-blue-600 hover:text-blue-800 hover:underline">
                 GitHub
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -73,6 +58,7 @@ export function BreadcrumbBasic() {
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbLink
+            className="text-blue-600 hover:text-blue-800 hover:underline"
             onClick={() => {
               console.log(buttonText, "has clicked")
               toast({ description: "Components." })
@@ -84,6 +70,7 @@ export function BreadcrumbBasic() {
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbPage
+            className="text-blue-600 hover:text-blue-800 hover:underline"
             onClick={() => {
               console.log(buttonText, "has clicked")
               toast({ description: "Breadcrumb." })

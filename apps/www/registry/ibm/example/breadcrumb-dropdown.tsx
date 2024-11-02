@@ -1,5 +1,4 @@
-import { ChevronDown, Slash } from "lucide-react"
-
+import { ChevronDownIcon, SlashIcon } from "@radix-ui/react-icons"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,42 +6,42 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
+} from "@/registry/new-york/ui/breadcrumb"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from "@/registry/new-york/ui/dropdown-menu"
 
 export default function BreadcrumbWithDropdown() {
   return (
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          <BreadcrumbLink href="/" className="text-blue-600 hover:text-blue-800 hover:underline">Home</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <Slash />
+          <SlashIcon />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1">
+            <DropdownMenuTrigger className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline">
               Components
-              <ChevronDown className="h-4 w-4" />
+              <ChevronDownIcon />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
-              <DropdownMenuItem>Documentation</DropdownMenuItem>
-              <DropdownMenuItem>Themes</DropdownMenuItem>
-              <DropdownMenuItem>GitHub</DropdownMenuItem>
+              <DropdownMenuItem className="text-blue-600 hover:text-blue-800 hover:underline">Documentation</DropdownMenuItem>
+              <DropdownMenuItem className="text-blue-600 hover:text-blue-800 hover:underline">Themes</DropdownMenuItem>
+              <DropdownMenuItem className="text-blue-600 hover:text-blue-800 hover:underline">GitHub</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <Slash />
+          <SlashIcon />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
-          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+          <BreadcrumbPage className="text-blue-600 hover:text-blue-800 hover:underline">Breadcrumb</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

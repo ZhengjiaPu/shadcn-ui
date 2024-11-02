@@ -1,3 +1,5 @@
+import { Toaster } from "@/registry/default/ui/toaster"
+import { useToast } from "@/registry/default/ui/use-toast"
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -6,20 +8,39 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
+} from "@/registry/sydney/ui/breadcrumb"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from "@/registry/sydney/ui/dropdown-menu"
 
-export default function BreadcrumbDemo() {
+export function BreadcrumbDemo() {
+  const { toast } = useToast()
+  const buttonText = "Normal Show Toast"
   return (
-    <Breadcrumb>
+    <Breadcrumb
+      style={{
+        backgroundColor: "rgb(255, 255, 255)",
+        color: "white",
+        padding: "10px",
+        borderRadius: "5px",
+        cursor: "pointer",
+      }}
+    >
       <BreadcrumbList>
+        <Toaster />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          <BreadcrumbLink
+            className="text-blue-600 hover:text-blue-800 hover:underline"
+            onClick={() => {
+              console.log(buttonText, "has clicked")
+              toast({ description: "Home." })
+            }}
+          >
+            Home
+          </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
@@ -29,21 +50,62 @@ export default function BreadcrumbDemo() {
               <span className="sr-only">Toggle menu</span>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
-              <DropdownMenuItem>Documentation</DropdownMenuItem>
-              <DropdownMenuItem>Themes</DropdownMenuItem>
-              <DropdownMenuItem>GitHub</DropdownMenuItem>
+              <DropdownMenuItem
+                className="text-blue-600 hover:text-blue-800 hover:underline"
+                onClick={() => {
+                  console.log(buttonText, "has clicked")
+                  toast({ description: "Documentation." })
+                }}
+              >
+                Documentation
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                className="text-blue-600 hover:text-blue-800 hover:underline"
+                onClick={() => {
+                  console.log(buttonText, "has clicked")
+                  toast({ description: "Themes." })
+                }}
+              >
+                Themes
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                className="text-blue-600 hover:text-blue-800 hover:underline"
+                onClick={() => {
+                  console.log(buttonText, "has clicked")
+                  toast({ description: "GitHub." })
+                }}
+              >
+                GitHub
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/docs/components">Components</BreadcrumbLink>
+          <BreadcrumbLink
+            className="text-blue-600 hover:text-blue-800 hover:underline"
+            onClick={() => {
+              console.log(buttonText, "has clicked")
+              toast({ description: "Components." })
+            }}
+          >
+            Components
+          </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+          <BreadcrumbLink
+            className="text-blue-600 hover:text-blue-800 hover:underline"
+            onClick={() => {
+              console.log(buttonText, "has clicked")
+              toast({ description: "Breadcrumb." })
+            }}
+          >
+            Breadcrumb
+          </BreadcrumbLink>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
   )
 }
+export default BreadcrumbDemo
