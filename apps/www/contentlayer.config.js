@@ -36,6 +36,15 @@ const LinksProperties = defineNestedType(() => ({
     api: {
       type: "string",
     },
+    storybook:{
+      type: "string",
+    },
+    guideline:{
+      type: "string",
+    },
+    accessibility:{
+      type: "string",
+    },
   },
 }))
 
