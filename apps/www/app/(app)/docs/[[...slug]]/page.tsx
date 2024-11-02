@@ -128,6 +128,39 @@ export default async function DocPage({ params }: DocPageProps) {
                 <ExternalLinkIcon className="h-3 w-3" />
               </Link>
             )}
+            {doc.links?.storybook && (
+              <Link
+                href={doc.links.storybook}
+                target="_blank"
+                rel="noreferrer"
+                className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
+              >
+                Storybook
+                <ExternalLinkIcon className="h-3 w-3" />
+              </Link>
+            )}
+            {doc.links?.guideline && (
+              <Link
+                href={doc.links.guideline}
+                target="_blank"
+                rel="noreferrer"
+                className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
+              >
+                Guideline Reference
+                <ExternalLinkIcon className="h-3 w-3" />
+              </Link>
+            )}
+            {doc.links?.accessibility && (
+              <Link
+                href={doc.links.accessibility}
+                target="_blank"
+                rel="noreferrer"
+                className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
+              >
+                Accessibility
+                <ExternalLinkIcon className="h-3 w-3" />
+              </Link>
+            )}
           </div>
         ) : null}
         <div className="pb-12 pt-8">
