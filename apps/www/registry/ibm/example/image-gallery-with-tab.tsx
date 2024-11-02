@@ -5,7 +5,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/unsw/ui/tabs"
+} from "@/registry/ibm/ui/tabs"
 
 export function GalleryWithTab() {
   const data = [
