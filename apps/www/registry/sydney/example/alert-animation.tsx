@@ -92,8 +92,7 @@ export default function AlertAnimation() {
       >
         <Alert className="flex items-center p-4 bg-red-100 text-red-800 rounded-lg">
           <CrossCircledIcon className="h-5 w-5 mr-2" />
-          <span className="font-medium">Error alert 
-          test 1</span>
+          <span className="font-medium">Error alert test 1</span>
         </Alert>
       </motion.div>
     </div>

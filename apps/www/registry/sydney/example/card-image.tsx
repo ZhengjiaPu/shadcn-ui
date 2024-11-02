@@ -29,7 +29,9 @@ export function CardWithPicture() {
           <br /> also make a donation by contacting
           <br /> the University revenue team.
         </CardDescription>
-        <Button className=" w-full py-4 px-4">Explore more →</Button>
+        <Button className="w-full py-4 px-4 bg-orange-500 hover:bg-orange-700 text-white">
+          Explore more →
+        </Button>
       </CardContent>
     </Card>
   )

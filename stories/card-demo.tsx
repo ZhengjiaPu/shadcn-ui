@@ -1,7 +1,6 @@
-import { BellRing, Check } from "lucide-react"
-
-import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
+import { BellRing, Check } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/default/ui/button";
 import {
   Card,
   CardContent,
@@ -9,32 +8,38 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Switch } from "@/registry/default/ui/switch"
+} from "@/registry/default/ui/card";
+import { Switch } from "@/registry/default/ui/switch";
 
-const notifications = [
-  {
-    title: "Your call has been confirmed.",
-    description: "1 hour ago",
-  },
-  {
-    title: "You have a new message!",
-    description: "1 hour ago",
-  },
-  {
-    title: "Your subscription is expiring soon!",
-    description: "2 hours ago",
-  },
-]
+type Notification = {
+  title: string;
+  description: string;
+};
 
-type CardProps = React.ComponentProps<typeof Card>
+type CardDemoProps = {
+  notifications?: Notification[];
+  cardTitle?: string;
+  cardDescription?: string;
+  buttonText?: string;
+} & React.ComponentProps<typeof Card>;
 
-export default function CardDemo({ className, ...props }: CardProps) {
+export default function CardDemo({
+  className,
+  notifications = [
+    { title: "Your call has been confirmed.", description: "1 hour ago" },
+    { title: "You have a new message!", description: "1 hour ago" },
+    { title: "Your subscription is expiring soon!", description: "2 hours ago" },
+  ],
+  cardTitle = "Notifications",
+  cardDescription = "You have 3 unread messages.",
+  buttonText = "Mark all as read",
+  ...props
+}: CardDemoProps) {
   return (
     <Card className={cn("w-[380px]", className)} {...props}>
       <CardHeader>
-        <CardTitle>Notifications</CardTitle>
-        <CardDescription>You have 3 unread messages.</CardDescription>
+        <CardTitle>{cardTitle}</CardTitle>
+        <CardDescription>{cardDescription}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         <div className="flex items-center space-x-4 rounded-md border p-4">
@@ -69,11 +74,10 @@ export default function CardDemo({ className, ...props }: CardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white">
-          <Check className="mr-2 h-4 w-4" />
-          Mark all as read
+        <Button className="w-full">
+          <Check className="mr-2 h-4 w-4" /> {buttonText}
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
