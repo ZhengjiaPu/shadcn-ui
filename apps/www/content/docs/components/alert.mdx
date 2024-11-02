@@ -1,14 +1,18 @@
 ---
 title: Alert
-description: Displays a callout for user attention.
+description: An alert is a UI component that displays a callout message to capture user attention. It is commonly used to convey important information, warnings, errors, or success messages in a visually distinct manner, often accompanied by an icon for added context.
 component: true
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/alert-dialog
+  api: https://www.radix-ui.com/primitives/docs/components/alert-dialog#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-alert--docs
+  guideline: https://react-spectrum.adobe.com/react-spectrum/AlertDialog.html
+  accessibility:
 ---
 
-<ComponentPreview
-  name="alert-demo"
-  title="An alert with an icon, title and description."
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
-/>
+## Introduction
+
+The Alert component in our UI library is designed to deliver clear and accessible notifications that inform users about the system’s current state or guide them through the application flow. The component supports various alert types including `default`, `destructive`, `information`, `warning`, and `success`. Each variant is equipped with its own unique animations and color schemes to ensure that users can quickly recognize the nature of the message. With customizable elements like icons, titles, and descriptions, the Alert component adapts well to multiple use cases such as system notifications, form validations, and updates, ensuring it stands out while remaining accessible and visually distinct.
 
 ## Installation
 
@@ -58,27 +62,42 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 </Alert>
 ```
 
-## Examples
+## Demo
+
+An alert with an icon, title, and description. The title says 'Heads up!' and the description is 'You can add components to your app using the CLI.
+
+<ComponentPreview name="alert-demo" description="" />
+## Variants
 
 ### Default
 
+The default variant is a general-purpose notification suitable for standard messages that don't require heightened attention. It comes with subtle entrance animations and a neutral color scheme for a professional appearance.
+
 <ComponentPreview
   name="alert-demo"
-  title="An alert with an icon, title and description."
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
+  description="An alert with an icon, title and description."
 />
 ### WithHover
 
-<ComponentPreview
-  name="alert-hover"
-  title="An variant alert for information notice"
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
-/>
+The hover variant of the Alert component provides visual feedback when a user hovers over it. This style can help capture user attention by changing background and text colors on hover, making it a great choice for notifications that might benefit from enhanced visibility without interrupting the user’s workflow.
+
+<ComponentPreview name="alert-hover" description="alert-hover" />
 
 ### Animation
 
-<ComponentPreview
-  name="alert-animation"
-  title="An variant alert for information notice"
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
-/>
+The animation variant uses Framer Motion to add dynamic entry and exit animations to the Alert component, enhancing user engagement through movement and attracting attention to key notifications. Each variant has a unique animation style based on its purpose.
+
+<ComponentPreview name="alert-animation" description="alert-animation" />
+## Reference
+
+The design and accessibility of the Alert component follow established UI guidelines to ensure clarity and usability. Our implementation considers:
+
+W3C Accessibility Guidelines - Ensuring accessible design for all users, including keyboard navigation and screen reader compatibility.
+
+Adobe Spectrum Design Guidelines - Implementing user-friendly alerts that are visually distinct, accessible, and cohesive.
+
+## Version History
+
+| Version | Editor   | Reviewer    | Date      | Description     |
+| ------- | -------- | ----------- | --------- | --------------- |
+| v2.0    | Yibei Li | Zhengjia Pu | 1/11/2024 | updated version |
