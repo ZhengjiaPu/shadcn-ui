@@ -1072,6 +1072,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "carousel-basic": {
+      name: "carousel-basic",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/default/example/carousel-basic")),
+      source: "",
+      files: ["registry/default/example/carousel-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-auto": {
+      name: "carousel-auto",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/default/example/carousel-auto")),
+      source: "",
+      files: ["registry/default/example/carousel-auto.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-images": {
+      name: "carousel-images",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/default/example/carousel-images")),
+      source: "",
+      files: ["registry/default/example/carousel-images.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "checkbox-demo": {
       name: "checkbox-demo",
       type: "components:example",
@@ -4809,6 +4842,39 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/carousel-plugin")),
       source: "",
       files: ["registry/new-york/example/carousel-plugin.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-basic": {
+      name: "carousel-basic",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/new-york/example/carousel-basic")),
+      source: "",
+      files: ["registry/new-york/example/carousel-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-auto": {
+      name: "carousel-auto",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/new-york/example/carousel-auto")),
+      source: "",
+      files: ["registry/new-york/example/carousel-auto.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-images": {
+      name: "carousel-images",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/new-york/example/carousel-images")),
+      source: "",
+      files: ["registry/new-york/example/carousel-images.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -8554,6 +8620,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "carousel-basic": {
+      name: "carousel-basic",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/sydney/example/carousel-basic")),
+      source: "",
+      files: ["registry/sydney/example/carousel-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-auto": {
+      name: "carousel-auto",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/sydney/example/carousel-auto")),
+      source: "",
+      files: ["registry/sydney/example/carousel-auto.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-images": {
+      name: "carousel-images",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/sydney/example/carousel-images")),
+      source: "",
+      files: ["registry/sydney/example/carousel-images.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "checkbox-demo": {
       name: "checkbox-demo",
       type: "components:example",
@@ -12291,6 +12390,39 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/ibm/example/carousel-plugin")),
       source: "",
       files: ["registry/ibm/example/carousel-plugin.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-basic": {
+      name: "carousel-basic",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/ibm/example/carousel-basic")),
+      source: "",
+      files: ["registry/ibm/example/carousel-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-auto": {
+      name: "carousel-auto",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/ibm/example/carousel-auto")),
+      source: "",
+      files: ["registry/ibm/example/carousel-auto.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-images": {
+      name: "carousel-images",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/ibm/example/carousel-images")),
+      source: "",
+      files: ["registry/ibm/example/carousel-images.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
