@@ -2315,6 +2315,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "tooltip-basic": {
+      name: "tooltip-basic",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/default/example/tooltip-basic")),
+      source: "",
+      files: ["registry/default/example/tooltip-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-disabled": {
+      name: "tooltip-disabled",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/default/example/tooltip-disabled")),
+      source: "",
+      files: ["registry/default/example/tooltip-disabled.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "typography-blockquote": {
       name: "typography-blockquote",
       type: "components:example",
@@ -6096,6 +6118,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/tooltip-demo")),
       source: "",
       files: ["registry/new-york/example/tooltip-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-basic": {
+      name: "tooltip-basic",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/new-york/example/tooltip-basic")),
+      source: "",
+      files: ["registry/new-york/example/tooltip-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-disabled": {
+      name: "tooltip-disabled",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/new-york/example/tooltip-disabled")),
+      source: "",
+      files: ["registry/new-york/example/tooltip-disabled.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -9885,6 +9929,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "tooltip-basic": {
+      name: "tooltip-basic",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/sydney/example/tooltip-basic")),
+      source: "",
+      files: ["registry/sydney/example/tooltip-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-disabled": {
+      name: "tooltip-disabled",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/sydney/example/tooltip-disabled")),
+      source: "",
+      files: ["registry/sydney/example/tooltip-disabled.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "typography-blockquote": {
       name: "typography-blockquote",
       type: "components:example",
@@ -13666,6 +13732,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/ibm/example/tooltip-demo")),
       source: "",
       files: ["registry/ibm/example/tooltip-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-basic": {
+      name: "tooltip-basic",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/ibm/example/tooltip-basic")),
+      source: "",
+      files: ["registry/ibm/example/tooltip-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-disabled": {
+      name: "tooltip-disabled",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/ibm/example/tooltip-disabled")),
+      source: "",
+      files: ["registry/ibm/example/tooltip-disabled.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
