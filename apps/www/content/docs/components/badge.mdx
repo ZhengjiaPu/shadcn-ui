@@ -1,14 +1,21 @@
 ---
 title: Badge
-description: Displays a badge or a component that looks like a badge.
+description: A small, customizable indicator used to convey information or highlight status.
 component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/accordion
+  api: https://www.radix-ui.com/docs/primitives/components/accordion#api-reference
+  storybook: http://localhost:6006/?path=/story/components-badge--default
+  guideline: https://react-spectrum.adobe.com/react-spectrum/Badge.html
 ---
 
-<ComponentPreview
-  name="badge-demo"
-  title="Badge"
-  description="A default badge"
-/>
+## Introduction
+
+The Badge component is a small, versatile indicator that can be used to convey information such as status, count, or other contextual data. Commonly placed on icons, buttons, or list items, badges provide a quick visual cue for users to notice updates, alerts, or numerical values. They are customizable in terms of color, size, and content, making them a flexible tool to enhance the user interface and improve the user experience. Badges are frequently used in notifications, item counts, and highlighting specific statuses within applications.
+
+## Demo
+
+<ComponentPreview name="badge-demo" description="A badge" />
 
 ## Installation
 
@@ -64,38 +71,46 @@ import { badgeVariants } from "@/components/ui/badge"
 <Link className={badgeVariants({ variant: "outline" })}>Badge</Link>
 ```
 
-## Examples
+## Variants
 
-### Default
+### Default Badge
 
-<ComponentPreview
-  name="badge-demo"
-  title="Badge"
-  description="A default badge"
-/>
+<ComponentPreview name="badge-demo" description="A badge" />
 
 ---
 
-### Secondary
+### Secondary Badge
 
 <ComponentPreview
   name="badge-secondary"
-  title="Badge"
   description="A badge using secondary as variant."
 />
 
 ---
 
-### Outline
+### Outline Badge
 
 <ComponentPreview
   name="badge-outline"
-  title="Badge"
   description="A badge using outline as variant."
 />
 
 ---
 
-### Destructive
+### Destructive Badge
 
 <ComponentPreview name="badge-destructive" description="A destructive badge." />
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Wentao Wu   | Wentao Wu   | 1/11/2024  | Updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.
