@@ -66,7 +66,14 @@ export default function CheckboxReactHookFormSingle() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+
+        {/* 橙色按钮 */}
+        <Button
+          type="submit"
+          className="w-full py-2 px-4 bg-orange-500 hover:bg-orange-700 text-white"
+        >
+          Submit
+        </Button>
       </form>
     </Form>
   )
