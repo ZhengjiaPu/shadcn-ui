@@ -1,7 +1,8 @@
-// draw-dialog.tsx
 import * as React from "react"
 
-import { Button } from "../../registry/default/ui/button"
+import { cn } from "@/lib/utils"
+import { useMediaQuery } from "@/hooks/use-media-query"
+import { Button } from "@/registry/default/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -9,7 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../registry/default/ui/dialog"
+} from "@/registry/default/ui/dialog"
 import {
   Drawer,
   DrawerClose,
@@ -19,34 +20,11 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "../../registry/default/ui/drawer"
-import { Input } from "../../registry/default/ui/input"
-import { Label } from "../../registry/default/ui/label"
+} from "@/registry/default/ui/drawer"
+import { Input } from "@/registry/default/ui/input"
+import { Label } from "@/registry/default/ui/label"
 
-// 模拟 useMediaQuery 钩子，确保在 Storybook 中不会出错
-const useMediaQuery = (query: string) => {
-  return typeof window !== "undefined" && window.matchMedia(query).matches
-}
-
-export interface DrawDialogProps {
-  openButtonLabel?: string
-  dialogTitle?: string
-  dialogDescription?: string
-  emailDefaultValue?: string
-  usernameDefaultValue?: string
-  submitButtonLabel?: string
-  cancelButtonLabel?: string
-}
-
-export default function DrawDialog({
-  openButtonLabel = "Edit Profile",
-  dialogTitle = "Edit profile",
-  dialogDescription = "Make changes to your profile here. Click save when you're done.",
-  emailDefaultValue = "shadcn@example.com",
-  usernameDefaultValue = "@shadcn",
-  submitButtonLabel = "Save changes",
-  cancelButtonLabel = "Cancel",
-}: DrawDialogProps) {
+export default function DrawerDialogDemo() {
   const [open, setOpen] = React.useState(false)
   const isDesktop = useMediaQuery("(min-width: 768px)")
 
@@ -54,18 +32,21 @@ export default function DrawDialog({
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline">{openButtonLabel}</Button>
+          <Button
+            variant="outline"
+            className="text-orange-500 border-orange-500"
+          >
+            Edit Profile
+          </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle>{dialogTitle}</DialogTitle>
-            <DialogDescription>{dialogDescription}</DialogDescription>
+            <DialogTitle>Edit profile</DialogTitle>
+            <DialogDescription>
+              Make changes to your profile here. Click save when you're done.
+            </DialogDescription>
           </DialogHeader>
-          <ProfileForm
-            emailDefaultValue={emailDefaultValue}
-            usernameDefaultValue={usernameDefaultValue}
-            submitButtonLabel={submitButtonLabel}
-          />
+          <ProfileForm />
         </DialogContent>
       </Dialog>
     )
@@ -74,22 +55,26 @@ export default function DrawDialog({
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button variant="outline">{openButtonLabel}</Button>
+        <Button variant="outline" className="text-orange-500 border-orange-500">
+          Edit Profile
+        </Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="text-left">
-          <DrawerTitle>{dialogTitle}</DrawerTitle>
-          <DrawerDescription>{dialogDescription}</DrawerDescription>
+          <DrawerTitle>Edit profile</DrawerTitle>
+          <DrawerDescription>
+            Make changes to your profile here. Click save when you're done.
+          </DrawerDescription>
         </DrawerHeader>
-        <ProfileForm
-          emailDefaultValue={emailDefaultValue}
-          usernameDefaultValue={usernameDefaultValue}
-          submitButtonLabel={submitButtonLabel}
-          className="px-4"
-        />
+        <ProfileForm className="px-4" />
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
-            <Button variant="outline">{cancelButtonLabel}</Button>
+            <Button
+              variant="outline"
+              className="text-orange-500 border-orange-500"
+            >
+              Cancel
+            </Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>
@@ -97,29 +82,23 @@ export default function DrawDialog({
   )
 }
 
-interface ProfileFormProps extends React.ComponentProps<"form"> {
-  emailDefaultValue?: string
-  usernameDefaultValue?: string
-  submitButtonLabel?: string
-}
-
-function ProfileForm({
-  emailDefaultValue,
-  usernameDefaultValue,
-  submitButtonLabel,
-  className,
-}: ProfileFormProps) {
+function ProfileForm({ className }: React.ComponentProps<"form">) {
   return (
-    <form className={`grid items-start gap-4 ${className}`}>
+    <form className={cn("grid items-start gap-4", className)}>
       <div className="grid gap-2">
         <Label htmlFor="email">Email</Label>
-        <Input type="email" id="email" defaultValue={emailDefaultValue} />
+        <Input type="email" id="email" defaultValue="shadcn@example.com" />
       </div>
       <div className="grid gap-2">
         <Label htmlFor="username">Username</Label>
-        <Input id="username" defaultValue={usernameDefaultValue} />
+        <Input id="username" defaultValue="@shadcn" />
       </div>
-      <Button type="submit">{submitButtonLabel}</Button>
+      <Button
+        type="submit"
+        className="bg-orange-500 hover:bg-orange-700 text-white"
+      >
+        Save changes
+      </Button>
     </form>
   )
 }
