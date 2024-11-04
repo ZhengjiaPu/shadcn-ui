@@ -5,7 +5,12 @@ component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/checkbox
   api: https://www.radix-ui.com/docs/primitives/components/checkbox#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-checkbox--docs
 ---
+
+## Introduction
+
+The Checkbox component is a versatile UI element used to capture binary choices, such as selecting or deselecting an option. This component provides flexibility with customizable styling and supports multiple states, including checked, unchecked, and indeterminate, making it suitable for various selection tasks. The Checkbox component can be easily integrated into forms, lists, and filters, providing a consistent and user-friendly way for users to make selections. Its accessible design ensures compatibility with screen readers and keyboard navigation, making it ideal for inclusive, responsive applications.
 
 <ComponentPreview name="checkbox-demo" description="A checkbox" />
 
@@ -61,6 +66,8 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 ### With text
 
+The CheckboxWithText component combines a checkbox with accompanying text, making it ideal for scenarios where users need to acknowledge terms or policies. The checkbox aligns with a label and a descriptive note, providing a clear, accessible interface. The label is linked to the checkbox for easy selection, and the additional text gives users context, such as references to terms or privacy policies. This setup is perfect for forms or agreements, where clarity and user consent are essential. The component also includes styling for disabled states, maintaining usability and a consistent visual design.
+
 <ComponentPreview
   name="checkbox-with-text"
   description="A checkbox with label and description."
@@ -68,10 +75,26 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 ### Disabled
 
+The CheckboxDisabled component is a checkbox paired with a label that indicates terms acceptance but is set to a disabled state. This setup visually communicates to users that the option is currently unavailable or not selectable. The label and checkbox are styled with reduced opacity and a “not-allowed” cursor, making it clear that interaction is restricted. This component is useful in forms where certain options may only be available based on user actions or conditions, maintaining clarity and accessibility while guiding user behavior.
+
 <ComponentPreview name="checkbox-disabled" description="A disabled checkbox" />
 
 ### Form
 
+The CheckboxForm component combines both single and multiple checkbox options within a single form, leveraging React Hook Form and Zod for streamlined validation. This versatile component allows for individual checkbox options, like selecting mobile-specific settings, as well as multiple checkbox selections, such as choosing items to display in a sidebar. Each checkbox is associated with labels and descriptions for clarity, enhancing user guidance. The form enforces validation, ensuring that users select at least one item when required. Upon submission, the form triggers a toast notification, displaying the selected values in JSON format to provide immediate feedback. The CheckboxForm component is ideal for customizable settings and preferences, where both single and multiple selections need to be managed with user-friendly, interactive feedback.
+
 <ComponentPreview name="checkbox-form-single" />
 
 <ComponentPreview name="checkbox-form-multiple" />
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Yihuan Cai  | Yihuan Cai  | 1/11/2024  | Updated version |
