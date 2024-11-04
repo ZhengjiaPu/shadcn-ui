@@ -24,7 +24,9 @@ export default function SheetSide() {
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
           <SheetTrigger asChild>
-            <Button variant="outline">{side}</Button>
+            <Button variant="outline" className="text-blue-500 border-blue-500">
+              {side}
+            </Button>
           </SheetTrigger>
           <SheetContent side={side}>
             <SheetHeader>
@@ -49,7 +51,12 @@ export default function SheetSide() {
             </div>
             <SheetFooter>
               <SheetClose asChild>
-                <Button type="submit">Save changes</Button>
+                <Button
+                  type="submit"
+                  className="bg-blue-500 hover:bg-blue-700 text-white"
+                >
+                  Save changes
+                </Button>
               </SheetClose>
             </SheetFooter>
           </SheetContent>
