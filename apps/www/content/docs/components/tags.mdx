@@ -1,0 +1,76 @@
+---
+title: Tags
+description: A component that categorizes content with interactive labels.
+component: true
+links:
+  storybook: http://localhost:6006/?path=/docs/components-tags--docs
+---
+
+## Introduction
+
+The Tags component is designed to display a series of labels or tags, often used for categorization, filtering, or highlighting specific attributes. Each tag is presented as a distinct, styled element, making it easy for users to identify different categories or topics. The component is customizable, allowing for varied styles, colors, and sizes to suit the context. It’s ideal for applications where content needs to be organized by tags, such as blog categories, product labels, or searchable keywords. The Tags component provides a clean, intuitive way to enhance content discoverability and user interaction.
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">
+    <p>npx shadcn-ui@latest add badge</p>
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Install the following dependencies:</Step>
+      <p>npm install @radix-ui/react-badge</p>
+      <Step>Copy and paste the following code into your project.</Step>
+      <ComponentSource name="badge" />
+      <Step>Update the import paths to match your project setup.</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Badge } from "@/components/ui/badge"
+```
+
+```tsx
+<div>
+  <Badge variant="default">Badge</Badge>
+  <Badge variant="secondary" style={{ marginLeft: "10px" }}>
+    Secondary
+  </Badge>
+  <Badge variant="destructive" style={{ marginLeft: "10px" }}>
+    Destructive
+  </Badge>
+  <Badge variant="outline" style={{ marginLeft: "10px" }}>
+    Outline
+  </Badge>
+</div>
+```
+
+Developers can customize the badge styles and content by adjusting the variant and style properties, enabling flexible usage across various contexts.
+
+## InnovativeTags
+
+The InnovativeTags component uses the Badge component to display various tag styles, showcasing different visual variants like "default," "secondary," "destructive," and "outline." Each tag is styled with a slight margin to maintain spacing between tags, enhancing readability and organization. This component is perfect for labeling or categorizing items with distinct visual cues, making it easy for users to recognize the importance or type of each tag. The InnovativeTags component is well-suited for contexts where quick identification of different statuses or categories is needed, such as notifications, alerts, or item labels.
+
+<ComponentPreview
+  name="tags-innovativetags"
+  description="A card showing notifications settings with image."
+/>
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Yihuan Cai  | Yihuan Cai  | 2/11/2024  | Updated version |

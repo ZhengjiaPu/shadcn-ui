@@ -2040,6 +2040,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "tags-innovativetags": {
+      name: "tags-innovativetags",
+      type: "components:example",
+      registryDependencies: ["tags"],
+      component: React.lazy(() => import("@/registry/default/example/tags-innovativetags")),
+      source: "",
+      files: ["registry/default/example/tags-innovativetags.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "textarea-demo": {
       name: "textarea-demo",
       type: "components:example",
@@ -5810,6 +5821,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/tabs-variant")),
       source: "",
       files: ["registry/new-york/example/tabs-variant.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tags-innovativetags": {
+      name: "tags-innovativetags",
+      type: "components:example",
+      registryDependencies: ["tags"],
+      component: React.lazy(() => import("@/registry/new-york/example/tags-innovativetags")),
+      source: "",
+      files: ["registry/new-york/example/tags-innovativetags.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -9588,6 +9610,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "tags-innovativetags": {
+      name: "tags-innovativetags",
+      type: "components:example",
+      registryDependencies: ["tags"],
+      component: React.lazy(() => import("@/registry/sydney/example/tags-innovativetags")),
+      source: "",
+      files: ["registry/sydney/example/tags-innovativetags.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "textarea-demo": {
       name: "textarea-demo",
       type: "components:example",
@@ -13358,6 +13391,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/ibm/example/tabs-variant")),
       source: "",
       files: ["registry/ibm/example/tabs-variant.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tags-innovativetags": {
+      name: "tags-innovativetags",
+      type: "components:example",
+      registryDependencies: ["tags"],
+      component: React.lazy(() => import("@/registry/ibm/example/tags-innovativetags")),
+      source: "",
+      files: ["registry/ibm/example/tags-innovativetags.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

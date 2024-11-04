@@ -848,6 +848,12 @@ export const examples: Registry = [
     files: ["example/tabs-variant.tsx"],
   },
   {
+    name: "tags-innovativetags",
+    type: "components:example",
+    registryDependencies: ["tags"],
+    files: ["example/tags-innovativetags.tsx"],
+  },
+  {
     name: "textarea-demo",
     type: "components:example",
     registryDependencies: ["textarea"],

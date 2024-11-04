@@ -343,6 +343,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Tags",
+          href: "/docs/components/tags",
+          items: [],
+        },
+        {
           title: "Textarea",
           href: "/docs/components/textarea",
           items: [],
