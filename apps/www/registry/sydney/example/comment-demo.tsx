@@ -1,13 +1,171 @@
+// import React, { useState } from "react"
+// import { Forward, Heart, MessageCircleMore } from "lucide-react"
+
+// import { Avatar, AvatarImage } from "@/registry/sydney/ui/avatar"
+// import { Button } from "@/registry/sydney/ui/button"
+// import { Card, CardContent, CardHeader } from "@/registry/sydney/ui/card"
+// import { Label } from "@/registry/sydney/ui/label"
+// import { Textarea } from "@/registry/sydney/ui/textarea"
+// import { Toaster } from "@/registry/sydney/ui/toaster"
+// import { useToast } from "@/registry/sydney/ui/use-toast"
+
+// export function BasicComment() {
+//   const initialMessage = {
+//     user: "USYD Student",
+//     avatarUrl: "https://api.dicebear.com/7.x/miniavs/svg?seed=1",
+//     description:
+//       "I am a student of USYD and majoring in Master of Computer Science.",
+//     content:
+//       "Education for all, leadership for good. Progressive thinking, breaking with convention, challenging the status quo and improving the world around us is in our DNA.",
+//     likes: 156,
+//     comments: 156,
+//     shares: 2,
+//   }
+
+//   const [message, setMessage] = useState(initialMessage)
+//   const [isTextareaActive, setIsTextareaActive] = useState(false)
+//   const [commentText, setCommentText] = useState("")
+//   const { toast } = useToast()
+
+//   const incrementStat = (stat: "likes" | "comments" | "shares") => {
+//     if (stat === "comments") {
+//       setIsTextareaActive(!isTextareaActive) // Toggle textarea visibility
+//       setCommentText("") // Reset the comment text
+//     } else {
+//       setMessage((prev) => ({ ...prev, [stat]: prev[stat] + 1 }))
+//     }
+//   }
+
+//   const postComment = () => {
+//     if (commentText.trim()) {
+//       toast({
+//         title: "You have successfully posted your comment:",
+//         description: commentText,
+//       })
+
+//       setMessage((prev) => ({ ...prev, comments: prev.comments + 1 }))
+//       setIsTextareaActive(false)
+//       setCommentText("")
+//     }
+//   }
+
+//   return (
+//     <>
+//       <Toaster />
+//       <Card className="mb-4">
+//         <CardHeader
+//           className="flex flex-col p-4"
+//           style={{ borderBottom: "1px solid #e8e8e8" }}
+//         >
+//           <div className="flex items-center mb-2">
+//             <Avatar style={{ marginRight: "10px" }}>
+//               <AvatarImage src={message.avatarUrl} alt={message.user} />
+//             </Avatar>
+//             <div className="flex flex-col">
+//               <Label style={{ fontWeight: "bold", fontSize: "1.05rem" }}>
+//                 {message.user}
+//               </Label>
+//             </div>
+//           </div>
+//           <div className="flex flex-col" style={{ marginLeft: "50px" }}>
+//             <Label style={{ fontSize: "0.75rem", color: "gray" }}>
+//               {message.description}
+//             </Label>
+//           </div>
+//         </CardHeader>
+//         <CardContent>
+//           <div
+//             className="text-left"
+//             style={{
+//               fontSize: "0.95rem",
+//               marginTop: "20px",
+//               marginBottom: "10px",
+//             }}
+//           >
+//             {message.content}
+//           </div>
+//           <div
+//             className="flex mt-2 justify-left text-sm text-gray-400 space-x-1"
+//             style={{ marginTop: "20px" }}
+//           >
+//             <Button
+//               variant="link"
+//               onClick={() => incrementStat("likes")}
+//               style={{ color: "gray" }}
+//             >
+//               <Heart size={20} style={{ marginRight: "5px" }} />
+//               {message.likes}
+//             </Button>
+//             <span
+//               className="text-gray-100 mx-1"
+//               style={{ marginTop: "10px", color: "gray" }}
+//             >
+//               |
+//             </span>
+//             <Button
+//               variant="link"
+//               onClick={() => incrementStat("comments")}
+//               style={{ color: "gray" }}
+//             >
+//               <MessageCircleMore size={20} style={{ marginRight: "5px" }} />
+//               {message.comments}
+//             </Button>
+//             <span
+//               className="text-gray-400 mx-1"
+//               style={{ marginTop: "10px", color: "gray" }}
+//             >
+//               |
+//             </span>
+//             <Button
+//               variant="link"
+//               onClick={() => incrementStat("shares")}
+//               style={{ color: "gray" }}
+//             >
+//               <Forward size={20} style={{ marginRight: "5px" }} />
+//               {message.shares}
+//             </Button>
+//           </div>
+//           {isTextareaActive && (
+//             <div className="grid w-full gap-2 mt-2">
+//               <Textarea
+//                 value={commentText}
+//                 placeholder="Type your comment here."
+//                 onChange={(e) => setCommentText(e.target.value)}
+//               />
+//               <div className="flex justify-end space-x-2">
+//                 <Button
+//                   onClick={() => setIsTextareaActive(false)}
+//                   variant="secondary"
+//                 >
+//                   Close
+//                 </Button>
+//                 <Button
+//                   onClick={postComment}
+//                   variant="default"
+//                   disabled={!commentText.trim()}
+//                 >
+//                   Post Comment
+//                 </Button>
+//               </div>
+//             </div>
+//           )}
+//         </CardContent>
+//       </Card>
+//     </>
+//   )
+// }
+
+// export default BasicComment
 import React, { useState } from "react"
 import { Forward, Heart, MessageCircleMore } from "lucide-react"
 
-import { Avatar, AvatarImage } from "@/registry/sydney/ui/avatar"
-import { Button } from "@/registry/sydney/ui/button"
-import { Card, CardContent, CardHeader } from "@/registry/sydney/ui/card"
-import { Label } from "@/registry/sydney/ui/label"
-import { Textarea } from "@/registry/sydney/ui/textarea"
-import { Toaster } from "@/registry/sydney/ui/toaster"
-import { useToast } from "@/registry/sydney/ui/use-toast"
+import { Avatar, AvatarImage } from "@/registry/default/ui/avatar"
+import { Button } from "@/registry/default/ui/button"
+import { Card, CardContent, CardHeader } from "@/registry/default/ui/card"
+import { Label } from "@/registry/default/ui/label"
+import { Textarea } from "@/registry/default/ui/textarea"
+import { Toaster } from "@/registry/default/ui/toaster"
+import { useToast } from "@/registry/default/ui/use-toast"
 
 export function BasicComment() {
   const initialMessage = {
@@ -29,8 +187,8 @@ export function BasicComment() {
 
   const incrementStat = (stat: "likes" | "comments" | "shares") => {
     if (stat === "comments") {
-      setIsTextareaActive(!isTextareaActive) // Toggle textarea visibility
-      setCommentText("") // Reset the comment text
+      setIsTextareaActive(!isTextareaActive) 
+      setCommentText("") 
     } else {
       setMessage((prev) => ({ ...prev, [stat]: prev[stat] + 1 }))
     }
@@ -39,7 +197,7 @@ export function BasicComment() {
   const postComment = () => {
     if (commentText.trim()) {
       toast({
-        title: "You have successfully posted your comment:",
+        title: "Comment posted successfully:",
         description: commentText,
       })
 
@@ -52,23 +210,20 @@ export function BasicComment() {
   return (
     <>
       <Toaster />
-      <Card className="mb-4">
-        <CardHeader
-          className="flex flex-col p-4"
-          style={{ borderBottom: "1px solid #e8e8e8" }}
-        >
+      <Card className="mb-4" style={{ borderColor: "#EAEAEA" }}>
+        <CardHeader className="flex flex-col p-4" style={{ borderBottom: "1px solid #EAEAEA" }}>
           <div className="flex items-center mb-2">
             <Avatar style={{ marginRight: "10px" }}>
               <AvatarImage src={message.avatarUrl} alt={message.user} />
             </Avatar>
             <div className="flex flex-col">
-              <Label style={{ fontWeight: "bold", fontSize: "1.05rem" }}>
+              <Label style={{ fontFamily: "Apercu Pro", fontWeight: "bold", fontSize: "1.05rem", color: "#333333" }}>
                 {message.user}
               </Label>
             </div>
           </div>
           <div className="flex flex-col" style={{ marginLeft: "50px" }}>
-            <Label style={{ fontSize: "0.75rem", color: "gray" }}>
+            <Label style={{ fontFamily: "Apercu Pro", fontSize: "0.85rem", color: "gray" }}>
               {message.description}
             </Label>
           </div>
@@ -77,50 +232,27 @@ export function BasicComment() {
           <div
             className="text-left"
             style={{
+              fontFamily: "Lyon Display",
               fontSize: "0.95rem",
+              color: "#333333",
               marginTop: "20px",
               marginBottom: "10px",
             }}
           >
             {message.content}
           </div>
-          <div
-            className="flex mt-2 justify-left text-sm text-gray-400 space-x-1"
-            style={{ marginTop: "20px" }}
-          >
-            <Button
-              variant="link"
-              onClick={() => incrementStat("likes")}
-              style={{ color: "gray" }}
-            >
+          <div className="flex mt-2 justify-left text-sm space-x-2" style={{ color: "#666666", marginTop: "20px" }}>
+            <Button variant="link" onClick={() => incrementStat("likes")} style={{ color: "#666666" }}>
               <Heart size={20} style={{ marginRight: "5px" }} />
               {message.likes}
             </Button>
-            <span
-              className="text-gray-100 mx-1"
-              style={{ marginTop: "10px", color: "gray" }}
-            >
-              |
-            </span>
-            <Button
-              variant="link"
-              onClick={() => incrementStat("comments")}
-              style={{ color: "gray" }}
-            >
+            <span className="text-gray-300 mx-1" style={{ color: "#EAEAEA" }}>|</span>
+            <Button variant="link" onClick={() => incrementStat("comments")} style={{ color: "#666666" }}>
               <MessageCircleMore size={20} style={{ marginRight: "5px" }} />
               {message.comments}
             </Button>
-            <span
-              className="text-gray-400 mx-1"
-              style={{ marginTop: "10px", color: "gray" }}
-            >
-              |
-            </span>
-            <Button
-              variant="link"
-              onClick={() => incrementStat("shares")}
-              style={{ color: "gray" }}
-            >
+            <span className="text-gray-300 mx-1" style={{ color: "#EAEAEA" }}>|</span>
+            <Button variant="link" onClick={() => incrementStat("shares")} style={{ color: "#666666" }}>
               <Forward size={20} style={{ marginRight: "5px" }} />
               {message.shares}
             </Button>
@@ -129,21 +261,15 @@ export function BasicComment() {
             <div className="grid w-full gap-2 mt-2">
               <Textarea
                 value={commentText}
-                placeholder="Type your comment here."
+                placeholder="Inspire others with your thoughts."
                 onChange={(e) => setCommentText(e.target.value)}
+                style={{ fontFamily: "Apercu Pro", color: "#333333" }}
               />
               <div className="flex justify-end space-x-2">
-                <Button
-                  onClick={() => setIsTextareaActive(false)}
-                  variant="secondary"
-                >
+                <Button onClick={() => setIsTextareaActive(false)} variant="secondary" style={{ fontFamily: "Apercu Pro" }}>
                   Close
                 </Button>
-                <Button
-                  onClick={postComment}
-                  variant="default"
-                  disabled={!commentText.trim()}
-                >
+                <Button onClick={postComment} variant="default" disabled={!commentText.trim()} style={{ fontFamily: "Apercu Pro", backgroundColor: "#FF6F00", color: "#FFFFFF" }}>
                   Post Comment
                 </Button>
               </div>

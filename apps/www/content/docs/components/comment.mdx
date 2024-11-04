@@ -1,16 +1,21 @@
 ---
 title: Comment
-description: A component for user to post comments.
+description: A component for users to post and interact with comments.
 component: true
 links:
-  doc: https://www.radix-ui.com/docs/primitives/components/accordion
-  api: https://www.radix-ui.com/docs/primitives/components/accordion#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-comment--docs
 ---
+
+## Introduction
+
+The Comment component allows users to post, view, and interact with comments. It includes functionality for liking, sharing, and replying to comments, providing an engaging experience within social or community-based applications. This component integrates user avatars, interactive buttons, and text areas to create a complete commenting interface, making it ideal for forums, social media platforms, and blog comment sections.
+
+## Demo
 
 <ComponentPreview
   name="comment-demo"
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
-  description="A comment component showcasing user interactions with likes, comments, and shares"
+  description="A comment component showcasing user interactions with likes, comments, and shares."
 />
 
 ## Installation
@@ -23,6 +28,8 @@ links:
 </TabsList>
 
 <TabsContent value="cli">
+
+Run the following commands to install required components:
 
 ```bash
 npx shadcn-ui@latest add card
@@ -45,7 +52,7 @@ npx shadcn-ui@latest add textarea
 npm install lucide-react
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>Copy and paste the Comment component code into your project:</Step>
 
 <ComponentSource name="comment" />
 
@@ -57,14 +64,11 @@ npm install lucide-react
 
 </Tabs>
 
-## Usage
+## Version History
 
-```tsx
-import { Forward, Heart, MessageCircleMore } from "lucide-react"
-
-import { Avatar, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-```
+| Version | Editor      | Reviewer   | Date       | Description     | Status    |
+|---------|-------------|------------|------------|-----------------|-----------|
+| v1.0    | Yuqing Wu   | Yuqing Wu  | 29/04/2024 | Framework       | Completed |
+| v2.0    | Yuqing Wu   | Yuqing Wu  | 01/05/2024 | Add function and interaction| Completed |
+| v3.0    | Yuqing Wu   | Yuqing Wu  | 09/05/2024 | Optimize the style| Completed |
+| v4.0    | Yilin Xiang | Yihan Zhao | 04/11/2024 | Updated version | Published |
