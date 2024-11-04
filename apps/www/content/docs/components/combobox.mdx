@@ -1,13 +1,21 @@
 ---
 title: Combobox
-description: Autocomplete input and command palette with a list of suggestions.
+description: An input component that combines a text field with a dropdown list.
 component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/accordion
+  api: https://www.radix-ui.com/docs/primitives/components/accordion#api-reference
+  storybook: http://localhost:6006/?path=/story/components-combobox--default
+  guideline: https://react-spectrum.adobe.com/react-spectrum/ComboBox.html
 ---
 
-<ComponentPreview
-  name="combobox-demo"
-  description="A combobox with a list of frameworks."
-/>
+## Introduction
+
+The Combobox component is a versatile input element that merges the functionality of a text input with a dropdown list, allowing users to either select a predefined option or enter a custom value. This component is particularly useful for fields with a large set of possible options, as it provides a streamlined and space-efficient way to present choices without overwhelming the user. By offering both selection and input capabilities, the Combobox enhances flexibility and user experience, commonly applied in forms, search interfaces, and filters where type-ahead suggestions improve interaction efficiency.
+
+## Demo
+
+<ComponentPreview name="combobox-demo" />
 
 ## Installation
 
@@ -114,14 +122,11 @@ export function ComboboxDemo() {
 }
 ```
 
-## Examples
+## Variants
 
 ### Combobox
 
-<ComponentPreview
-  name="combobox-demo"
-  description="A combobox with a list of frameworks."
-/>
+<ComponentPreview name="combobox-demo" />
 
 ### Popover
 
@@ -129,10 +134,7 @@ export function ComboboxDemo() {
 
 ### Dropdown menu
 
-<ComponentPreview
-  name="combobox-dropdown-menu"
-  description="A combobox in a dropdown menu"
-/>
+<ComponentPreview name="combobox-dropdown-menu" />
 
 ### Responsive
 
@@ -143,3 +145,17 @@ You can create a responsive combobox by using the `<Popover />` on desktop and t
 ### Form
 
 <ComponentPreview name="combobox-form" />
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Wentao Wu   | Wentao Wu   | 1/11/2024  | Updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.

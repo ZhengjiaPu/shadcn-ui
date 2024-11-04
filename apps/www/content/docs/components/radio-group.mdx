@@ -5,7 +5,15 @@ component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/radio-group
   api: https://www.radix-ui.com/docs/primitives/components/radio-group#api-reference
+  storybook: http://localhost:6006/?path=/story/components-radiogroup--default
+  guideline: https://react-spectrum.adobe.com/react-spectrum/RadioGroup.html
 ---
+
+## Introduction
+
+The Radio Group component is a collection of radio buttons that allows users to select only one option from a predefined set. Each button represents a single choice, and selecting one automatically deselects any previously chosen option, ensuring only one option is active at a time. This component is especially useful for forms and settings where a single, definitive selection is required. Radio Groups provide a clear and intuitive way to present mutually exclusive options, enhancing usability by guiding users towards making a specific choice within a controlled selection set.
+
+## Demo
 
 <ComponentPreview
   name="radio-group-demo"
@@ -70,8 +78,26 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 </RadioGroup>
 ```
 
-## Examples
+## Variants
 
-### Form
+### Radio Group Form
 
 <ComponentPreview name="radio-group-form" />
+
+### Radio Group With Alert
+
+<ComponentPreview name="radio-group-block" />
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Wentao Wu   | Wentao Wu   | 1/11/2024  | Updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.
