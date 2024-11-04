@@ -4,7 +4,7 @@ import DrawDemo, { DrawDemoProps } from './draw-demo';
 
 
 const meta: Meta<typeof DrawDemo> = {
-  title: 'Components/DrawDemo',
+  title: 'Components/Draw',
   component: DrawDemo,
   argTypes: {
     initialGoal: {

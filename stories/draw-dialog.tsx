@@ -1,8 +1,6 @@
 // draw-dialog.tsx
 import * as React from "react";
-import { cn } from "@/lib/utils";
-import { useMediaQuery } from "@/hooks/use-media-query";
-import { Button } from "@/registry/default/ui/button";
+import { Button } from "../../registry/default/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/default/ui/dialog";
+} from "../../registry/default/ui/dialog";
 import {
   Drawer,
   DrawerClose,
@@ -20,9 +18,14 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/default/ui/drawer";
-import { Input } from "@/registry/default/ui/input";
-import { Label } from "@/registry/default/ui/label";
+} from "../../registry/default/ui/drawer";
+import { Input } from "../../registry/default/ui/input";
+import { Label } from "../../registry/default/ui/label";
+
+
+const useMediaQuery = (query: string) => {
+  return typeof window !== "undefined" && window.matchMedia(query).matches;
+};
 
 export interface DrawDialogProps {
   openButtonLabel?: string;
@@ -106,7 +109,7 @@ function ProfileForm({
   className,
 }: ProfileFormProps) {
   return (
-    <form className={cn("grid items-start gap-4", className)}>
+    <form className={`grid items-start gap-4 ${className}`}>
       <div className="grid gap-2">
         <Label htmlFor="email">Email</Label>
         <Input type="email" id="email" defaultValue={emailDefaultValue} />
