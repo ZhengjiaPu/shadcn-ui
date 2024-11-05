@@ -19,15 +19,55 @@ export default function DropdownMenuRadioGroupDemo() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button
+          variant="outline"
+          className="hover:bg-blue-600 hover:text-white"
+          style={{
+            fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+            fontWeight: 300,
+          }}
+        >
+          Open
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
+        <DropdownMenuLabel
+          style={{
+            fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+            fontWeight: 300,
+          }}
+        >
+          Panel Position
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem
+            value="top"
+            style={{
+              fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+              fontWeight: 300,
+            }}
+          >
+            Top
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem
+            value="bottom"
+            style={{
+              fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+              fontWeight: 300,
+            }}
+          >
+            Bottom
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem
+            value="right"
+            style={{
+              fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+              fontWeight: 300,
+            }}
+          >
+            Right
+          </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
