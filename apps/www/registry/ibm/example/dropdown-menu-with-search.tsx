@@ -12,7 +12,7 @@ import {
 } from "@/registry/sydney/ui/dropdown-menu"
 
 export function DropdownMenuSelect() {
-  const [selectedOptions, setSelectedOptions] = React.useState([])
+  const [selectedOptions, setSelectedOptions] = React.useState<string[]>([])
   const [searchTerm, setSearchTerm] = React.useState("")
   const [open, setOpen] = React.useState(false)
 

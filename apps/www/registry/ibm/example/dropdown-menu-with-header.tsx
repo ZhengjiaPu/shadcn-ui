@@ -15,7 +15,7 @@ import {
 export function DropdownMenuwithHeader() {
   const userEmail = "nzha9876@uni.sydney.edu.au"
 
-  const [selectedOptions, setSelectedOptions] = React.useState([])
+  const [selectedOptions, setSelectedOptions] = React.useState<string[]>([])
 
   const toggleOption = (option: string) => {
     setSelectedOptions((prev) =>

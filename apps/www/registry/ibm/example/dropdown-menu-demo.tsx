@@ -14,9 +14,9 @@ import {
 } from "@/registry/sydney/ui/dropdown-menu"
 
 export function DropdownMenuCheckboxes() {
-  const [selectedOptions, setSelectedOptions] = React.useState([])
+  const [selectedOptions, setSelectedOptions] = React.useState<string[]>([])
 
-  const toggleOption = (option) => {
+  const toggleOption = (option: string) => {
     setSelectedOptions((prev) =>
       prev.includes(option)
         ? prev.filter((item) => item !== option)
