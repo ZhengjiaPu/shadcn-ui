@@ -20,7 +20,10 @@ export default function CollapsibleDemo() {
       className="w-[350px] space-y-2"
     >
       <div className="flex items-center justify-between space-x-4 px-4">
-        <h4 className="text-sm font-semibold" style={{ fontFamily: 'Segoe UI' }}>
+        <h4
+          className="text-sm font-semibold"
+          style={{ fontFamily: "Segoe UI" }}
+        >
           @peduarte starred 3 repositories
         </h4>
         <CollapsibleTrigger asChild>
@@ -30,14 +33,26 @@ export default function CollapsibleDemo() {
           </Button>
         </CollapsibleTrigger>
       </div>
-      <div className="rounded-md border px-4 py-2 text-sm shadow-sm" style={{ fontFamily: 'Segoe UI' }}>
+      <div
+        className="rounded-md border px-4 py-2 text-sm shadow-sm"
+        style={{ fontFamily: "Segoe UI" }}
+      >
         @radix-ui/primitives
       </div>
-      <CollapsibleContent className="space-y-2" style={{ fontFamily: 'Segoe UI' }}>
-        <div className="rounded-md border px-4 py-2 text-sm shadow-sm" style={{ fontFamily: 'Segoe UI' }}>
+      <CollapsibleContent
+        className="space-y-2"
+        style={{ fontFamily: "Segoe UI" }}
+      >
+        <div
+          className="rounded-md border px-4 py-2 text-sm shadow-sm"
+          style={{ fontFamily: "Segoe UI" }}
+        >
           @radix-ui/colors
         </div>
-        <div className="rounded-md border px-4 py-2 text-sm shadow-sm" style={{ fontFamily: 'Segoe UI' }}>
+        <div
+          className="rounded-md border px-4 py-2 text-sm shadow-sm"
+          style={{ fontFamily: "Segoe UI" }}
+        >
           @stitches/react
         </div>
       </CollapsibleContent>
