@@ -3,130 +3,172 @@ title: Button
 description: Displays a button or a component that looks like a button.
 featured: true
 component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/button
+  api: https://www.radix-ui.com/docs/primitives/components/button#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-button--docs
+  guideline: https://react-spectrum.adobe.com/react-spectrum/Button.html
+  accessibility: https://www.w3.org/WAI/ARIA/apg/patterns/button/
 ---
 
-<ComponentPreview name="button-demo" description="A button" />
+## Introduction
 
-## Installation
+The `Button` component is an essential interactive UI element designed to trigger actions, navigate users, or perform specific tasks. It is a highly customizable element that can adapt to various design requirements, supporting multiple styles like primary, secondary, and outline. Built with accessibility in mind, the Button follows the standards to ensure usability across applications. In the `Demo`, a toast notification is triggered on button click, providing immediate feedback to the user.
 
-<Tabs defaultValue="cli">
+## Demo
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-<TabsContent value="cli">
+<ComponentPreview
+  name="button-demo"
+  description="A button in its default style"
+/>
 
-```bash
-npx shadcn-ui@latest add button
+### Usage
+
+To use the basic `Button` component from our library in your React application, follow these steps for a practical, real-world implementation:
+
+#### Step 1: Install the shadcn Component Library
+
+If you haven’t set up shadcn components in your project, add it by running:
+
+```shell
+npx shadcn-ui@latest add button toast
 ```
 
-</TabsContent>
+#### Step 2: Import the Button Component
 
-<TabsContent value="manual">
+In the file where you want to use the button (e.g., `App.js` or `Form.js`), import it from the library:
 
-<Steps>
-
-<Step>Install the following dependencies:</Step>
-
-```bash
-npm install @radix-ui/react-slot
-```
-
-<Step>Copy and paste the following code into your project.</Step>
-
-<ComponentSource name="button" />
-
-<Step>Update the import paths to match your project setup.</Step>
-
-</Steps>
-
-</TabsContent>
-
-</Tabs>
-
-## Usage
-
-```tsx
+```javascript
 import { Button } from "@/components/ui/button"
 ```
 
-```tsx
-<Button variant="outline">Button</Button>
+#### Step 3: Using the Button with Toast Notification
+
+Here’s an example use case where a button triggers a toast notification on click, providing immediate feedback to the user.
+
+```javascript
+import React from "react"
+
+import { Button } from "@/components/ui/button"
+import { ToastAction, Toaster } from "@/components/ui/toast"
+import { useToast } from "@/components/ui/use-toast"
+
+const ButtonDemo = () => {
+  const { toast } = useToast()
+
+  const handleClick = () => {
+    toast({
+      description: "Button clicked!",
+      action: <ToastAction altText="Goto schedule to undo">Undo</ToastAction>,
+    })
+  }
+
+  return (
+    <div>
+      <Toaster />
+      <Button
+        variant="outline"
+        className="bg-orange-600 text-white hover:bg-orange-700 focus:ring-orange-600"
+        onClick={handleClick}
+      >
+        Click me
+      </Button>
+    </div>
+  )
+}
+
+export default ButtonDemo
 ```
 
-## Link
+#### Explanation
 
-You can use the `buttonVariants` helper to create a link that looks like a button.
+- **Toast Notification**: The `toast` function is called on button click, displaying a message to inform the user that the button was clicked.
+- **Immediate Feedback**: The `ToastAction` provides an option to "Undo" the action, offering additional interactivity.
+- **Custom Styling**: The button uses custom classes to have an orange background with white text, turning a darker orange on hover for visual feedback.
 
-```tsx
-import { buttonVariants } from "@/components/ui/button"
-```
+#### Customizing the Button
 
-```tsx
-<Link className={buttonVariants({ variant: "outline" })}>Click here</Link>
-```
+In a real application, you might want the `Button` to match your branding or a specific design. The `Button` component allows easy customization with props for size, color, and variant (e.g., `variant="outline"`), letting you adapt it to different scenarios, like a “Cancel” button with secondary styling or a larger “Submit” button in primary styling.
 
-Alternatively, you can set the `asChild` parameter and nest the link component.
+## Variants
 
-```tsx
-<Button asChild>
-  <Link href="/login">Login</Link>
-</Button>
-```
+### Primary Button
 
-## Examples
+<ComponentPreview name="button-demo" description="A button in primary style" />
+The Primary Button is used for main actions, capturing user attention for critical
+tasks. Its bold styling differentiates it from other UI elements, making it an ideal
+choice for primary actions in forms or call-to-action sections.
 
-### Primary
+### Secondary Button
 
-<ComponentPreview name="button-demo" description="A primary button" />
+<ComponentPreview
+  name="button-secondary"
+  description="A button in secondary style"
+/>
+The Secondary Button is less prominent than the Primary Button and is commonly used
+for supplementary actions. It visually supports the primary action, allowing users
+to perform alternative tasks or navigate secondary choices.
 
-### Secondary
-
-<ComponentPreview name="button-secondary" description="A secondary button" />
-
-### Destructive
+### Destructive Button
 
 <ComponentPreview
   name="button-destructive"
-  description="A destructive button"
+  description="A button in destructive style"
 />
+The Destructive Button is typically used for actions that have significant consequences,
+like deletions. Its distinctive color signals caution, helping users to understand
+the potential impact of their action.
 
-### Outline
+### Outline Button
 
 <ComponentPreview
   name="button-outline"
-  description="A button using the outline variant."
+  description="A button in outline style"
 />
+The Outline Button provides a subtler visual style with only a border, making it
+suitable for less prominent actions where visual weight needs to be minimized, such
+as in toolbars or secondary options.
 
-### Ghost
+### Ghost Button
+
+<ComponentPreview name="button-ghost" description="A button in ghost style" />
+The Ghost Button is minimalistic, with no solid fill or border, blending well with
+backgrounds. This button is ideal for actions that are low-priority or when used
+in dense UI layouts.
+
+### Link Button
+
+<ComponentPreview name="button-link" description="A button in link style" />
+The Link Button mimics the appearance of a hyperlink, directing users to related
+pages or content without requiring a traditional button interface. It’s useful for
+inline navigation within text or cards.
+
+### Icon Button
+
+<ComponentPreview name="button-icon" description="A button with an icon only" />
+The Icon Button is compact, designed for actions where space is limited, such as
+toolbars or compact UI elements. Its concise design helps users quickly recognize
+actions by icon.
+
+### Button with Icon
 
 <ComponentPreview
-  name="button-ghost"
-  description="A button using the ghost variant"
+  name="button-with-icon"
+  description="A button with text and an icon"
 />
+A Button with Icon provides a blend of icon and text for improved usability, offering
+additional context to users. Ideal for scenarios requiring quick action recognition
+alongside descriptive labels.
 
-### Link
-
-<ComponentPreview
-  name="button-link"
-  description="A button using the link variant."
-/>
-
-### Icon
-
-<ComponentPreview name="button-icon" description="An icon button" />
-
-### With Icon
-
-<ComponentPreview name="button-with-icon" description="A button with an icon" />
-
-### Loading
+### Loading Button
 
 <ComponentPreview
   name="button-loading"
-  description="A button with a loading state."
+  description="A button with a loading indicator"
 />
+The Loading Button indicates processing status for actions that require time to complete,
+keeping users informed about ongoing tasks, which enhances user experience and reduces
+uncertainty.
 
 ### As Child
 
@@ -134,3 +176,39 @@ Alternatively, you can set the `asChild` parameter and nest the link component.
   name="button-as-child"
   description="A button wrapping a custom Link component"
 />
+The As Child variant allows nesting components like links within the Button. It maintains
+Button styling while incorporating navigational or interactive elements, increasing
+versatility.
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">
+    <Steps>
+      <Step>Run the following command:</Step>
+      ```bash npx shadcn-ui@latest add button ```
+    </Steps>
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Install the following dependencies:</Step>
+      ```bash npm install @radix-ui/react-slot ```
+      <Step>Copy and paste the following code into your project.</Step>
+      <ComponentSource name="button" />
+      <Step>Update the import paths to match your project setup.</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Version History
+
+| Version | Editor      | Reviewer   | Date      | Description     |
+| ------- | ----------- | ---------- | --------- | --------------- |
+| v1.0    | shadcn      | -          | -         | Initial version |
+| v2.0    | Zhengjia Pu | Yihan Zhao | 1/11/2024 | updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.
