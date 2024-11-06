@@ -40,7 +40,7 @@ export default function AccordionDemo() {
     description: string
   ) => (
     <DialogContent className="flex items-center">
-      <div className="flex-none w-[120px] h-[160px] mr-5">
+      <div className="mr-5 h-[160px] w-[120px] flex-none">
         <Image
           src={avatarSrc}
           alt={fullName}
@@ -51,11 +51,11 @@ export default function AccordionDemo() {
       </div>
       <div className="flex-1">
         <div className="mb-2.5">
-          <p className="text-red-600 m-0 font-bold">{role}</p>
+          <p className="m-0 font-bold text-red-600">{role}</p>
           <p className="m-0">{fullName}</p>
         </div>
         <div>
-          <p className="text-gray-500 m-0">{description}</p>
+          <p className="m-0 text-gray-500">{description}</p>
         </div>
       </div>
     </DialogContent>
@@ -76,7 +76,7 @@ export default function AccordionDemo() {
         </Avatar>
       </TableCell>
       <Dialog>
-        <TableCell className="font-medium text-right">
+        <TableCell className="text-right font-medium">
           <DialogTrigger asChild>
             <div
               onClick={() =>
@@ -86,10 +86,10 @@ export default function AccordionDemo() {
               }
               className="cursor-pointer"
             >
-              <p className="text-neutral-950 text-right cursor-pointer">
+              <p className="cursor-pointer text-right text-neutral-950">
                 {role}
               </p>
-              <p className="text-right cursor-pointer">{fullName}</p>
+              <p className="cursor-pointer text-right">{fullName}</p>
             </div>
           </DialogTrigger>
         </TableCell>
@@ -99,7 +99,7 @@ export default function AccordionDemo() {
   )
 
   return (
-    <div className="flex items-center justify-center w-[600px] bg-white">
+    <div className="flex w-[600px] items-center justify-center bg-white">
       <div className="w-[500px] bg-white">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">

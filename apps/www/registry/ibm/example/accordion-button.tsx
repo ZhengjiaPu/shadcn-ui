@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/default/ui/accordion"
+} from "@/registry/ibm/ui/accordion"
 import { Button } from "@/registry/default/ui/button"
 import { Toaster } from "@/registry/default/ui/toaster"
 import { useToast } from "@/registry/default/ui/use-toast"
@@ -21,8 +21,8 @@ export default function AccordionButton() {
   }
 
   return (
-    <div className="flex items-center justify-center w-[600px] bg-neutral">
-      <div className="w-[500px] bg-neutral-50">
+    <div className="flex w-[600px] items-center justify-center bg-white">
+      <div className="w-[500px] bg-white">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>How do I enrol?</AccordionTrigger>
@@ -32,9 +32,10 @@ export default function AccordionButton() {
               are several sections to complete as part of your enrolment. You
               can log out and return later if you need to.
               <br />
+              <br />
               <Toaster />
               <Button
-                className="bg-neutral-950 text-neutral-50 py-2 px-4 rounded-md cursor-pointer"
+                className="cursor-pointer rounded-none border-2 bg-slate-100 px-4 py-2 text-black focus:border-blue-600"
                 variant="outline"
                 onClick={() => {
                   console.log(buttonText, "has clicked")
@@ -58,9 +59,10 @@ export default function AccordionButton() {
               privacy policy regarding the personal information you supply
               during enrolment.
               <br />
+              <br />
               <Toaster />
               <Button
-                className="bg-neutral-950 text-neutral-50 py-2 px-4 rounded-md cursor-pointer"
+                className="cursor-pointer rounded-none border-2 bg-slate-100 px-4 py-2 text-black focus:border-blue-600"
                 variant="outline"
                 onClick={() => {
                   console.log(buttonText, "has clicked")

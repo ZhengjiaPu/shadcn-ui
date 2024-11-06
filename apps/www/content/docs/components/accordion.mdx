@@ -12,6 +12,8 @@ links:
 
 ## Introduction
 
+The `Accordion` component is a versatile, interactive UI element designed to organize content into collapsible sections, allowing users to navigate through information efficiently. This component supports single-item expansion, ensuring only one panel is open at a time, while also allowing users to toggle each item individually. Each Accordion section includes a trigger and content area, making it ideal for FAQs, lists, or any structured content that benefits from progressive disclosure. Built with accessibility in mind, the Accordion follows the WAI-ARIA design patterns and includes default animations and styles, creating a smooth, visually cohesive experience across applications.
+
 ## Demo
 
 <ComponentPreview
@@ -29,14 +31,30 @@ links:
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
   description="An accordion with three items"
 />
+The `AccordionButton` variant is ideal for use in onboarding guides, help sections,
+or multi-step instructions where users need quick actions within expandable content.
+Each accordion section can reveal detailed information or steps, and the button inside
+triggers a toast notification for immediate feedback, keeping users informed as they
+interact. This setup suits scenarios requiring a clear, guided flow with interactive
+elements, enhancing user engagement and comprehension in complex processes.{" "}
 
-### accordion with picture and button
+### accordion
+
+with picture and button
 
 <ComponentPreview
   name="accordion-picture-button"
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
   description="An accordion with three items"
 />
+The `AccordionPictureButton` variant is designed for interactive content that includes
+images, text, and actionable buttons within expandable sections. Ideal for use in
+tutorials, product descriptions, or information-rich guides, each accordion item
+can contain an image that toggles between zoomed and normal view on click, providing
+a detailed visual experience. A button in each section triggers a toast notification
+for instant feedback, enhancing user interaction. This component is perfect for scenarios
+that require clear, step-by-step visuals and responsive actions to guide users through
+complex or detailed information.{" "}
 
 ### accordion with list
 
@@ -45,6 +63,14 @@ links:
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
   description="An accordion with three items"
 />
+The `AccordionList` variant is a structured, interactive accordion designed for presenting
+categorized lists, such as campus locations or faculty departments. Each section
+expands to display a table of clickable items. When an item is clicked, a toast notification
+appears with the selected item’s name, providing immediate feedback. This component
+is ideal for directories, listings, or informational pages where users can explore
+various categories and receive real-time responses to their selections, making it
+particularly suitable for academic or organizational settings where structured information
+is essential.
 
 ### accordion with list and avatar
 
@@ -53,6 +79,16 @@ links:
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
   description="An accordion with three items"
 />
+The accordion with list and avatar is an interactive directory designed for displaying
+information about individuals in expandable sections. Each accordion item (e.g.,
+"Albanese Ministry" and "Shadow Ministry") contains a list of officials with their
+respective roles, names, and profile avatars. Clicking on an entry opens a dialog
+with a detailed profile view, including an image and description.
+
+Key Features:
+Structured Information: Organizes profiles into categories, making it easy for users to navigate through sections.
+Dialog Display: Each entry opens a dialog on click, providing an in-depth view of the person’s role and responsibilities.
+Visual and Interactive Elements: Incorporates avatars for quick identification, and dialog interactions for more detailed information.
 
 ### accordion custmized version
 
@@ -61,6 +97,10 @@ links:
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
   description="An accordion with three items"
 />
+This component is well-suited for educational platforms, onboarding processes, or
+policy pages where users may need to explore details, view images, and receive instant
+feedback through notifications. It combines text, visuals, and interactivity to enhance
+the user experience in any content-rich application.{" "}
 
 ### Installation
 
@@ -184,11 +224,6 @@ import {
   </AccordionItem>
 </Accordion>
 ```
-
-## Reference
-
-When designing the component, you must borrowed idea somewhere else, list them here.
-For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
 
 ## Version History
 

@@ -24,7 +24,7 @@ export default function AccordionPictureButton() {
     : "w-1/2 cursor-zoom-in"
 
   return (
-    <div className="flex items-center justify-center w-[600px] bg-white">
+    <div className="flex w-[600px] items-center justify-center bg-white">
       <div className="w-[500px] bg-white">
         <Accordion type="single" collapsible className="w-full">
           {/* First Accordion Item */}

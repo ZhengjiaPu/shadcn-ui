@@ -5,31 +5,32 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/default/ui/accordion"
+} from "@/registry/sydney/ui/accordion"
 
 export default function AccordionDemo() {
   return (
-    <div className="flex items-center justify-center w-[600px] bg-white">
-      <div className="w-[500px] bg-white">
-        <Accordion type="single" collapsible className="w-full">
+    <div className="flex w-full items-center justify-center">
+      <div className="w-full max-w-[600px]">
+        <Accordion type="multiple" className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionTrigger>How do I get information that I am interested in?</AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+              For information about a particular course or area of study, search for a course using keywords such as ‘Accounting’ or ‘Engineering’. Our course information pages include information about course entry requirements, structure, career outcomes, tuition fees, and more.
+              <br />
+              <br />
+              <a href="#" className="text-red-600 underline">Search for a course</a>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
+            <AccordionTrigger>What are the academic and English entry requirements?</AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              Entry requirements vary depending on the program. Please check the course details for specific academic and English language requirements.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
+            <AccordionTrigger>What is the process to apply for a course?</AccordionTrigger>
             <AccordionContent>
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
+              The application process can be completed online. Start by selecting your course, review the requirements, prepare your documents, and follow the online application steps.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -37,3 +38,4 @@ export default function AccordionDemo() {
     </div>
   )
 }
+

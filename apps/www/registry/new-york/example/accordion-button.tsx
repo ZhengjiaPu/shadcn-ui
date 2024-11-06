@@ -21,8 +21,8 @@ export default function AccordionButton() {
   }
 
   return (
-    <div className="flex items-center justify-center w-[600px] bg-neutral">
-      <div className="w-[500px] bg-neutral-50">
+    <div className="flex w-[600px] items-center justify-center bg-white">
+      <div className="w-[500px] bg-white">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>How do I enrol?</AccordionTrigger>
@@ -34,7 +34,7 @@ export default function AccordionButton() {
               <br />
               <Toaster />
               <Button
-                className="bg-neutral-950 text-neutral-50 py-2 px-4 rounded-md cursor-pointer"
+                className="cursor-pointer rounded-md bg-neutral-950 px-4 py-2 text-neutral-50"
                 variant="outline"
                 onClick={() => {
                   console.log(buttonText, "has clicked")
@@ -60,7 +60,7 @@ export default function AccordionButton() {
               <br />
               <Toaster />
               <Button
-                className="bg-neutral-950 text-neutral-50 py-2 px-4 rounded-md cursor-pointer"
+                className="cursor-pointer rounded-md bg-neutral-950 px-4 py-2 text-neutral-50"
                 variant="outline"
                 onClick={() => {
                   console.log(buttonText, "has clicked")

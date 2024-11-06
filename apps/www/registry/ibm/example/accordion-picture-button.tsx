@@ -6,7 +6,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/default/ui/accordion"
+} from "@/registry/ibm/ui/accordion"
 import { Button } from "@/registry/default/ui/button"
 import { Toaster } from "@/registry/default/ui/toaster"
 import { useToast } from "@/registry/default/ui/use-toast"
@@ -24,7 +24,7 @@ export default function AccordionPictureButton() {
     : "w-1/2 cursor-zoom-in"
 
   return (
-    <div className="flex items-center justify-center w-[600px] bg-white">
+    <div className="flex w-[600px] items-center justify-center bg-white">
       <div className="w-[500px] bg-white">
         <Accordion type="single" collapsible className="w-full">
           {/* First Accordion Item */}
@@ -48,7 +48,7 @@ export default function AccordionPictureButton() {
               </p>
               <Toaster />
               <Button
-                className="my-4 cursor-pointer rounded-md bg-zinc-950 px-4 py-2 text-white"
+                className="cursor-pointer rounded-none border-2 bg-slate-100 px-4 py-2 text-black focus:border-blue-600"
                 variant="outline"
                 onClick={() => {
                   toast({
@@ -84,7 +84,7 @@ export default function AccordionPictureButton() {
               </p>
               <Toaster />
               <Button
-                className="my-4 cursor-pointer rounded-md bg-orange-500 px-4 py-2 text-white"
+                className="cursor-pointer rounded-none border-2 bg-slate-100 px-4 py-2 text-black focus:border-blue-600"
                 variant="outline"
                 onClick={() => {
                   toast({

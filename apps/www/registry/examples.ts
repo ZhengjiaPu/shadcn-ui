@@ -35,7 +35,7 @@ export const examples: Registry = [
     name: "accordion-mix",
     type: "components:example",
     registryDependencies: ["accordion"],
-    files: ["example/accordion-picture-mix.tsx"],
+    files: ["example/accordion-mix.tsx"],
   },
   {
     name: "alert-demo",

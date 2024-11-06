@@ -25,8 +25,8 @@ export default function AccordionMix() {
     : "w-1/2 cursor-zoom-in"
 
   return (
-    <div className="flex items-center justify-center w-[600px] bg-neutral-50">
-      <div className="w-[500px] bg-neutral-50">
+    <div className="flex items-center justify-center w-[600px] bg-white">
+      <div className="w-[500px] bg-white">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>How do I enrol?</AccordionTrigger>

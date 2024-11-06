@@ -5,13 +5,13 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/default/ui/accordion"
+} from "@/registry/ibm/ui/accordion"
 
 export default function AccordionDemo() {
   return (
-    <div className="flex items-center justify-center w-[600px] bg-white">
-      <div className="w-[500px] bg-white">
-        <Accordion type="single" collapsible className="w-full">
+    <div className="flex w-full items-center justify-center bg-white p-4">
+      <div className="w-full max-w-[500px] rounded-md bg-white shadow-md">
+        <Accordion type="multiple" className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>Is it accessible?</AccordionTrigger>
             <AccordionContent>
@@ -21,15 +21,13 @@ export default function AccordionDemo() {
           <AccordionItem value="item-2">
             <AccordionTrigger>Is it styled?</AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              Yes. It comes with default styles that matches the other components' aesthetic.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>Is it animated?</AccordionTrigger>
             <AccordionContent>
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
+              Yes. It's animated by default, but you can disable it if you prefer.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

@@ -5,10 +5,10 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/default/ui/accordion"
-import { Button } from "@/registry/default/ui/button"
-import { Toaster } from "@/registry/default/ui/toaster"
-import { useToast } from "@/registry/default/ui/use-toast"
+} from "@/registry/sydney/ui/accordion"
+import { Button } from "@/registry/sydney/ui/button"
+import { Toaster } from "@/registry/sydney/ui/toaster"
+import { useToast } from "@/registry/sydney/ui/use-toast"
 
 export default function AccordionButton() {
   const { toast } = useToast()
@@ -21,9 +21,9 @@ export default function AccordionButton() {
   }
 
   return (
-    <div className="flex items-center justify-center w-[600px] bg-neutral">
-      <div className="w-[500px] bg-neutral-50">
-        <Accordion type="single" collapsible className="w-full">
+    <div className="flex w-[600px] items-center justify-center bg-white">
+      <div className="w-[500px] bg-white">
+        <Accordion type="multiple" className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>How do I enrol?</AccordionTrigger>
             <AccordionContent>
@@ -34,7 +34,7 @@ export default function AccordionButton() {
               <br />
               <Toaster />
               <Button
-                className="bg-neutral-950 text-neutral-50 py-2 px-4 rounded-md cursor-pointer"
+                className="cursor-pointer rounded-md bg-orange-600 px-4 py-2 text-neutral-50"
                 variant="outline"
                 onClick={() => {
                   console.log(buttonText, "has clicked")
@@ -60,7 +60,7 @@ export default function AccordionButton() {
               <br />
               <Toaster />
               <Button
-                className="bg-neutral-950 text-neutral-50 py-2 px-4 rounded-md cursor-pointer"
+                className="cursor-pointer rounded-md bg-orange-600 px-4 py-2 text-neutral-50"
                 variant="outline"
                 onClick={() => {
                   console.log(buttonText, "has clicked")
