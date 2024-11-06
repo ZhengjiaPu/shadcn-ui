@@ -5,7 +5,16 @@ component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/dialog
   api: https://www.radix-ui.com/docs/primitives/components/dialog#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-sheet--docs
 ---
+
+## Introduction
+
+The Sheet component is a sliding panel that appears from the edge of the screen, similar to a drawer, but typically occupies more screen space and often overlays the main content. It’s ideal for displaying detailed information, settings, or actions that require user focus without navigating away from the current page. Customizable in size, position, and animation, the Sheet component is particularly useful for mobile and responsive designs, where it serves as an efficient way to present content like forms, filters, or menus. This component enhances user interaction by providing a seamless, focused experience in applications with limited screen space.
+
+## Sheetdemo
+
+The SheetDemo component provides a simple, user-friendly interface for editing profile details within a sliding sheet. By clicking the "Open" button, the Sheet component slides in, displaying a form with fields for the user's name and username. The sheet includes a header with a title and description to guide users, and a footer with a "Save changes" button that closes the sheet upon submission. This layout is ideal for quick edits or settings adjustments, allowing users to make changes without navigating away from the main page.
 
 <ComponentPreview name="sheet-demo" description="A sheet component." />
 
@@ -77,8 +86,9 @@ import {
 
 ## Examples
 
-### Side
+### SheetSide
 
+The SheetSide component demonstrates the Sheet component's versatility by allowing it to slide in from any side of the screen—top, right, bottom, or left. Each button opens a Sheet from the corresponding side, displaying an editable profile form with fields for name and username. The Sheet includes a header, a description for guidance, and a footer with a "Save changes" button, making it suitable for in-place editing. This layout is ideal for responsive applications, allowing users to make updates in a focused, overlayed interface without disrupting their current view.
 Use the `side` property to `<SheetContent />` to indicate the edge of the screen where the component will appear. The values can be `top`, `right`, `bottom` or `left`.
 
 <ComponentPreview name="sheet-side" />
@@ -101,3 +111,15 @@ You can adjust the size of the sheet using CSS classes:
   </SheetContent>
 </Sheet>
 ```
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Yihuan Cai  | Yihuan Cai  | 3/11/2024  | Updated version |

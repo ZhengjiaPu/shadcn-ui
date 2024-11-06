@@ -15,45 +15,19 @@ import {
 } from "@/registry/default/ui/drawer"
 
 const data = [
-  {
-    goal: 400,
-  },
-  {
-    goal: 300,
-  },
-  {
-    goal: 200,
-  },
-  {
-    goal: 300,
-  },
-  {
-    goal: 200,
-  },
-  {
-    goal: 278,
-  },
-  {
-    goal: 189,
-  },
-  {
-    goal: 239,
-  },
-  {
-    goal: 300,
-  },
-  {
-    goal: 200,
-  },
-  {
-    goal: 278,
-  },
-  {
-    goal: 189,
-  },
-  {
-    goal: 349,
-  },
+  { goal: 400 },
+  { goal: 300 },
+  { goal: 200 },
+  { goal: 300 },
+  { goal: 200 },
+  { goal: 278 },
+  { goal: 189 },
+  { goal: 239 },
+  { goal: 300 },
+  { goal: 200 },
+  { goal: 278 },
+  { goal: 189 },
+  { goal: 349 },
 ]
 
 export default function DrawerDemo() {
@@ -66,7 +40,9 @@ export default function DrawerDemo() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline">Open Drawer</Button>
+        <Button variant="outline" className="text-orange-500 border-orange-500">
+          Open Drawer
+        </Button>
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
@@ -79,7 +55,7 @@ export default function DrawerDemo() {
               <Button
                 variant="outline"
                 size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
+                className="h-8 w-8 shrink-0 rounded-full text-orange-500 border-orange-500"
                 onClick={() => onClick(-10)}
                 disabled={goal <= 200}
               >
@@ -87,17 +63,17 @@ export default function DrawerDemo() {
                 <span className="sr-only">Decrease</span>
               </Button>
               <div className="flex-1 text-center">
-                <div className="text-7xl font-bold tracking-tighter">
+                <div className="text-7xl font-bold tracking-tighter text-orange-500">
                   {goal}
                 </div>
-                <div className="text-[0.70rem] uppercase text-muted-foreground">
+                <div className="text-[0.70rem] uppercase text-orange-400">
                   Calories/day
                 </div>
               </div>
               <Button
                 variant="outline"
                 size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
+                className="h-8 w-8 shrink-0 rounded-full text-orange-500 border-orange-500"
                 onClick={() => onClick(10)}
                 disabled={goal >= 400}
               >
@@ -110,21 +86,26 @@ export default function DrawerDemo() {
                 <BarChart data={data}>
                   <Bar
                     dataKey="goal"
-                    style={
-                      {
-                        fill: "hsl(var(--foreground))",
-                        opacity: 0.9,
-                      } as React.CSSProperties
-                    }
+                    style={{
+                      fill: "hsl(33, 100%, 50%)", // 橙色
+                      opacity: 0.9,
+                    }}
                   />
                 </BarChart>
               </ResponsiveContainer>
             </div>
           </div>
           <DrawerFooter>
-            <Button>Submit</Button>
+            <Button className="bg-orange-500 hover:bg-orange-700 text-white">
+              Submit
+            </Button>
             <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
+              <Button
+                variant="outline"
+                className="text-orange-500 border-orange-500"
+              >
+                Cancel
+              </Button>
             </DrawerClose>
           </DrawerFooter>
         </div>

@@ -5,7 +5,12 @@ component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/tooltip
   api: https://www.radix-ui.com/docs/primitives/components/tooltip#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-tooltips--docs
 ---
+
+##Introduction
+
+The Tooltip component provides helpful, context-specific information when users hover over or focus on an element. This component is designed to enhance user experience by offering additional details, explanations, or tips without cluttering the interface. Tooltips are typically used to clarify icons, buttons, or other interactive elements, guiding users through the application with minimal disruption. The Tooltip component is highly customizable, allowing for different positions, animations, and styles, making it adaptable for various use cases. It's an essential component for improving usability and accessibility, helping users understand functionality intuitively.
 
 <ComponentPreview name="tooltip-demo" description="A tooltip component." />
 
@@ -68,3 +73,27 @@ import {
   </Tooltip>
 </TooltipProvider>
 ```
+
+## tooltip-basic
+
+The BasicTooltip component is a simple, interactive tooltip that appears when users hover over or focus on a button. It uses a state variable, isOpen, to control visibility, logging a message to the console each time it opens. The tooltip content provides guidance—such as "Add to library"—helping users understand the action associated with the button. Wrapped within a TooltipProvider, this setup ensures consistent behavior and accessibility across tooltips in the application. The BasicTooltip component is ideal for enhancing user experience by providing context without occupying extra screen space.
+
+<ComponentPreview name="tooltip-basic" description="A tooltip component." />
+
+## tooltip-disabled
+
+The DisableTooltip component is a tooltip designed for a disabled button, providing contextual information when users hover over or focus on it. The button is styled with reduced opacity and a "not-allowed" cursor to indicate its disabled state, while the tooltip displays a message like "Disabled Tooltip" to explain why the button is inactive. A state variable, isOpen, controls the tooltip's visibility and logs a message to the console each time it becomes visible. This component is useful for scenarios where users may need clarification about disabled or unavailable actions, enhancing the accessibility and user-friendliness of the interface.
+
+<ComponentPreview name="tooltip-disabled" description="A tooltip component." />
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Yihuan Cai  | Yihuan Cai  | 2/11/2024  | Updated version |

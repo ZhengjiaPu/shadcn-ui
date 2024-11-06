@@ -1072,6 +1072,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "carousel-basic": {
+      name: "carousel-basic",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/default/example/carousel-basic")),
+      source: "",
+      files: ["registry/default/example/carousel-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-auto": {
+      name: "carousel-auto",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/default/example/carousel-auto")),
+      source: "",
+      files: ["registry/default/example/carousel-auto.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-images": {
+      name: "carousel-images",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/default/example/carousel-images")),
+      source: "",
+      files: ["registry/default/example/carousel-images.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "checkbox-demo": {
       name: "checkbox-demo",
       type: "components:example",
@@ -2007,6 +2040,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "tags-innovativetags": {
+      name: "tags-innovativetags",
+      type: "components:example",
+      registryDependencies: ["tags"],
+      component: React.lazy(() => import("@/registry/default/example/tags-innovativetags")),
+      source: "",
+      files: ["registry/default/example/tags-innovativetags.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "textarea-demo": {
       name: "textarea-demo",
       type: "components:example",
@@ -2267,6 +2311,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/tooltip-demo")),
       source: "",
       files: ["registry/default/example/tooltip-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-basic": {
+      name: "tooltip-basic",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/default/example/tooltip-basic")),
+      source: "",
+      files: ["registry/default/example/tooltip-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-disabled": {
+      name: "tooltip-disabled",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/default/example/tooltip-disabled")),
+      source: "",
+      files: ["registry/default/example/tooltip-disabled.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -4813,6 +4879,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "carousel-basic": {
+      name: "carousel-basic",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/new-york/example/carousel-basic")),
+      source: "",
+      files: ["registry/new-york/example/carousel-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-auto": {
+      name: "carousel-auto",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/new-york/example/carousel-auto")),
+      source: "",
+      files: ["registry/new-york/example/carousel-auto.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-images": {
+      name: "carousel-images",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/new-york/example/carousel-images")),
+      source: "",
+      files: ["registry/new-york/example/carousel-images.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "checkbox-demo": {
       name: "checkbox-demo",
       type: "components:example",
@@ -5748,6 +5847,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "tags-innovativetags": {
+      name: "tags-innovativetags",
+      type: "components:example",
+      registryDependencies: ["tags"],
+      component: React.lazy(() => import("@/registry/new-york/example/tags-innovativetags")),
+      source: "",
+      files: ["registry/new-york/example/tags-innovativetags.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "textarea-demo": {
       name: "textarea-demo",
       type: "components:example",
@@ -6008,6 +6118,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/tooltip-demo")),
       source: "",
       files: ["registry/new-york/example/tooltip-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-basic": {
+      name: "tooltip-basic",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/new-york/example/tooltip-basic")),
+      source: "",
+      files: ["registry/new-york/example/tooltip-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-disabled": {
+      name: "tooltip-disabled",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/new-york/example/tooltip-disabled")),
+      source: "",
+      files: ["registry/new-york/example/tooltip-disabled.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -8554,6 +8686,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "carousel-basic": {
+      name: "carousel-basic",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/sydney/example/carousel-basic")),
+      source: "",
+      files: ["registry/sydney/example/carousel-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-auto": {
+      name: "carousel-auto",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/sydney/example/carousel-auto")),
+      source: "",
+      files: ["registry/sydney/example/carousel-auto.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-images": {
+      name: "carousel-images",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/sydney/example/carousel-images")),
+      source: "",
+      files: ["registry/sydney/example/carousel-images.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "checkbox-demo": {
       name: "checkbox-demo",
       type: "components:example",
@@ -9489,6 +9654,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "tags-innovativetags": {
+      name: "tags-innovativetags",
+      type: "components:example",
+      registryDependencies: ["tags"],
+      component: React.lazy(() => import("@/registry/sydney/example/tags-innovativetags")),
+      source: "",
+      files: ["registry/sydney/example/tags-innovativetags.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "textarea-demo": {
       name: "textarea-demo",
       type: "components:example",
@@ -9749,6 +9925,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/sydney/example/tooltip-demo")),
       source: "",
       files: ["registry/sydney/example/tooltip-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-basic": {
+      name: "tooltip-basic",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/sydney/example/tooltip-basic")),
+      source: "",
+      files: ["registry/sydney/example/tooltip-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-disabled": {
+      name: "tooltip-disabled",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/sydney/example/tooltip-disabled")),
+      source: "",
+      files: ["registry/sydney/example/tooltip-disabled.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -12295,6 +12493,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "carousel-basic": {
+      name: "carousel-basic",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/ibm/example/carousel-basic")),
+      source: "",
+      files: ["registry/ibm/example/carousel-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-auto": {
+      name: "carousel-auto",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/ibm/example/carousel-auto")),
+      source: "",
+      files: ["registry/ibm/example/carousel-auto.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "carousel-images": {
+      name: "carousel-images",
+      type: "components:example",
+      registryDependencies: ["carousel"],
+      component: React.lazy(() => import("@/registry/ibm/example/carousel-images")),
+      source: "",
+      files: ["registry/ibm/example/carousel-images.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "checkbox-demo": {
       name: "checkbox-demo",
       type: "components:example",
@@ -13230,6 +13461,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "tags-innovativetags": {
+      name: "tags-innovativetags",
+      type: "components:example",
+      registryDependencies: ["tags"],
+      component: React.lazy(() => import("@/registry/ibm/example/tags-innovativetags")),
+      source: "",
+      files: ["registry/ibm/example/tags-innovativetags.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "textarea-demo": {
       name: "textarea-demo",
       type: "components:example",
@@ -13490,6 +13732,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/ibm/example/tooltip-demo")),
       source: "",
       files: ["registry/ibm/example/tooltip-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-basic": {
+      name: "tooltip-basic",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/ibm/example/tooltip-basic")),
+      source: "",
+      files: ["registry/ibm/example/tooltip-basic.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "tooltip-disabled": {
+      name: "tooltip-disabled",
+      type: "components:example",
+      registryDependencies: ["tooltip"],
+      component: React.lazy(() => import("@/registry/ibm/example/tooltip-disabled")),
+      source: "",
+      files: ["registry/ibm/example/tooltip-disabled.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

@@ -1,83 +1,29 @@
 ---
 title: Watermark
-description: A responsive watermark component.
+description: A semi-transparent text or image overlay used to protect or brand content.
 component: true
+links:
+  storybook: http://localhost:6006/?path=/story/components-watermark--default
 ---
+
+## Introduction
+
+The Watermark component is a semi-transparent overlay applied to content such as images, documents, or videos to indicate ownership, protect intellectual property, or add subtle branding. It typically consists of text or a logo positioned in a fixed location or repeated across the content, ensuring visibility without obstructing the main content. Commonly used in digital media, the Watermark component helps deter unauthorized use while reinforcing brand identity, making it a valuable tool for protecting and personalizing digital assets in various applications.
+
+## Demo
 
 <ComponentPreview name="watermark-demo" />
 
-## Installation
+## Reference
 
-<Tabs defaultValue="cli">
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-<TabsContent value="cli">
+## Version History
 
-```bash
-npx shadcn-ui@latest add table
-```
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Wentao Wu   | Wentao Wu   | 1/11/2024  | Updated version |
 
-</TabsContent>
-
-<TabsContent value="manual">
-
-<Steps>
-
-<Step>Copy and paste the following code into your project.</Step>
-
-<ComponentSource name="watermark" />
-
-<Step>Update the import paths to match your project setup.</Step>
-
-</Steps>
-
-</TabsContent>
-
-</Tabs>
-
-## Usage
-
-```tsx
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-```
-
-```tsx
-<Table>
-  <TableCaption>A list of your recent invoices.</TableCaption>
-  <TableHeader>
-    <TableRow>
-      <TableHead className="w-[100px]">Invoice</TableHead>
-      <TableHead>Status</TableHead>
-      <TableHead>Method</TableHead>
-      <TableHead className="text-right">Amount</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-medium">INV001</TableCell>
-      <TableCell>Paid</TableCell>
-      <TableCell>Credit Card</TableCell>
-      <TableCell className="text-right">$250.00</TableCell>
-    </TableRow>
-  </TableBody>
-</Table>
-```
-
-## Data Table
-
-You can use the `<Table />` component to build more complex data tables. Combine it with [@tanstack/react-table](https://tanstack.com/table/v8) to create tables with sorting, filtering and pagination.
-
-See the [Data Table](/docs/components/data-table) documentation for more information.
-
-You can also see an example of a data table in the [Tasks](/examples/tasks) demo.
+Provide Version, Editor, Reviewer, Date, Description, Status here.

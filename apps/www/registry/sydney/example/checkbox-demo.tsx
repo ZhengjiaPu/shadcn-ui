@@ -24,6 +24,7 @@ export default function CheckboxDemo() {
           <Checkbox
             id="Default checkbox"
             onClick={() => handleCheckboxClick("Default checkbox")}
+            className="text-orange-500 checked:bg-orange-500 checked:border-orange-500"
           />
           <label
             htmlFor="Default checkbox"

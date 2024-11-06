@@ -308,6 +308,24 @@ export const examples: Registry = [
     files: ["example/carousel-plugin.tsx"],
   },
   {
+    name: "carousel-basic",
+    type: "components:example",
+    registryDependencies: ["carousel"],
+    files: ["example/carousel-basic.tsx"],
+  },
+  {
+    name: "carousel-auto",
+    type: "components:example",
+    registryDependencies: ["carousel"],
+    files: ["example/carousel-auto.tsx"],
+  },
+  {
+    name: "carousel-images",
+    type: "components:example",
+    registryDependencies: ["carousel"],
+    files: ["example/carousel-images.tsx"],
+  },
+  {
     name: "checkbox-demo",
     type: "components:example",
     registryDependencies: ["checkbox"],
@@ -830,6 +848,12 @@ export const examples: Registry = [
     files: ["example/tabs-variant.tsx"],
   },
   {
+    name: "tags-innovativetags",
+    type: "components:example",
+    registryDependencies: ["tags"],
+    files: ["example/tags-innovativetags.tsx"],
+  },
+  {
     name: "textarea-demo",
     type: "components:example",
     registryDependencies: ["textarea"],
@@ -972,6 +996,18 @@ export const examples: Registry = [
     type: "components:example",
     registryDependencies: ["tooltip"],
     files: ["example/tooltip-demo.tsx"],
+  },
+  {
+    name: "tooltip-basic",
+    type: "components:example",
+    registryDependencies: ["tooltip"],
+    files: ["example/tooltip-basic.tsx"],
+  },
+  {
+    name: "tooltip-disabled",
+    type: "components:example",
+    registryDependencies: ["tooltip"],
+    files: ["example/tooltip-disabled.tsx"],
   },
   {
     name: "typography-blockquote",

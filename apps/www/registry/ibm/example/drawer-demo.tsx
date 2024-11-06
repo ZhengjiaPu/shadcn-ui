@@ -66,7 +66,9 @@ export default function DrawerDemo() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline">Open Drawer</Button>
+        <Button variant="outline" className="text-blue-500 border-blue-500">
+          Open Drawer
+        </Button>
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
@@ -79,7 +81,7 @@ export default function DrawerDemo() {
               <Button
                 variant="outline"
                 size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
+                className="h-8 w-8 shrink-0 rounded-full text-blue-500 border-blue-500"
                 onClick={() => onClick(-10)}
                 disabled={goal <= 200}
               >
@@ -87,17 +89,17 @@ export default function DrawerDemo() {
                 <span className="sr-only">Decrease</span>
               </Button>
               <div className="flex-1 text-center">
-                <div className="text-7xl font-bold tracking-tighter">
+                <div className="text-7xl font-bold tracking-tighter text-blue-500">
                   {goal}
                 </div>
-                <div className="text-[0.70rem] uppercase text-muted-foreground">
+                <div className="text-[0.70rem] uppercase text-blue-400">
                   Calories/day
                 </div>
               </div>
               <Button
                 variant="outline"
                 size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
+                className="h-8 w-8 shrink-0 rounded-full text-blue-500 border-blue-500"
                 onClick={() => onClick(10)}
                 disabled={goal >= 400}
               >
@@ -112,7 +114,7 @@ export default function DrawerDemo() {
                     dataKey="goal"
                     style={
                       {
-                        fill: "hsl(var(--foreground))",
+                        fill: "hsl(211, 100%, 50%)", // 蓝色
                         opacity: 0.9,
                       } as React.CSSProperties
                     }
@@ -122,9 +124,16 @@ export default function DrawerDemo() {
             </div>
           </div>
           <DrawerFooter>
-            <Button>Submit</Button>
+            <Button className="bg-blue-500 hover:bg-blue-700 text-white">
+              Submit
+            </Button>
             <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
+              <Button
+                variant="outline"
+                className="text-blue-500 border-blue-500"
+              >
+                Cancel
+              </Button>
             </DrawerClose>
           </DrawerFooter>
         </div>

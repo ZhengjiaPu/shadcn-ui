@@ -4,7 +4,12 @@ description: A drawer component for React.
 component: true
 links:
   doc: https://github.com/emilkowalski/vaul
+  storybook: http://localhost:6006/?path=/docs/components-drawdemo--docs
 ---
+
+## Introduction
+
+The Drawer component is a sliding panel that appears from the side of the screen, providing a convenient way to display additional content or navigation options without leaving the current page. It’s commonly used for menus, filters, or detailed information, making it easy for users to access supplementary content while staying focused on the main view. The Drawer component is customizable, with options for different slide-in directions, animations, and overlay styles. It supports flexible positioning and content customization, allowing developers to adjust it for various application needs. This component is especially useful for mobile interfaces and responsive designs, providing an intuitive, space-efficient way to enhance user interaction.
 
 <ComponentPreview name="drawer-demo" description="A drawer component." />
 
@@ -87,6 +92,18 @@ import {
 
 ### Responsive Dialog
 
-You can combine the `Dialog` and `Drawer` components to create a responsive dialog. This renders a `Dialog` component on desktop and a `Drawer` on mobile.
+The DrawerDialogDemo component combines Dialog and Drawer to create a responsive editing interface. On desktop, it shows a centered Dialog, while on mobile, it slides in as a Drawer. This setup optimizes user experience across screen sizes, allowing seamless profile editing with consistent functionality. Ideal for forms or quick settings adjustments, it adapts smoothly to both desktop and mobile views.
 
 <ComponentPreview name="drawer-dialog" />
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Yihuan Cai  | Yihuan Cai  | 2/11/2024  | Updated version |
