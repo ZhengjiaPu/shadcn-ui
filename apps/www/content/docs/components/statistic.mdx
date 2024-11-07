@@ -2,64 +2,29 @@
 title: "Statistic"
 description: "Displays various statistic components with different variants."
 component: true
+links:
+  doc: https://ant.design/components/statistic/
+  api: https://bladewindui.com/component/statistic
+  storybook: http://localhost:6006/?path=/docs/components-statistic-normal--docs
+  guideline: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Status_Role
+  accessibility: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Status_Role
 ---
 
-## Examples
+## Introduction
 
-### Basic Statistic
+The `Statistic` component is a dynamic display element designed for showcasing key values, statistics, or data points in a visually distinct format. It is particularly useful for dashboards, reports, or any data-rich interfaces. With several variants available, the Statistic component can be customized to include visual indicators, countdowns, and integration within card components, allowing for flexible data presentation tailored to various contexts. The component is also designed to follow accessibility guidelines, ensuring it can be used effectively by all users.
 
-<ComponentPreview
-  name="statistic-demo"
-  title="Basic Statistic"
-  description="A basic statistic component displaying values with precision."
-/>
+## Demo
 
-## Installation
-
-<Tabs defaultValue="cli">
-
-{" "}
-
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-  <TabsContent value="cli">
-  
-  ```bash
-  npx shadcn-ui@latest add statistic
-  npx shadcn-ui@latest add card
-  npx shadcn-ui@latest add countdown
-  ```
-
-  </TabsContent>
-
-  <TabsContent value="manual">
-
-{" "}
-
-<Steps>
-  <Step>Copy and paste the following code into your project.</Step>
-  <ComponentSource name="statistic" />
-  <ComponentSource name="card" />
-  <ComponentSource name="countdown" />
-  <Step>Update the import paths to match your project setup.</Step>
-</Steps>
-
-  </TabsContent>
-
-</Tabs>
-
-## Examples
-
-### Basic Statistic Example
+The demo below provides an example of the `Statistic` component in its basic form, displaying values with configurable precision. This setup is ideal for presenting numerical data that requires emphasis and readability.
 
 <ComponentPreview
   name="statistic-demo"
   title="Basic Statistic"
   description="A basic statistic component displaying values with precision."
 />
+
+## Variants
 
 ### Statistic in Card
 
@@ -68,3 +33,76 @@ component: true
   title="Statistic in Card"
   description="A statistic component displayed within a card, using color-coded indicators."
 />
+The `StatisticInCard` variant places the statistic component inside a card layout,
+making it suitable for grouped data displays. The card includes color-coded indicators
+to provide quick, visual insights into data trends or statuses. This setup is commonly
+used in analytics panels or overview sections, where multiple statistics are displayed
+side by side.
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<Steps>
+
+<Step>Run the following commands:</Step>
+
+```bash
+npx shadcn-ui@latest add statistic
+npx shadcn-ui@latest add card
+npx shadcn-ui@latest add countdown
+```
+
+</Steps>
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="statistic" />
+<ComponentSource name="card" />
+<ComponentSource name="countdown" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  Statistic,
+  StatisticCard,
+  StatisticCountdown,
+} from "@/components/ui/statistic"
+```
+
+```tsx
+<Statistic value={12345} precision={2} />
+<StatisticCard title="Sales" value={48000} indicator="positive" />
+<StatisticCountdown targetDate="2024-12-31T23:59:59" />
+```
+
+## Version History
+
+| Version | Editor      | Reviewer | Date      | Description           |
+| ------- | ----------- | -------- | --------- | --------------------- |
+| v1.0    | shadcn      | -        | -         | Initial version       |
+| v2.0    | Zhengjia Pu | Yibei Li | 1/11/2024 | Updated with variants |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.
