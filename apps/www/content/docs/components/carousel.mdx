@@ -5,7 +5,12 @@ component: true
 links:
   doc: https://www.embla-carousel.com/get-started/react
   api: https://www.embla-carousel.com/api
+  storybook: http://localhost:6006/?path=/docs/components-carousel--docs
 ---
+
+## Introduction
+
+The Carousel component is a versatile and customizable UI element for showcasing a series of images, content cards, or other items in a visually engaging, interactive slider format. Ideal for displaying featured content, product showcases, or galleries, the Carousel component supports smooth transitions and user controls for navigation, creating an intuitive experience. It includes options for autoplay, looping, and adjustable slide intervals, allowing developers to tailor its functionality and design to meet specific user engagement needs. This component is fully responsive, ensuring a seamless viewing experience across devices and screen sizes.
 
 <ComponentPreview
   name="carousel-demo"
@@ -84,6 +89,7 @@ import {
 
 ### Sizes
 
+The CarouselSize component demonstrates a carousel with customizable dimensions, displaying a sequence of numbered cards arranged within a limited width. This carousel is responsive and aligns its items at the start, making it adaptable to various screen sizes. Each carousel item contains a card component with a centered, bold number to represent its position in the sequence. Navigation buttons are provided to allow users to cycle through the carousel content interactively. With a maximum width set for smaller screens, this example effectively showcases how carousel items can be dynamically rendered in a clean, grid-based layout.
 To set the size of the items, you can use the `basis` utility class on the `<CarouselItem />`.
 
 <ComponentPreview
@@ -116,6 +122,7 @@ To set the size of the items, you can use the `basis` utility class on the `<Car
 
 ### Spacing
 
+The CarouselSpacing component displays a carousel with spaced items, providing a clean, organized layout for numbered cards. Each item has a slight left margin, creating separation between cards while keeping them within a responsive, max-width container. Users can navigate through the carousel with next and previous buttons, making it easy to browse through content interactively.
 To set the spacing between the items, we use a `pl-[VALUE]` utility on the `<CarouselItem />` and a negative `-ml-[VALUE]` on the `<CarouselContent />`.
 
 <Callout className="mt-6">
@@ -154,8 +161,9 @@ You can always adjust this in your own project if you need to.
 </Carousel>
 ```
 
-### Orientation
+## Orientation
 
+The CarouselOrientation component features a vertically oriented carousel, perfect for displaying content in a stacked, scrolling layout. With items aligned to the top and contained within a fixed height, this setup allows users to browse through numbered cards using vertical navigation buttons. The compact, max-width container is ideal for space-limited designs.
 Use the `orientation` prop to set the orientation of the carousel.
 
 <ComponentPreview
@@ -195,6 +203,7 @@ You can pass options to the carousel using the `opts` prop. See the [Embla Carou
 
 ## API
 
+The CarouselDApiDemo component demonstrates a carousel with an integrated API, allowing it to display the current slide position dynamically. As users navigate through the items, the component updates the current slide number and total count in real time. This setup provides a responsive carousel with numbered cards, next/previous buttons, and a footer showing the current slide status for an improved user experience.
 Use a state and the `setApi` props to get an instance of the carousel API.
 
 <ComponentPreview
@@ -272,6 +281,7 @@ See the [Embla Carousel docs](https://www.embla-carousel.com/api/events/) for mo
 
 ## Plugins
 
+The CarouselPlugin component is a carousel with autoplay functionality, using a plugin to automatically cycle through items every 2 seconds. The autoplay pauses when users interact with the carousel (hovering stops it, and leaving resets it), allowing for both automated and manual navigation. With a compact layout and numbered cards, this component provides an engaging, hands-free browsing experience enhanced by next and previous buttons for easy interaction.
 You can use the `plugins` prop to add plugins to the carousel.
 
 ```ts showLineNumbers {1,6-10}
@@ -299,3 +309,39 @@ export function Example() {
 />
 
 See the [Embla Carousel docs](https://www.embla-carousel.com/api/plugins/) for more information on using plugins.
+
+## carousel-basic
+
+The BasicCarousel component is a simple, elegant carousel displaying a series of inspirational quotes with the author’s name. Each carousel item centers the quote text and author within a card, creating a clean, visually appealing design. Users can navigate through the quotes using next and previous buttons, making it an interactive way to present motivational or literary quotes. This compact, max-width design is ideal for showcasing short text content in a carousel format.
+
+<ComponentPreview name="carousel-basic" description="A basic carousel." />
+
+## carousel-auto
+
+The CarouselAuto component is an autoplay carousel that cycles through items every 2 seconds using the Autoplay plugin. It pauses on user interaction, such as hovering, and resumes when the cursor leaves, offering a seamless blend of automatic and manual navigation. With a max-width for compact display and navigation buttons for controlled browsing, this component is ideal for content that benefits from continuous, hands-free scrolling.
+
+<ComponentPreview
+  name="carousel-auto"
+  description="The CarouselAuto component features a modern and simplistic design that automatically showcases numbered items in a sequence."
+/>
+
+## carousel-images
+
+The CarouselImage component is an autoplay image carousel, displaying a collection of scenic images with a smooth, automated transition every 4 seconds. The autoplay pauses when users hover over the carousel, allowing for interactive control while preserving the automatic flow. Each image is centered within a card, making the carousel visually organized and responsive within a compact, max-width container. This setup is ideal for showcasing image galleries or scenic photo collections in a hands-free, engaging format.
+
+<ComponentPreview
+  name="carousel-images"
+  description="TheCarouselImage component is tailored to elegantly display a series of images within a carousel format."
+/>
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Yihuan Cai  | Yihuan Cai  | 1/11/2024  | Updated version |

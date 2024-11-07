@@ -1,0 +1,80 @@
+import React from "react"
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/registry/sydney/ui/accordion"
+import { Button } from "@/registry/sydney/ui/button"
+import { Toaster } from "@/registry/sydney/ui/toaster"
+import { useToast } from "@/registry/sydney/ui/use-toast"
+
+export default function AccordionButton() {
+  const { toast } = useToast()
+  const buttonText = "Normal Show Toast"
+  const handleClick = (url: any) => () => {
+    window.open(url, "_blank")
+  }
+  const windowClick = (message: any) => () => {
+    alert(message)
+  }
+
+  return (
+    <div className="flex w-[600px] items-center justify-center bg-white">
+      <div className="w-[500px] bg-white">
+        <Accordion type="multiple" className="w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>How do I enrol?</AccordionTrigger>
+            <AccordionContent>
+              Once you're ready, enrol online by logging in to Sydney Student.
+              Go to "My studies" then "Enrolment" and you're set to go. There
+              are several sections to complete as part of your enrolment. You
+              can log out and return later if you need to.
+              <br />
+              <Toaster />
+              <Button
+                className="cursor-pointer rounded-md bg-orange-600 px-4 py-2 text-neutral-50"
+                variant="outline"
+                onClick={() => {
+                  console.log(buttonText, "has clicked")
+                  toast({
+                    description: "Button click.",
+                  })
+                }}
+              >
+                Enrol now
+              </Button>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-2">
+            <AccordionTrigger>
+              Your responsibilities and privacy
+            </AccordionTrigger>
+            <AccordionContent>
+              Your enrolment comes with certain conditions so it's important to
+              understand them. You should also familiarise yourself with our
+              privacy policy regarding the personal information you supply
+              during enrolment.
+              <br />
+              <Toaster />
+              <Button
+                className="cursor-pointer rounded-md bg-orange-600 px-4 py-2 text-neutral-50"
+                variant="outline"
+                onClick={() => {
+                  console.log(buttonText, "has clicked")
+                  toast({
+                    description: "Button click.",
+                  })
+                }}
+              >
+                Learn more
+              </Button>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
+    </div>
+  )
+}

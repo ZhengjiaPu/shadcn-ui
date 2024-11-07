@@ -1,17 +1,20 @@
 ---
 title: Aspect Ratio
-description: Displays content within a desired ratio.
+description: A container that maintains a consistent width-to-height ratio.
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/aspect-ratio
   api: https://www.radix-ui.com/docs/primitives/components/aspect-ratio#api-reference
+  storybook: http://localhost:6006/?path=/story/components-aspectratio--default
 ---
 
-<ComponentPreview
-  name="aspect-ratio-demo"
-  title="Aspect Ratio"
-  description="A component that displays an image with a 16:9 aspect ratio."
-/>
+## Introduction
+
+The Aspect Ratio component ensures that media elements such as images, videos, and containers maintain a specified width-to-height ratio regardless of screen size or parent container dimensions. This helps in creating responsive layouts by preserving the aspect ratio across different devices and orientations, providing a consistent and visually appealing user experience. The component is highly customizable, allowing you to define the desired ratio and easily integrate it with other UI elements.
+
+## Demo
+
+<ComponentPreview name="aspect-ratio-demo" />
 
 ## Installation
 
@@ -66,3 +69,17 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
   </AspectRatio>
 </div>
 ```
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Wentao Wu   | Wentao Wu   | 1/11/2024  | Updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.

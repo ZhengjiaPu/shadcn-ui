@@ -1,12 +1,20 @@
 ---
 title: Dropdown Menu
-description: Displays a menu to the user — such as a set of actions or functions — triggered by a button.
+description: A toggleable menu that displays a list of options or actions when triggered.
 featured: true
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/dropdown-menu
-  api: https://www.radix-ui.com/docs/primitives/components/dropdown-menu#api-reference
+  api: https://www.radix-ui.com/docs/primitives/components/dropdown-menu
+  storybook: http://localhost:6006/?path=/story/components-dropdownmenu--default
+  guideline: https://react-spectrum.adobe.com/react-spectrum/Menu.html
 ---
+
+## Introduction
+
+The Dropdown Menu component is a toggleable UI element that displays a list of options or actions upon interaction, commonly used for navigation, settings, or contextual actions. When triggered, the menu opens to reveal items that users can select, making it ideal for consolidating multiple actions in a compact and organized format. Highly customizable, the Dropdown Menu enhances interface efficiency and user experience by keeping the design clean and clutter-free. It’s frequently used in toolbars, navigation bars, and settings panels, allowing users to access a variety of choices within a single component.
+
+## Demo
 
 <ComponentPreview
   name="dropdown-menu-demo"
@@ -78,18 +86,72 @@ import {
 </DropdownMenu>
 ```
 
-## Examples
+## Variants
 
-### Checkboxes
+### Dropdown Menu Checkboxes
+
+The Dropdown Menu Checkboxes variant includes checkboxes within the dropdown menu, allowing users to select multiple options at once. This variant is ideal for cases where multiple selections are necessary, such as filtering options or choosing from a list of preferences.
 
 <ComponentPreview
   name="dropdown-menu-checkboxes"
   description="A dropdown menu with checkboxes."
 />
 
-### Radio Group
+### Dropdown Menu Radio Group
+
+The Dropdown Menu Radio Group variant provides radio button options in a dropdown menu, ensuring that users can only select one option from a predefined set. This variant is perfect for cases where only one selection is allowed, such as choosing a single setting or preference.
 
 <ComponentPreview
   name="dropdown-menu-radio-group"
   description="A dropdown menu with radio items."
 />
+
+### Dropdown Menu With icons
+
+The Dropdown Menu With Icons variant includes icons alongside each menu item, enhancing visual clarity and helping users quickly identify actions or options. This style is useful for feature-rich interfaces where icons provide context and aid in navigation.
+
+<ComponentPreview
+  name="dropdown-menu-with-icon"
+  description="A dropdown menu with icon."
+/>
+
+### Dropdown Menu With divider
+
+The Dropdown Menu With Divider variant separates different sections within the dropdown using dividers, making it easier for users to distinguish between groups of items. This layout is useful for organizing related actions or options in larger menus.
+
+<ComponentPreview
+  name="dropdown-menu-with-divider"
+  description="A dropdown menu with dividers."
+/>
+
+### Dropdown Menu With search
+
+The Dropdown Menu With Search variant includes a search bar at the top of the dropdown, enabling users to filter and quickly find specific options. This variant is ideal for menus with a large number of items, providing a more efficient way to locate options.
+
+<ComponentPreview
+  name="dropdown-menu-with-search"
+  description="A dropdown menu with search."
+/>
+
+### Dropdown Menu With header
+
+The Dropdown Menu With Header variant adds a header to the top of the dropdown, which can display a title or other contextual information. This variant is useful for providing additional context or labeling the menu contents, enhancing usability.
+
+<ComponentPreview
+  name="dropdown-menu-with-header"
+  description="A dropdown menu with header."
+/>
+
+## Reference
+
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Wentao Wu   | Wentao Wu   | 1/11/2024  | Updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.

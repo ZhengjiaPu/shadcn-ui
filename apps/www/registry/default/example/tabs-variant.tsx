@@ -17,24 +17,15 @@ import {
 
 export function TabsDemo() {
   return (
-    <Tabs defaultValue="recent" className="w-[500px] h-[500px]">
-      <TabsList className="grid w-full grid-cols-3">
-        <TabsTrigger
-          value="recent"
-          className="relative data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-[2px] hover:after:bg-orange-600"
-        >
+    <Tabs defaultValue="recent" className="w-[400px] h-[500px]">
+      <TabsList className="flex w-full h-[60px]">
+        <TabsTrigger value="recent" className="w-full text-center text-lg">
           Recent
         </TabsTrigger>
-        <TabsTrigger
-          value="popular"
-          className="relative data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-[2px] hover:after:bg-orange-600"
-        >
+        <TabsTrigger value="popular" className="w-full text-center text-lg">
           Popular
         </TabsTrigger>
-        <TabsTrigger
-          value="trending"
-          className="relative data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-[2px] hover:after:bg-orange-600"
-        >
+        <TabsTrigger value="trending" className="w-full text-center text-lg">
           Trending
         </TabsTrigger>
       </TabsList>

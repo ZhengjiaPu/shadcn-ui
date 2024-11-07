@@ -127,6 +127,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Browser Window",
+          href: "/docs/components/browserwindow",
+          items: [],
+        },
+        {
           title: "Button",
           href: "/docs/components/button",
           items: [],
@@ -173,6 +178,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Comment",
+          href: "/docs/components/comment",
+          items: [],
+        },
+        {
           title: "Context Menu",
           href: "/docs/components/context-menu",
           items: [],
@@ -210,6 +220,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Hover Card",
           href: "/docs/components/hover-card",
+          items: [],
+        },
+        {
+          title: "Image Gallery",
+          href: "/docs/components/image-gallery",
           items: [],
         },
         {
@@ -308,6 +323,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Statistic",
+          href: "/docs/components/statistic",
+          items: [],
+        },
+        {
           title: "Switch",
           href: "/docs/components/switch",
           items: [],
@@ -320,6 +340,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Tabs",
           href: "/docs/components/tabs",
+          items: [],
+        },
+        {
+          title: "Tags",
+          href: "/docs/components/tags",
           items: [],
         },
         {
@@ -345,6 +370,16 @@ export const docsConfig: DocsConfig = {
         {
           title: "Tooltip",
           href: "/docs/components/tooltip",
+          items: [],
+        },
+        {
+          title: "Tour",
+          href: "/docs/components/tour",
+          items: [],
+        },
+        {
+          title: "Watermark",
+          href: "/docs/components/watermark",
           items: [],
         },
       ],

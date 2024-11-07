@@ -19,15 +19,35 @@ export default function DropdownMenuRadioGroupDemo() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button
+          variant="outline"
+          className="hover:bg-orange-600 hover:text-white"
+        >
+          Open
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem
+            value="top"
+            className="hover:bg-orange-600 hover:text-white"
+          >
+            Top
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem
+            value="bottom"
+            className="hover:bg-orange-600 hover:text-white"
+          >
+            Bottom
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem
+            value="right"
+            className="hover:bg-orange-600 hover:text-white"
+          >
+            Right
+          </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>

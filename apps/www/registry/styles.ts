@@ -12,8 +12,8 @@ export const styles = [
     label: "Sydney",
   },
   {
-    name: "unsw",
-    label: "UNSW",
+    name: "ibm",
+    label: "IBM",
   },
 ] as const
 

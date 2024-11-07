@@ -32,7 +32,12 @@ export default function DrawerDialogDemo() {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline">Edit Profile</Button>
+          <Button
+            variant="outline"
+            className="text-orange-500 border-orange-500"
+          >
+            Edit Profile
+          </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
@@ -50,7 +55,9 @@ export default function DrawerDialogDemo() {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+        <Button variant="outline" className="text-orange-500 border-orange-500">
+          Edit Profile
+        </Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="text-left">
@@ -62,7 +69,12 @@ export default function DrawerDialogDemo() {
         <ProfileForm className="px-4" />
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
+            <Button
+              variant="outline"
+              className="text-orange-500 border-orange-500"
+            >
+              Cancel
+            </Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>
@@ -81,7 +93,12 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
         <Label htmlFor="username">Username</Label>
         <Input id="username" defaultValue="@shadcn" />
       </div>
-      <Button type="submit">Save changes</Button>
+      <Button
+        type="submit"
+        className="bg-orange-500 hover:bg-orange-700 text-white"
+      >
+        Save changes
+      </Button>
     </form>
   )
 }

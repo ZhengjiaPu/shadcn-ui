@@ -1,13 +1,169 @@
 ---
 title: Breadcrumb
-description: Displays the path to the current resource using a hierarchy of links.
+description: A navigation component that indicates the current page’s location within a hierarchical structure.
 component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/breadcrumb
+  api: https://www.radix-ui.com/docs/primitives/components/breadcrumb
+  storybook: http://localhost:6006/?path=/story/components-breadcrumb--default
+  guideline: https://react-spectrum.adobe.com/react-spectrum/Breadcrumbs.html
 ---
+
+## Introduction
+
+The Breadcrumb component is a navigational aid that displays the current page’s location within a hierarchical structure, allowing users to trace their path back to previous pages. Commonly used in multi-level or deeply nested interfaces, Breadcrumbs improve user experience by providing context, enhancing navigation, and reducing the effort required to move through the application. This component supports customization options such as separators and responsive dropdowns, making it a flexible solution for various design requirements.
+
+## Demo
 
 <ComponentPreview
   name="breadcrumb-demo"
   className="[&_.preview]:p-2"
   description="A breadcrumb with a collapsible dropdown."
+/>
+## Variants
+
+### breadcrumb with custom separator
+
+This variant allows you to use a custom separator between breadcrumb items. Instead of the default “/” or “>” symbol, you can specify any icon or character as a separator by passing a custom component to the BreadcrumbSeparator. This variant is useful when the design calls for unique symbols that align with the application's aesthetic, making the navigation experience more cohesive.
+
+<ComponentPreview
+  name="breadcrumb-separator"
+  description="A breadcrumb with a custom separator"
+/>
+
+```tsx showLineNumbers {1,10-12}
+import { Slash } from "lucide-react"
+
+...
+
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator>
+      <Slash />
+    </BreadcrumbSeparator>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+---
+
+### breadcrumb with dropdown
+
+The Breadcrumb with Dropdown variant is ideal for navigating complex, multi-level hierarchies. Instead of showing all breadcrumb items in a linear path, this variant groups sections into a dropdown. Users can expand the dropdown to view or select intermediate levels, providing a cleaner, more concise navigation experience. This variant is particularly useful in applications where the breadcrumb path can be long, reducing visual clutter while retaining full navigational functionality.
+
+<ComponentPreview
+  name="breadcrumb-dropdown"
+  className="[&_.preview]:p-2"
+  description="A breadcrumb with a dropdown."
+/>
+
+```tsx showLineNumbers {1-6,11-21}
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+...
+
+<BreadcrumbItem>
+  <DropdownMenu>
+    <DropdownMenuTrigger className="flex items-center gap-1">
+      Components
+      <ChevronDownIcon />
+    </DropdownMenuTrigger>
+    <DropdownMenuContent align="start">
+      <DropdownMenuItem>Documentation</DropdownMenuItem>
+      <DropdownMenuItem>Themes</DropdownMenuItem>
+      <DropdownMenuItem>GitHub</DropdownMenuItem>
+    </DropdownMenuContent>
+  </DropdownMenu>
+</BreadcrumbItem>
+```
+
+---
+
+### breadcrumb with collapsed
+
+The Collapsible Breadcrumb variant is designed for interfaces with limited space or a large number of hierarchical levels. In this variant, only the first and last items are displayed by default, while the intermediate items are collapsed into a dropdown. This approach keeps the navigation compact and accessible, especially on smaller screens, while still allowing users to trace their path through the hierarchy.
+
+<ComponentPreview
+  name="breadcrumb-ellipsis"
+  className="[&_.preview]:p-2"
+  description="A breadcrumb showing a collapsed state."
+/>
+
+```tsx showLineNumbers {1,9}
+import { BreadcrumbEllipsis } from "@/components/ui/breadcrumb"
+
+...
+
+<Breadcrumb>
+  <BreadcrumbList>
+    {/* ... */}
+    <BreadcrumbItem>
+      <BreadcrumbEllipsis />
+    </BreadcrumbItem>
+    {/* ... */}
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+---
+
+### breadcrumb with link component
+
+The Breadcrumb with Link Component variant integrates interactive links for each breadcrumb item, enabling users to click and navigate directly to any previous page in the hierarchy. This approach enhances usability by allowing immediate access to any level, making it a preferred choice for dynamic applications where users frequently navigate between different levels. This variant is especially helpful in content-heavy applications, like e-commerce or knowledge bases, where users may need to backtrack quickly.
+
+<ComponentPreview
+  name="breadcrumb-link"
+  description="A breadcrumb with a custom Link component"
+/>
+
+```tsx showLineNumbers {1,8-10}
+import { Link } from "next/link"
+
+...
+
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink asChild>
+        <Link href="/">Home</Link>
+      </BreadcrumbLink>
+    </BreadcrumbItem>
+    {/* ... */}
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+---
+
+### breadcrumb with responsive
+
+The Responsive Breadcrumb variant is optimized for devices of varying screen sizes, ensuring seamless navigation across desktops, tablets, and mobile devices. This variant automatically adjusts the display of breadcrumb items based on available screen width, using techniques like collapsing items into a dropdown on smaller screens. It allows users to maintain context regardless of the device they are using, improving accessibility and adaptability in multi-device applications.
+
+<ComponentPreview
+  name="breadcrumb-responsive"
+  className="[&_.preview]:p-2"
+  description="A responsive breadcrumb. It displays a dropdown on desktop and a drawer on mobile."
+/>
+
+### breadcrumb with border
+
+The Breadcrumb with Border variant emphasizes the breadcrumb trail by adding a border around each item or the entire breadcrumb component. This variant is suitable for applications that require a more defined or structured visual style, as the border helps differentiate the breadcrumb from other elements on the page. Adding a border enhances visual clarity and creates a more formal, compartmentalized look, making the navigation path more noticeable and guiding users’ attention to their current location within the hierarchy.
+
+<ComponentPreview
+  name="breadcrumb-without-border"
+  className="[&_.preview]:p-2"
+  description="A breadcrumb without border."
 />
 
 ## Installation
@@ -73,140 +229,16 @@ import {
 </Breadcrumb>
 ```
 
-## Examples
+## Reference
 
-### Custom separator
+When designing the component, you must borrowed idea somewhere else, list them here.
+For the design guidelines and usability/accessibility requirements, if they are written by you, provide the reference source here as well.
 
-Use a custom component as `children` for `<BreadcrumbSeparator />` to create a custom separator.
+## Version History
 
-<ComponentPreview
-  name="breadcrumb-separator"
-  description="A breadcrumb with a custom separator"
-/>
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Wentao Wu   | Wentao Wu   | 1/11/2024  | Updated version |
 
-```tsx showLineNumbers {1,10-12}
-import { Slash } from "lucide-react"
-
-...
-
-<Breadcrumb>
-  <BreadcrumbList>
-    <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
-    </BreadcrumbItem>
-    <BreadcrumbSeparator>
-      <Slash />
-    </BreadcrumbSeparator>
-    <BreadcrumbItem>
-      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
-    </BreadcrumbItem>
-  </BreadcrumbList>
-</Breadcrumb>
-```
-
----
-
-### Dropdown
-
-You can compose `<BreadcrumbItem />` with a `<DropdownMenu />` to create a dropdown in the breadcrumb.
-
-<ComponentPreview
-  name="breadcrumb-dropdown"
-  className="[&_.preview]:p-2"
-  description="A breadcrumb with a dropdown."
-/>
-
-```tsx showLineNumbers {1-6,11-21}
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
-...
-
-<BreadcrumbItem>
-  <DropdownMenu>
-    <DropdownMenuTrigger className="flex items-center gap-1">
-      Components
-      <ChevronDownIcon />
-    </DropdownMenuTrigger>
-    <DropdownMenuContent align="start">
-      <DropdownMenuItem>Documentation</DropdownMenuItem>
-      <DropdownMenuItem>Themes</DropdownMenuItem>
-      <DropdownMenuItem>GitHub</DropdownMenuItem>
-    </DropdownMenuContent>
-  </DropdownMenu>
-</BreadcrumbItem>
-```
-
----
-
-### Collapsed
-
-We provide a `<BreadcrumbEllipsis />` component to show a collapsed state when the breadcrumb is too long.
-
-<ComponentPreview
-  name="breadcrumb-ellipsis"
-  className="[&_.preview]:p-2"
-  description="A breadcrumb showing a collapsed state."
-/>
-
-```tsx showLineNumbers {1,9}
-import { BreadcrumbEllipsis } from "@/components/ui/breadcrumb"
-
-...
-
-<Breadcrumb>
-  <BreadcrumbList>
-    {/* ... */}
-    <BreadcrumbItem>
-      <BreadcrumbEllipsis />
-    </BreadcrumbItem>
-    {/* ... */}
-  </BreadcrumbList>
-</Breadcrumb>
-```
-
----
-
-### Link component
-
-To use a custom link component from your routing library, you can use the `asChild` prop on `<BreadcrumbLink />`.
-
-<ComponentPreview
-  name="breadcrumb-link"
-  description="A breadcrumb with a custom Link component"
-/>
-
-```tsx showLineNumbers {1,8-10}
-import { Link } from "next/link"
-
-...
-
-<Breadcrumb>
-  <BreadcrumbList>
-    <BreadcrumbItem>
-      <BreadcrumbLink asChild>
-        <Link href="/">Home</Link>
-      </BreadcrumbLink>
-    </BreadcrumbItem>
-    {/* ... */}
-  </BreadcrumbList>
-</Breadcrumb>
-```
-
----
-
-### Responsive
-
-Here's an example of a responsive breadcrumb that composes `<BreadcrumbItem />` with `<BreadcrumbEllipsis />`, `<DropdownMenu />`, and `<Drawer />`.
-
-It displays a dropdown on desktop and a drawer on mobile.
-
-<ComponentPreview
-  name="breadcrumb-responsive"
-  className="[&_.preview]:p-2"
-  description="A responsive breadcrumb. It displays a dropdown on desktop and a drawer on mobile."
-/>
+Provide Version, Editor, Reviewer, Date, Description, Status here.

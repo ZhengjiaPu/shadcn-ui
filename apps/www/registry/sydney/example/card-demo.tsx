@@ -69,8 +69,9 @@ export default function CardDemo({ className, ...props }: CardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">
-          <Check className="mr-2 h-4 w-4" /> Mark all as read
+        <Button className="w-full py-2 px-4 bg-orange-500 hover:bg-orange-700 text-white">
+          <Check className="mr-2 h-4 w-4" />
+          Mark all as read
         </Button>
       </CardFooter>
     </Card>

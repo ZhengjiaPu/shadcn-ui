@@ -20,8 +20,18 @@ export default function TabsDemo() {
   return (
     <Tabs defaultValue="account" className="w-[400px]">
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="account">Account</TabsTrigger>
-        <TabsTrigger value="password">Password</TabsTrigger>
+        <TabsTrigger
+          value="account"
+          className="data-[state=active]:bg-orange-600 data-[state=active]:text-white"
+        >
+          Account
+        </TabsTrigger>
+        <TabsTrigger
+          value="password"
+          className="data-[state=active]:bg-orange-600 data-[state=active]:text-white"
+        >
+          Password
+        </TabsTrigger>
       </TabsList>
       <TabsContent value="account">
         <Card>
@@ -42,7 +52,9 @@ export default function TabsDemo() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save changes</Button>
+            <Button className="bg-orange-600 hover:!bg-orange-700 text-white">
+              Save changes
+            </Button>
           </CardFooter>
         </Card>
       </TabsContent>
@@ -65,7 +77,9 @@ export default function TabsDemo() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save password</Button>
+            <Button className="bg-orange-600 hover:!bg-orange-700 text-white">
+              Save password
+            </Button>
           </CardFooter>
         </Card>
       </TabsContent>
