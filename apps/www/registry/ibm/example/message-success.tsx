@@ -23,7 +23,12 @@ export function MessageSuccess() {
         backgroundColor: "rgb(255, 255, 255)",
       }}
     >
-      <Button onClick={showMessage}>Display success message</Button>
+      <Button
+        onClick={showMessage}
+        className="bg-blue-600 hover:bg-blue-800 shadow-md text-white px-4 py-2 border-none"
+      >
+        Display success message
+      </Button>
       <Messages
         icon={
           <CheckCircledIcon style={{ color: "#21AB12", marginRight: "10px" }} />
@@ -32,6 +37,7 @@ export function MessageSuccess() {
         duration={30000}
         isVisible={isVisible}
         hideMessage={hideMessage}
+        className="border border-blue-600 px-4 py-2"
       />
     </div>
   )

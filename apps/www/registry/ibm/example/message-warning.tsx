@@ -23,7 +23,12 @@ export function MessageWarning() {
         backgroundColor: "rgb(255, 255, 255)",
       }}
     >
-      <Button onClick={showMessage}>Display warning message</Button>
+      <Button
+        onClick={showMessage}
+        className="bg-blue-600 hover:bg-blue-800 shadow-md text-white px-4 py-2 border-none"
+      >
+        Display warning message
+      </Button>
       <Messages
         icon={
           <ExclamationTriangleIcon
@@ -34,6 +39,7 @@ export function MessageWarning() {
         duration={30000}
         isVisible={isVisible}
         hideMessage={hideMessage}
+        className="border border-blue-600 px-4 py-2"
       />
     </div>
   )

@@ -23,7 +23,13 @@ export function MessageWarning() {
         backgroundColor: "rgb(255, 255, 255)",
       }}
     >
-      <Button onClick={showMessage}>Display warning message</Button>
+      <Button
+        onClick={showMessage}
+        className="bg-orange-600 hover:bg-orange-700"
+      >
+        {" "}
+        Display warning message
+      </Button>
       <Messages
         icon={
           <ExclamationTriangleIcon
@@ -31,7 +37,7 @@ export function MessageWarning() {
           />
         }
         description="This is a warning message!"
-        duration={30000}
+        duration={3000}
         isVisible={isVisible}
         hideMessage={hideMessage}
       />

@@ -24,13 +24,18 @@ export function MessageError() {
         backgroundColor: "rgb(255, 255, 255)",
       }}
     >
-      <Button onClick={showMessage}>Display error message</Button>
+      <Button
+        onClick={showMessage}
+        className="bg-orange-600 hover:bg-orange-700"
+      >
+        Display error message
+      </Button>
       <Messages
         icon={
           <CrossCircledIcon style={{ color: "#FF0B0B", marginRight: "10px" }} />
         }
         description="This is a error message!"
-        duration={10000}
+        duration={1000}
         isVisible={isVisible}
         hideMessage={hideMessage}
       />

@@ -23,13 +23,18 @@ export function MessageNormal() {
         backgroundColor: "rgb(255, 255, 255)",
       }}
     >
-      <Button onClick={showMessage}>Display normal message</Button>
+      <Button
+        onClick={showMessage}
+        className="bg-orange-600 hover:bg-orange-700"
+      >
+        Display normal message
+      </Button>
       <Messages
         icon={
           <InfoCircledIcon style={{ color: "#1890ff", marginRight: "10px" }} />
         }
         description="This is a normal message!"
-        duration={10000}
+        duration={1000}
         isVisible={isVisible}
         hideMessage={hideMessage}
       />

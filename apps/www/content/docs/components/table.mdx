@@ -1,10 +1,18 @@
 ---
 title: Table
-description: A responsive table component.
+description: The Table component provides a responsive and customizable structure for displaying tabular data, ideal for invoices, lists, or any structured dataset.
 component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/table
+  api: https://www.radix-ui.com/docs/primitives/components/table#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-tabledemo--docs
+  guideline: https://react-spectrum.adobe.com/react-spectrum/TableView.html
+  accessibility:
 ---
 
-<ComponentPreview name="table-demo" description="A table component." />
+## Introduction
+
+The Table component allows you to display structured data in a responsive, customizable table layout. It supports various elements like headers, captions, and footers, making it versatile for use cases such as displaying invoices, financial records, and lists of items.
 
 ## Installation
 
@@ -74,7 +82,18 @@ import {
 </Table>
 ```
 
+### Demo
+
+Displays a list of invoices with columns for invoice number, status, payment method, and amount.
+
+<ComponentPreview
+  name="table-demo"
+  title="An variant alert for information notice"
+  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
+/>
 ### Variant
+
+A variant of the table with color-coded rows for readability.
 
 <ComponentPreview
   name="table-colorful"
@@ -89,3 +108,9 @@ You can use the `<Table />` component to build more complex data tables. Combine
 See the [Data Table](/docs/components/data-table) documentation for more information.
 
 You can also see an example of a data table in the [Tasks](/examples/tasks) demo.
+
+## Version History
+
+| Version | Editor   | Reviewer    | Date      | Description     |
+| ------- | -------- | ----------- | --------- | --------------- |
+| v2.0    | Yibei Li | Zhengjia Pu | 1/11/2024 | updated version |

@@ -13,6 +13,7 @@ export function MessageNormal() {
   const hideMessage = () => {
     setIsVisible(false)
   }
+
   return (
     <div
       style={{
@@ -23,16 +24,26 @@ export function MessageNormal() {
         backgroundColor: "rgb(255, 255, 255)",
       }}
     >
-      <Button onClick={showMessage}>Display normal message</Button>
-      <Messages
-        icon={
-          <InfoCircledIcon style={{ color: "#1890ff", marginRight: "10px" }} />
-        }
-        description="This is a normal message!"
-        duration={10000}
-        isVisible={isVisible}
-        hideMessage={hideMessage}
-      />
+      <Button
+        onClick={showMessage}
+        className="bg-blue-600 hover:bg-blue-800 shadow-md text-white px-4 py-2 border-none"
+      >
+        Display normal message
+      </Button>
+      {isVisible && (
+        <Messages
+          icon={
+            <InfoCircledIcon
+              style={{ color: "#1890ff", marginRight: "10px" }}
+            />
+          }
+          description="This is a normal message!"
+          duration={10000}
+          isVisible={isVisible}
+          hideMessage={hideMessage}
+          className="border border-blue-600 px-4 py-2"
+        />
+      )}
     </div>
   )
 }

@@ -15,7 +15,10 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("border-t border-gray-300 transition-colors hover:border-gray-500", className)}
+    className={cn(
+      "border-t border-gray-300 transition-colors hover:border-gray-500",
+      className
+    )}
     {...props}
   />
 ))
@@ -26,7 +29,7 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <AccordionPrimitive.Header className="flex">
@@ -40,9 +43,7 @@ const AccordionTrigger = React.forwardRef<
         {...props}
       >
         {children}
-        <span className="ml-2 text-xl">
-          {isOpen ? "-" : "+"}
-        </span>
+        <span className="ml-2 text-xl">{isOpen ? "-" : "+"}</span>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )
