@@ -1,14 +1,26 @@
 ---
-title: Popover
-description: Displays rich content in a portal, triggered by a button.
+title: "Popover"
+description: "Displays rich content in a portal, triggered by a button."
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/popover
   api: https://www.radix-ui.com/docs/primitives/components/popover#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-popover-demo--docs
+  guideline: https://react-spectrum.adobe.com/react-aria/Popover.html
+  accessibility: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tooltip_Role
 ---
+
+## Introduction
+
+The `Popover` component is a versatile interface element designed to display additional content or forms in a portal overlay. It is triggered by a button and can be customized to hold various types of interactive elements. This component is ideal for creating tooltips, form pop-ups, or any context-based information that requires user engagement without redirecting from the main page. It follows accessibility standards, ensuring inclusivity across all users.
+
+## Demo
+
+The demo below shows the `Popover` component with a form setup. This configuration demonstrates how the popover can act as an overlay for gathering user input or displaying extra details.
 
 <ComponentPreview
   name="popover-demo"
+  title="Basic Popover"
   description="A popover component with a form."
 />
 
@@ -20,11 +32,18 @@ links:
   <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
+
 <TabsContent value="cli">
+
+<Steps>
+
+<Step>Run the following command:</Step>
 
 ```bash
 npx shadcn-ui@latest add popover
 ```
+
+</Steps>
 
 </TabsContent>
 
@@ -32,7 +51,7 @@ npx shadcn-ui@latest add popover
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>Install the required dependencies:</Step>
 
 ```bash
 npm install @radix-ui/react-popover
@@ -42,7 +61,7 @@ npm install @radix-ui/react-popover
 
 <ComponentSource name="popover" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>Update the import paths according to your project structure.</Step>
 
 </Steps>
 
@@ -66,3 +85,12 @@ import {
   <PopoverContent>Place content for the popover here.</PopoverContent>
 </Popover>
 ```
+
+## Version History
+
+| Version | Editor      | Reviewer | Date      | Description     |
+| ------- | ----------- | -------- | --------- | --------------- |
+| v1.0    | shadcn      | -        | -         | Initial version |
+| v2.0    | Zhengjia Pu | Yibei Li | 1/11/2024 | Updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.
