@@ -1,14 +1,18 @@
 ---
 title: Links
-description: Displays a callout for user attention.
+description: The Links component provides styled, accessible navigational links for various use cases. It supports button-styled links and enhanced card layouts with customizable features.
 component: true
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/toolbar
+  api: https://www.radix-ui.com/primitives/docs/components/toolbar#link
+  storybook: http://localhost:6006/?path=/docs/components-links--docs
+  guideline: https://react-spectrum.adobe.com/react-spectrum/Link.html
+  accessibility:
 ---
 
-<ComponentPreview
-  name="links-demo"
-  title="An alert with an icon, title and description."
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
-/>
+## Introduction
+
+The Links component provides a styled and accessible way to add navigational links within your application. With customizable options, it can adapt to various scenarios, from simple button-style links to more enhanced card layouts that encapsulate additional information.
 
 ## Installation
 
@@ -21,40 +25,41 @@ component: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add alert
+npx shadcn-ui@latest add links
 ```
 
-</TabsContent>
-
-<TabsContent value="manual">
-
-<Steps>
-
+</TabsContent> <TabsContent value="manual"> <Steps>
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="alert" />
-
+<ComponentSource name="links" />
 <Step>Update the import paths to match your project setup.</Step>
 
-</Steps>
-
-</TabsContent>
-
-</Tabs>
+</Steps> </TabsContent> </Tabs>
 
 ## Examples
 
 ### Default
 
+A basic alert-style link example.
+
 <ComponentPreview
   name="links-demo"
   title="An alert with an icon, title and description."
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
+  description="An alert with an icon, title, and description. The title says 'Heads up!' and the description is 'You can add components to your app using the CLI.'"
 />
+
 ### Expand
+
+A variant alert styled for information notices. Includes a card layout with a link for more details.
 
 <ComponentPreview
   name="links-expand"
-  title="An variant alert for information notice"
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
+  title="A variant alert for information notice"
+  description="An alert with an icon, title, and description. The title says 'Heads up!' and the description is 'You can add components to your app using the CLI.'"
 />
+
+## Version History
+
+| Version | Editor   | Reviewer    | Date      | Description     |
+| ------- | -------- | ----------- | --------- | --------------- |
+| v2.0    | Yibei Li | Zhengjia Pu | 1/11/2024 | updated version |

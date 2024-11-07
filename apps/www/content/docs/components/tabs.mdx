@@ -1,16 +1,18 @@
 ---
 title: Tabs
-description: A set of layered sections of content—known as tab panels—that are displayed one at a time.
+description: The Tabs component organizes content into multiple sections, displaying one section at a time. Users can navigate between sections via tab triggers.
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/tabs
   api: https://www.radix-ui.com/docs/primitives/components/tabs#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-tabsdemo--docs
+  guideline: https://react-spectrum.adobe.com/react-spectrum/Tabs.html
+  accessibility:
 ---
 
-<ComponentPreview
-  name="tabs-demo"
-  description="A tabs component with two forms."
-/>
+## Introduction
+
+The Tabs component allows you to organize content into multiple sections, each displayed one at a time. This component is ideal for use cases where content can be grouped and layered for easy navigation. Tabs include custom styling and active states to improve user interaction.
 
 ## Installation
 
@@ -21,7 +23,6 @@ links:
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
-
 ```bash
 npx shadcn-ui@latest add tabs
 ```
@@ -67,10 +68,26 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 </Tabs>
 ```
 
+### Demo
+
+A tabbed interface where users can toggle between Account and Password settings.
+
+<ComponentPreview
+  name="tabs-demo"
+  description="A tabs component with forms for account management."
+/>
+
 ### Variant
+
+A tab setup with Recent, Popular, and Trending tabs, useful for organizing content feeds or dynamic updates.
 
 <ComponentPreview
   name="tabs-variant"
-  title="An variant alert for information notice"
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
+  description="Tabs with content sections for recent, popular, and trending updates."
 />
+
+## Version History
+
+| Version | Editor   | Reviewer    | Date      | Description     |
+| ------- | -------- | ----------- | --------- | --------------- |
+| v2.0    | Yibei Li | Zhengjia Pu | 1/11/2024 | updated version |

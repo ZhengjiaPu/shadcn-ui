@@ -25,13 +25,18 @@ export function MessageDuration() {
         backgroundColor: "rgb(255, 255, 255)",
       }}
     >
-      <Button onClick={showMessage}>Display duration message</Button>
+      <Button
+        onClick={showMessage}
+        className="bg-orange-600 hover:bg-orange-700"
+      >
+        Display duration message
+      </Button>
       <Messages
         icon={
           <CheckCircledIcon style={{ color: "#21AB12", marginRight: "10px" }} />
         }
         description="This is a prompt message for success, and it will disappear in 3 seconds!"
-        duration={3000}
+        duration={300}
         isVisible={isVisible}
         hideMessage={hideMessage}
       />

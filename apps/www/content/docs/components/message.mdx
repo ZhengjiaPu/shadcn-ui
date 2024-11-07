@@ -1,14 +1,18 @@
 ---
 title: Message
-description: Displays a callout for user attention.
+description: The Message component displays callout messages to capture user attention, with support for various types like normal, duration, error, success, and warning messages.
 component: true
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/form
+  api: https://www.radix-ui.com/primitives/docs/components/form#message
+  storybook: http://localhost:6006/?path=/docs/components-message--docs
+  guideline: https://react-spectrum.adobe.com/react-spectrum/ActionGroup.html
+  accessibility:
 ---
 
-<ComponentPreview
-  name="message-demo"
-  title="An alert with an icon, title and description."
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
-/>
+## Introduction
+
+The Message component is designed to provide users with important information through visually distinct messages. It supports several types, including `normal`, `duration`, `error`, `success`, and `warning`, each with custom icons, styles, and durations to fit different use cases. Messages are dismissible and can be controlled to appear and disappear as needed.
 
 ## Installation
 
@@ -24,27 +28,19 @@ component: true
 npx shadcn-ui@latest add alert
 ```
 
-</TabsContent>
-
-<TabsContent value="manual">
-
-<Steps>
-
+</TabsContent> <TabsContent value="manual"> <Steps>
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="alert" />
-
+<ComponentSource name="message" />
 <Step>Update the import paths to match your project setup.</Step>
 
-</Steps>
-
-</TabsContent>
-
-</Tabs>
+</Steps> </TabsContent> </Tabs>
 
 ## Examples
 
 ### Default
+
+Displays a regular informational message.
 
 <ComponentPreview
   name="message-demo"
@@ -53,6 +49,8 @@ npx shadcn-ui@latest add alert
 />
 ### MessageDuration
 
+A message that appears for a specific duration before disappearing.
+
 <ComponentPreview
   name="message-duration"
   title="An variant alert for information notice"
@@ -60,12 +58,16 @@ npx shadcn-ui@latest add alert
 />
 ### MessageError
 
+Displays an error message with a distinct red icon, useful for conveying issues or alerts.
+
 <ComponentPreview
   name="message-error"
   title="An variant alert for information notice"
   description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
 />
 ### MessageSuccess
+
+A success message that provides positive feedback to the user.
 
 <ComponentPreview
   name="message-success"
@@ -75,8 +77,16 @@ npx shadcn-ui@latest add alert
 
 ### MessageWarning
 
+A warning message that draws attention to potential issues or cautionary information.
+
 <ComponentPreview
   name="message-warning"
   title="An variant alert for information notice"
   description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
 />
+
+## Version History
+
+| Version | Editor   | Reviewer    | Date      | Description     |
+| ------- | -------- | ----------- | --------- | --------------- |
+| v2.0    | Yibei Li | Zhengjia Pu | 1/11/2024 | updated version |

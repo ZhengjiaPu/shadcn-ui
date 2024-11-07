@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { X } from "lucide-react"
 
 interface MessageProps {
@@ -7,6 +7,7 @@ interface MessageProps {
   duration: number
   isVisible: boolean
   hideMessage: () => void
+  className?: string
 }
 
 const Messages: React.FC<MessageProps> = ({
@@ -15,6 +16,7 @@ const Messages: React.FC<MessageProps> = ({
   duration,
   isVisible,
   hideMessage,
+  className,
 }) => {
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>
@@ -29,6 +31,7 @@ const Messages: React.FC<MessageProps> = ({
   return (
     isVisible && (
       <div
+        className={className}
         style={{
           position: "fixed",
           top: "0",
@@ -36,7 +39,7 @@ const Messages: React.FC<MessageProps> = ({
           transform: "translateX(-50%)",
           backgroundColor: "white",
           padding: "10px 20px",
-          borderRadius: "5px",
+          borderRadius: "0px", // Ensure no rounding
           boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
           transition: "all 0.5s ease-out",
           display: "flex",
