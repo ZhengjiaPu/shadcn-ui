@@ -11,9 +11,9 @@ import {
 } from "@/registry/ibm/ui/pagination"
 
 export function PaginationDemo() {
-  const totalPages = 25 // Total number of pages.
-  const [currentPage, setCurrentPage] = useState(1)
-  const [hoveredPage, setHoveredPage] = useState(null) // New state for hover
+  const totalPages = 10 // Total number of pages.
+  const [currentPage, setCurrentPage] = useState<number>(1)
+  const [hoveredPage, setHoveredPage] = useState<number | null>(null) // Updated to accept number or null
 
   // Inline styles
   const paginationStyle = {
@@ -27,14 +27,14 @@ export function PaginationDemo() {
     margin: "0 4px",
   }
 
-  // Define paginationLinkStyle as a function to use the hover state
-  const paginationLinkStyle = (isHovered) => ({
+  // Define paginationLinkStyle with a type for isHovered
+  const paginationLinkStyle = (isHovered: boolean) => ({
     border: "none",
     borderRadius: "4px",
     padding: "8px 12px",
     cursor: "pointer",
     textDecoration: "none",
-    backgroundColor: isHovered ? "#f0f0f0" : "hsl(var(--background))", // Gray hover color
+    backgroundColor: isHovered ? "#f0f0f0" : "hsl(var(--background))", // Updated light gray hover color
     color: "hsl(var(--foreground))",
     transition: "background-color 0.3s",
   })
