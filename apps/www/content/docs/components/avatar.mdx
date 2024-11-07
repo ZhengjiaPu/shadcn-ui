@@ -5,13 +5,26 @@ component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/avatar
   api: https://www.radix-ui.com/docs/primitives/components/avatar#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-avatar--docs
+  guideline: https://react-spectrum.adobe.com/react-spectrum/Avatar.html
+  accessibility: https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=142#images-of-users
 ---
+
+## Introduction
+
+The Avatar component represents a user visually, displaying an image when available and a fallback (such as initials or a default icon) when it is not. This component is essential for user identification and personalization in interfaces.
+
+## Demo
 
 <ComponentPreview
   name="avatar-demo"
   title="Avatar"
   description="An avatar with a fallback."
 />
+
+The demo highlights the core functionality of the Avatar component. In its standard use, the Avatar component will attempt to display an image sourced from the user's profile or specified link. If the image fails to load or is not provided, the component defaults to a fallback. This fallback can be customized to show the user's initials or a default icon, ensuring a consistent visual presence for each user even in the absence of an image.
+
+The avatar component is highly flexible and responsive, allowing developers to define various fallback mechanisms based on context. This ensures that the user interface maintains a uniform look while still being informative and recognizable to users. The demo showcases a common scenario in which avatars are displayed in user lists, comments, or profile summaries, underscoring the component’s role in creating a visually cohesive user experience.
 
 ## Installation
 
@@ -21,6 +34,7 @@ links:
   <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
+
 <TabsContent value="cli">
 
 ```bash
@@ -63,3 +77,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
   <AvatarFallback>CN</AvatarFallback>
 </Avatar>
 ```
+
+## Version History
+
+| Version | Editor      | Reviewer   | Date      | Description     |
+| ------- | ----------- | ---------- | --------- | --------------- |
+| v1.0    | shadcn      | -          | -         | Initial version |
+| v2.0    | Zhengjia Pu | Yihan Zhao | 1/11/2024 | Updated version |
