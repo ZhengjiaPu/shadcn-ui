@@ -1,16 +1,15 @@
-/* eslint-disable tailwindcss/classnames-order */
 import React, { useState } from "react"
 import Image from "next/image"
 
+import { Button } from "@/registry/default/ui/button"
+import { Toaster } from "@/registry/default/ui/toaster"
+import { useToast } from "@/registry/default/ui/use-toast"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/sydney/ui/accordion"
-import { Button } from "@/registry/sydney/ui/button"
-import { Toaster } from "@/registry/sydney/ui/toaster"
-import { useToast } from "@/registry/sydney/ui/use-toast"
+} from "@/registry/ibm/ui/accordion"
 
 export default function AccordionMix() {
   const { toast } = useToast()
@@ -25,7 +24,7 @@ export default function AccordionMix() {
     : "w-1/2 cursor-zoom-in"
 
   return (
-    <div className="flex items-center justify-center w-[600px] bg-white">
+    <div className="flex w-[600px] items-center justify-center bg-white">
       <div className="w-[500px] bg-white">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
@@ -48,7 +47,7 @@ export default function AccordionMix() {
               <br />
               <Toaster />
               <Button
-                className="my-4 cursor-pointer rounded-md bg-orange-600 px-4 py-2 text-neutral-50"
+                className="cursor-pointer rounded-none border-2 bg-slate-100 px-4 py-2 text-black focus:border-blue-600"
                 variant="outline"
                 onClick={() => {
                   toast({
@@ -87,7 +86,7 @@ export default function AccordionMix() {
               <br />
               <Toaster />
               <Button
-                className="my-4 cursor-pointer rounded-md bg-orange-600 px-4 py-2 text-neutral-50"
+                className="cursor-pointer rounded-none border-2 bg-slate-100 px-4 py-2 text-black focus:border-blue-600"
                 variant="outline"
                 onClick={() => {
                   toast({
