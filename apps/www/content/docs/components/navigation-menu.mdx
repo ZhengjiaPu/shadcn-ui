@@ -5,9 +5,26 @@ component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/navigation-menu
   api: https://www.radix-ui.com/docs/primitives/components/navigation-menu#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-navigation-menu--docs
+  guideline: https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/navigation
+  accessibility: https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/examples/menu-button-links/
 ---
 
-<ComponentPreview name="navigation-menu-demo" />
+## Introduction
+
+The `NavigationMenu` component is a streamlined and efficient navigation tool, suitable for building a collection of links within a website. This component provides flexible configuration options to embed navigation menus in various parts of a page, allowing users to quickly browse website content. Supporting a multi-level link structure, it enhances user experience with smooth navigation. The NavigationMenu component follows the WAI-ARIA design guidelines, ensuring accessibility for all users.
+
+## Demo
+
+The `NavigationMenu` demo demonstrates a basic implementation of a navigational structure, where multiple items can be grouped within a list for structured, hierarchical navigation. Each `NavigationMenuItem` contains a `NavigationMenuTrigger` and `NavigationMenuContent`, allowing users to access links and nested menu options in an organized way.
+
+In this example, clicking on a trigger reveals the associated content, which can include links, categories, or additional navigation layers, providing a flexible, multi-level navigation system. This setup is ideal for websites with diverse content sections, as it enables users to explore related content quickly and intuitively. The layout ensures that navigation elements remain visually accessible and responsive across different devices.
+
+<ComponentPreview
+  name="navigation-menu-demo"
+  className="[&_.preview>[data-orientation=horizontal]]:sm:max-w-[70%]"
+  description="A simple navigation menu example"
+/>
 
 ## Installation
 
@@ -17,11 +34,18 @@ links:
   <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
+
 <TabsContent value="cli">
+
+<Steps>
+
+<Step>Run the following command:</Step>
 
 ```bash
 npx shadcn-ui@latest add navigation-menu
 ```
+
+</Steps>
 
 </TabsContent>
 
@@ -47,7 +71,7 @@ npm install @radix-ui/react-navigation-menu
 
 </Tabs>
 
-## Usage
+## Usage Example
 
 ```tsx
 import {
@@ -95,4 +119,13 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 </NavigationMenuItem>
 ```
 
-See also the [Radix UI documentation](https://www.radix-ui.com/docs/primitives/components/navigation-menu#with-client-side-routing) for handling client side routing.
+See also the [Radix UI documentation](https://www.radix-ui.com/docs/primitives/components/navigation-menu#with-client-side-routing) for handling client-side routing.
+
+## Version History
+
+| Version | Editor      | Reviewer | Date      | Description     |
+| ------- | ----------- | -------- | --------- | --------------- |
+| v1.0    | shadcn      | -        | -         | Initial version |
+| v2.0    | Zhengjia Pu | Yibei Li | 1/11/2024 | Updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.
