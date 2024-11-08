@@ -171,12 +171,12 @@ export function BasicComment() {
                 placeholder="Type your comment here."
                 onChange={(e) => setCommentText(e.target.value)}
                 onFocus={(e) => {
-                  e.target.style.borderColor = "#0f62fe";
-                  e.target.style.boxShadow = "0 0 0 2px rgba(15, 98, 254, 0.3)";
+                  e.target.style.borderColor = "#0f62fe"
+                  e.target.style.boxShadow = "0 0 0 2px rgba(15, 98, 254, 0.3)"
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = "#d1d1d1";
-                  e.target.style.boxShadow = "none";
+                  e.target.style.borderColor = "#d1d1d1"
+                  e.target.style.boxShadow = "none"
                 }}
                 style={{
                   border: "1px solid #d1d1d1",

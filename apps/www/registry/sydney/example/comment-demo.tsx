@@ -55,7 +55,7 @@ export function BasicComment() {
       <Card className="mb-4" style={{ borderColor: "#EAEAEA" }}>
         <CardHeader
           className="flex flex-col p-4"
-          style={{ 
+          style={{
             backgroundColor: "#FF6F00",
             borderBottom: "1px solid #EAEAEA",
             borderTopLeftRadius: "8px",
