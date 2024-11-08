@@ -60,7 +60,9 @@ const Alert = React.forwardRef<
       animate?: boolean
     }
 >(({ className, variant, hoverEffect, animate = false, ...props }, ref) => {
-  const motionProps = animate ? alertAnimations[variant || "default"] : null
+  const motionProps = animate
+    ? alertAnimations[variant || "default"]
+    : undefined
 
   const alertContent = (
     <div
