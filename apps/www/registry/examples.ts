@@ -812,6 +812,30 @@ export const examples: Registry = [
     files: ["example/statistic-incard.tsx"],
   },
   {
+    name: "steps-demo",
+    type: "components:example",
+    registryDependencies: ["steps"],
+    files: ["example/steps-demo.tsx"],
+  },
+  {
+    name: "steps-with-content",
+    type: "components:example",
+    registryDependencies: ["steps", "with-content"],
+    files: ["example/steps-with-content.tsx"],
+  },
+  {
+    name: "steps-with-dots",
+    type: "components:example",
+    registryDependencies: ["steps", "with-dots"],
+    files: ["example/steps-with-dots.tsx"],
+  },
+  {
+    name: "steps-with-icon",
+    type: "components:example",
+    registryDependencies: ["steps", "with-icon"],
+    files: ["example/steps-with-icon.tsx"],
+  },
+  {
     name: "switch-demo",
     type: "components:example",
     registryDependencies: ["switch"],

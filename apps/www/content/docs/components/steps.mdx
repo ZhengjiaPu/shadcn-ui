@@ -1,0 +1,87 @@
+---
+title: Steps
+description: Presents a collection of images in a visually appealing grid layout.
+component: true
+links:
+  storybook: http://localhost:6006/?path=/docs/components-steps--docs
+---
+
+## Introduction
+
+The Steps component provides a visual navigation system for multi-step processes, featuring a Stepper container to indicate progress, individual steps that adjust styling based on their state (active, completed, or default), and "Prev" and "Next" buttons for navigation.
+
+## Demo
+
+<ComponentPreview
+  name="steps-demo"
+  description="A gallery that dynamically displays images in three columns regardless of screen size."
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+Run the following command:
+
+```bash
+npx shadcn-ui@latest add steps
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @heroicons/react
+# Add any other required libraries or dependencies here
+```
+
+<Step>Copy and paste the Image Gallery component code into your project:</Step>
+
+<ComponentSource name="steps-demo" />
+
+<Step>Update the import paths as needed to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Variants
+
+### Steps with Content
+
+The steps with content variant enriches each step by incorporating titles, subtitles, descriptions, and icons, providing a more informative and engaging experience. This design is ideal for processes requiring clear context for each step, and users can interactively navigate by clicking on any part of the step.
+
+<ComponentPreview name="steps-with-content" description="" />
+
+### Steps with Dots
+
+The steps with dots variant uses minimalist dot indicators to represent each step, providing a sleek and subtle design ideal for clean, modern interfaces. Each dot changes appearance based on its state (active, completed, or default) and is clickable, allowing users to navigate directly to any step.
+
+<ComponentPreview name="steps-with-dots" description="" />
+
+### Steps with Icon
+
+The steps with icon variant enhances navigation by incorporating icons for each step, creating a more intuitive and visually distinct experience. Users can easily identify each step by its specific icon and can click on the icons directly to navigate between steps.
+
+<ComponentPreview name="steps-with-icon" description="" />
+
+## Version History
+
+| Version | Editor      | Reviewer   | Date       | Description     | Status    |
+| ------- | ----------- | ---------- | ---------- | --------------- | --------- |
+| v1.0    | Xinyu Chen  | Xinyu Chen | 02/05/2024 | Initial version | Completed |
+| v2.0    | Yilin Xiang | Yihan Zhao | 07/11/2024 | Updated version | Published |

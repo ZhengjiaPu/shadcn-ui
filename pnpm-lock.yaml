@@ -23,6 +23,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^17.6.3
         version: 17.6.3
+      '@heroicons/react':
+        specifier: ^2.1.5
+        version: 2.1.5(react@18.2.0)
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^3.7.2
         version: 3.7.2(prettier@2.8.8)
@@ -1941,6 +1944,11 @@ packages:
     resolution: {integrity: sha512-AiXO/bfe9bmxBjxxtYxFAXGZvMaN5s8kO+jBHAJCON8rJoB5YS/D6X7ZNc6XQkuHNmyl4CYaMI1fJ/Gn27RGGw==}
     engines: {node: '>=6'}
     hasBin: true
+
+  '@heroicons/react@2.1.5':
+    resolution: {integrity: sha512-FuzFN+BsHa+7OxbvAERtgBTNeZpUjgM/MIizfVkSCL2/edriN0Hx/DWRCR//aPYwO5QX/YlgLGXk+E3PcfZwjA==}
+    peerDependencies:
+      react: '>= 16'
 
   '@hookform/resolvers@3.1.0':
     resolution: {integrity: sha512-z0A8K+Nxq+f83Whm/ajlwE6VtQlp/yPHZnXw7XWVPIGm1Vx0QV8KThU3BpbBRfAZ7/dYqCKKBNnQh85BkmBKkA==}
@@ -11291,6 +11299,10 @@ snapshots:
       long: 5.2.3
       protobufjs: 7.3.0
       yargs: 17.7.2
+
+  '@heroicons/react@2.1.5(react@18.2.0)':
+    dependencies:
+      react: 18.2.0
 
   '@hookform/resolvers@3.1.0(react-hook-form@7.44.2(react@18.2.0))':
     dependencies:

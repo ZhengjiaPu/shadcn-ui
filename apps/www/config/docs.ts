@@ -328,6 +328,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Steps",
+          href: "/docs/components/steps",
+          items: [],
+        },
+        {
           title: "Switch",
           href: "/docs/components/switch",
           items: [],
