@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { useMediaQuery } from "@/hooks/use-media-query"
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/new-york/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -11,17 +11,17 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/default/ui/command"
+} from "@/registry/new-york/ui/command"
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@/registry/default/ui/drawer"
+} from "@/registry/new-york/ui/drawer"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/registry/new-york/ui/popover"
 
 type Status = {
   value: string
@@ -62,7 +62,14 @@ export default function ComboBoxResponsive() {
     return (
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <Button variant="outline" className="w-[150px] justify-start">
+          <Button
+            variant="outline"
+            className="w-[150px] justify-start"
+            style={{
+              fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+              fontWeight: 300,
+            }}
+          >
             {selectedStatus ? <>{selectedStatus.label}</> : <>+ Set status</>}
           </Button>
         </PopoverTrigger>
@@ -76,7 +83,14 @@ export default function ComboBoxResponsive() {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button variant="outline" className="w-[150px] justify-start">
+        <Button
+          variant="outline"
+          className="w-[150px] justify-start"
+          style={{
+            fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+            fontWeight: 300,
+          }}
+        >
           {selectedStatus ? <>{selectedStatus.label}</> : <>+ Set status</>}
         </Button>
       </DrawerTrigger>
@@ -98,7 +112,13 @@ function StatusList({
 }) {
   return (
     <Command>
-      <CommandInput placeholder="Filter status..." />
+      <CommandInput
+        placeholder="Filter status..."
+        style={{
+          fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+          fontWeight: 300,
+        }}
+      />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup>
@@ -111,6 +131,10 @@ function StatusList({
                   statuses.find((priority) => priority.value === value) || null
                 )
                 setOpen(false)
+              }}
+              style={{
+                fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                fontWeight: 300,
               }}
             >
               {status.label}

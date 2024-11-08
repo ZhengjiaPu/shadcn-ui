@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Calendar, MoreHorizontal, Tags, Trash, User } from "lucide-react"
+import { DotsHorizontalIcon } from "@radix-ui/react-icons"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/new-york/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -11,7 +11,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/default/ui/command"
+} from "@/registry/new-york/ui/command"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,7 +24,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from "@/registry/new-york/ui/dropdown-menu"
 
 const labels = [
   "feature",
@@ -42,33 +42,79 @@ export default function ComboboxDropdownMenu() {
 
   return (
     <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
-      <p className="text-sm font-medium leading-none">
-        <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground">
+      <p
+        className="text-sm font-medium leading-none"
+        style={{
+          fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+          fontWeight: 300,
+        }}
+      >
+        <span
+          className="mr-2 rounded-lg bg-blue-600 px-2 py-1 text-xs text-primary-foreground"
+          style={{
+            fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+            fontWeight: 300,
+          }}
+        >
           {label}
         </span>
-        <span className="text-muted-foreground">Create a new project</span>
+        <span
+          className="text-muted-foreground"
+          style={{
+            fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+            fontWeight: 300,
+          }}
+        >
+          Create a new project
+        </span>
       </p>
       <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="sm">
-            <MoreHorizontal />
+          <Button
+            variant="ghost"
+            size="sm"
+            style={{
+              fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+              fontWeight: 300,
+            }}
+          >
+            <DotsHorizontalIcon />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-[200px]">
-          <DropdownMenuLabel>Actions</DropdownMenuLabel>
+          <DropdownMenuLabel
+            style={{
+              fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+              fontWeight: 300,
+            }}
+          >
+            Actions
+          </DropdownMenuLabel>
           <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <User className="mr-2 h-4 w-4" />
+            <DropdownMenuItem
+              style={{
+                fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                fontWeight: 300,
+              }}
+            >
               Assign to...
             </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Calendar className="mr-2 h-4 w-4" />
+            <DropdownMenuItem
+              style={{
+                fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                fontWeight: 300,
+              }}
+            >
               Set due date...
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuSub>
-              <DropdownMenuSubTrigger>
-                <Tags className="mr-2 h-4 w-4" />
+              <DropdownMenuSubTrigger
+                style={{
+                  fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                  fontWeight: 300,
+                }}
+              >
                 Apply label
               </DropdownMenuSubTrigger>
               <DropdownMenuSubContent className="p-0">
@@ -76,6 +122,11 @@ export default function ComboboxDropdownMenu() {
                   <CommandInput
                     placeholder="Filter label..."
                     autoFocus={true}
+                    className="h-9"
+                    style={{
+                      fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                      fontWeight: 300,
+                    }}
                   />
                   <CommandList>
                     <CommandEmpty>No label found.</CommandEmpty>
@@ -88,6 +139,11 @@ export default function ComboboxDropdownMenu() {
                             setLabel(value)
                             setOpen(false)
                           }}
+                          style={{
+                            fontFamily:
+                              "Roboto, Helvetica Neue, Arial, sans-serif",
+                            fontWeight: 300,
+                          }}
                         >
                           {label}
                         </CommandItem>
@@ -98,8 +154,13 @@ export default function ComboboxDropdownMenu() {
               </DropdownMenuSubContent>
             </DropdownMenuSub>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-red-600">
-              <Trash className="mr-2 h-4 w-4" />
+            <DropdownMenuItem
+              className="text-red-600"
+              style={{
+                fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                fontWeight: 300,
+              }}
+            >
               Delete
               <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
             </DropdownMenuItem>

@@ -1,12 +1,12 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Check, ChevronsUpDown } from "lucide-react"
+import { CaretSortIcon, CheckIcon } from "@radix-ui/react-icons"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/new-york/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -14,7 +14,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/default/ui/command"
+} from "@/registry/new-york/ui/command"
 import {
   Form,
   FormControl,
@@ -23,13 +23,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
+} from "@/registry/new-york/ui/form"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
-import { toast } from "@/registry/default/ui/use-toast"
+} from "@/registry/new-york/ui/popover"
+import { toast } from "@/registry/new-york/ui/use-toast"
 
 const languages = [
   { label: "English", value: "en" },
@@ -73,7 +73,14 @@ export default function ComboboxForm() {
           name="language"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <FormLabel>Language</FormLabel>
+              <FormLabel
+                style={{
+                  fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                  fontWeight: 300,
+                }}
+              >
+                Language
+              </FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
@@ -84,21 +91,32 @@ export default function ComboboxForm() {
                         "w-[200px] justify-between",
                         !field.value && "text-muted-foreground"
                       )}
+                      style={{
+                        fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                        fontWeight: 300,
+                      }}
                     >
                       {field.value
                         ? languages.find(
                             (language) => language.value === field.value
                           )?.label
                         : "Select language"}
-                      <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                      <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className="w-[200px] p-0">
                   <Command>
-                    <CommandInput placeholder="Search language..." />
+                    <CommandInput
+                      placeholder="Search framework..."
+                      className="h-9"
+                      style={{
+                        fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                        fontWeight: 300,
+                      }}
+                    />
                     <CommandList>
-                      <CommandEmpty>No language found.</CommandEmpty>
+                      <CommandEmpty>No framework found.</CommandEmpty>
                       <CommandGroup>
                         {languages.map((language) => (
                           <CommandItem
@@ -107,16 +125,21 @@ export default function ComboboxForm() {
                             onSelect={() => {
                               form.setValue("language", language.value)
                             }}
+                            style={{
+                              fontFamily:
+                                "Roboto, Helvetica Neue, Arial, sans-serif",
+                              fontWeight: 300,
+                            }}
                           >
-                            <Check
+                            {language.label}
+                            <CheckIcon
                               className={cn(
-                                "mr-2 h-4 w-4",
+                                "ml-auto h-4 w-4",
                                 language.value === field.value
                                   ? "opacity-100"
                                   : "opacity-0"
                               )}
                             />
-                            {language.label}
                           </CommandItem>
                         ))}
                       </CommandGroup>
@@ -124,14 +147,28 @@ export default function ComboboxForm() {
                   </Command>
                 </PopoverContent>
               </Popover>
-              <FormDescription>
+              <FormDescription
+                style={{
+                  fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                  fontWeight: 300,
+                }}
+              >
                 This is the language that will be used in the dashboard.
               </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button
+          type="submit"
+          className="hover:bg-blue-600 hover:text-white"
+          style={{
+            fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+            fontWeight: 300,
+          }}
+        >
+          Submit
+        </Button>
       </form>
     </Form>
   )

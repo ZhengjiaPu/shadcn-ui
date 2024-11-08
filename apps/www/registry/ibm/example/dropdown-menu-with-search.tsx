@@ -13,8 +13,8 @@ import {
 
 export function DropdownMenuSelect() {
   const [selectedOptions, setSelectedOptions] = React.useState<string[]>([])
-  const [searchTerm, setSearchTerm] = React.useState<string>("")
-  const [open, setOpen] = React.useState<boolean>(false)
+  const [searchTerm, setSearchTerm] = React.useState("")
+  const [open, setOpen] = React.useState(false)
 
   const toggleOption = (option: string) => {
     setSelectedOptions((prev) =>
@@ -45,7 +45,15 @@ export function DropdownMenuSelect() {
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" onClick={handleTriggerClick}>
+        <Button
+          variant="outline"
+          onClick={handleTriggerClick}
+          className="hover:bg-blue-600 hover:text-white"
+          style={{
+            fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+            fontWeight: 300,
+          }}
+        >
           {getButtonLabel()}
         </Button>
       </DropdownMenuTrigger>
@@ -56,6 +64,10 @@ export function DropdownMenuSelect() {
           value={searchTerm}
           onChange={handleSearchChange}
           className="p-2 m-2 w-48"
+          style={{
+            fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+            fontWeight: 300,
+          }}
         />
         <DropdownMenuSeparator />
         {filteredOptions.map((option) => (
@@ -63,6 +75,10 @@ export function DropdownMenuSelect() {
             key={option}
             checked={selectedOptions.includes(option)}
             onCheckedChange={() => toggleOption(option)}
+            style={{
+              fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+              fontWeight: 300,
+            }}
           >
             {option}
           </DropdownMenuCheckboxItem>

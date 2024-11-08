@@ -1,17 +1,8 @@
 "use client"
 
 import * as React from "react"
-import {
-  ArrowUpCircle,
-  CheckCircle2,
-  Circle,
-  HelpCircle,
-  LucideIcon,
-  XCircle,
-} from "lucide-react"
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/new-york/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -19,44 +10,38 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/default/ui/command"
+} from "@/registry/new-york/ui/command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/registry/new-york/ui/popover"
 
 type Status = {
   value: string
   label: string
-  icon: LucideIcon
 }
 
 const statuses: Status[] = [
   {
     value: "backlog",
     label: "Backlog",
-    icon: HelpCircle,
   },
   {
     value: "todo",
     label: "Todo",
-    icon: Circle,
   },
   {
     value: "in progress",
     label: "In Progress",
-    icon: ArrowUpCircle,
   },
   {
     value: "done",
     label: "Done",
-    icon: CheckCircle2,
   },
   {
     value: "canceled",
     label: "Canceled",
-    icon: XCircle,
   },
 ]
 
@@ -68,27 +53,37 @@ export default function ComboboxPopover() {
 
   return (
     <div className="flex items-center space-x-4">
-      <p className="text-sm text-muted-foreground">Status</p>
+      <p
+        className="text-sm text-muted-foreground"
+        style={{
+          fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+          fontWeight: 300,
+        }}
+      >
+        Status
+      </p>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
             variant="outline"
-            size="sm"
             className="w-[150px] justify-start"
+            style={{
+              fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+              fontWeight: 300,
+            }}
           >
-            {selectedStatus ? (
-              <>
-                <selectedStatus.icon className="mr-2 h-4 w-4 shrink-0" />
-                {selectedStatus.label}
-              </>
-            ) : (
-              <>+ Set status</>
-            )}
+            {selectedStatus ? <>{selectedStatus.label}</> : <>+ Set status</>}
           </Button>
         </PopoverTrigger>
         <PopoverContent className="p-0" side="right" align="start">
           <Command>
-            <CommandInput placeholder="Change status..." />
+            <CommandInput
+              placeholder="Change status..."
+              style={{
+                fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                fontWeight: 300,
+              }}
+            />
             <CommandList>
               <CommandEmpty>No results found.</CommandEmpty>
               <CommandGroup>
@@ -103,16 +98,12 @@ export default function ComboboxPopover() {
                       )
                       setOpen(false)
                     }}
+                    style={{
+                      fontFamily: "Roboto, Helvetica Neue, Arial, sans-serif",
+                      fontWeight: 300,
+                    }}
                   >
-                    <status.icon
-                      className={cn(
-                        "mr-2 h-4 w-4",
-                        status.value === selectedStatus?.value
-                          ? "opacity-100"
-                          : "opacity-40"
-                      )}
-                    />
-                    <span>{status.label}</span>
+                    {status.label}
                   </CommandItem>
                 ))}
               </CommandGroup>
