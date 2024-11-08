@@ -32,7 +32,7 @@ export function GalleryWithPreView() {
     <div>
       <div>
         <img
-          className="h-auto w-full rounded-lg object-cover object-center md:h-[480px]"
+          className="h-auto w-full rounded-none object-cover object-center md:h-[480px]"
           src={active}
           alt="Selected"
         />
@@ -41,12 +41,12 @@ export function GalleryWithPreView() {
         {data.map(({ imagelink }, index) => (
           <div
             key={index}
-            className="cursor-pointer rounded-lg overflow-hidden"
+            className="cursor-pointer rounded-none overflow-hidden"
             onClick={() => setActive(imagelink)}
           >
             <img
               src={imagelink}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-none"
               alt={`Thumbnail ${index}`}
             />
           </div>

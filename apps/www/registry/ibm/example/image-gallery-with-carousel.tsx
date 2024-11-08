@@ -48,11 +48,11 @@ export function GalleryWithCarousel() {
         {data.map((imagelink, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <Card>
-                <CardContent className="flex flex-col items-center justify-center p-6">
+              <Card className="rounded-none">
+                <CardContent className="flex flex-col items-center justify-center p-6 rounded-none">
                   <img
                     src={imagelink.imagelink}
-                    className="max-w-full max-h-full"
+                    className="max-w-full max-h-full rounded-none"
                   />
                 </CardContent>
               </Card>

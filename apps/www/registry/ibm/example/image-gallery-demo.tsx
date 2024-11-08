@@ -67,17 +67,17 @@ export function GalleryDefault() {
     <>
       <style>
         {`
-                .gallery {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 10px;
-                }
-                .gallery-item img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 8px;
-                }
-                `}
+          .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+          }
+          .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 0px;
+          }
+        `}
       </style>
       <div className="gallery">
         {data.map(({ imagelink }, index) => (
