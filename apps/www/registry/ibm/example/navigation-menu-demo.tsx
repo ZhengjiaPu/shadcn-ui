@@ -1,5 +1,3 @@
-"use client"
-
 import * as React from "react"
 import Link from "next/link"
 
@@ -73,7 +71,7 @@ export default function NavigationMenuDemo() {
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
+                    <p className="text-sm leading-tight text-muted-foreground hover:text-white">
                       Beautifully designed components that you can copy and
                       paste into your apps. Accessible. Customizable. Open
                       Source.
@@ -81,15 +79,21 @@ export default function NavigationMenuDemo() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
+              <ListItem
+                href="/docs"
+                title="Introduction"
+                description="Re-usable components built using Radix UI and Tailwind CSS."
+              />
+              <ListItem
+                href="/docs/installation"
+                title="Installation"
+                description="How to install dependencies and structure your app."
+              />
+              <ListItem
+                href="/docs/primitives/typography"
+                title="Typography"
+                description="Styles for headings, paragraphs, lists...etc"
+              />
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -104,9 +108,8 @@ export default function NavigationMenuDemo() {
                   key={component.title}
                   title={component.title}
                   href={component.href}
-                >
-                  {component.description}
-                </ListItem>
+                  description={component.description}
+                />
               ))}
             </ul>
           </NavigationMenuContent>
@@ -130,22 +133,19 @@ export default function NavigationMenuDemo() {
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+  { href: string; title: string; description: string }
+>(({ href, title, description }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
         <a
           ref={ref}
-          className={cn(
-            "block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-600 hover:text-white rounded-none",
-            className
-          )}
-          {...props}
+          href={href}
+          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-600 hover:text-white rounded-none"
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
+          <p className="text-sm leading-snug text-muted-foreground hover:text-white">
+            {description}
           </p>
         </a>
       </NavigationMenuLink>
