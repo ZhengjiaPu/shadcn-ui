@@ -1,34 +1,120 @@
 ---
-title: Label
-description: Renders an accessible label associated with controls.
+title: Input
+description: Displays a form input field or a component that looks like an input field.
 component: true
 links:
-  doc: https://www.radix-ui.com/docs/primitives/components/label
-  api: https://www.radix-ui.com/docs/primitives/components/label#api-reference
-  storybook: http://localhost:6006/?path=/docs/components-label--docs
-  guideline: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
-  accessibility: https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=135#labels-or-instructions
+  doc: https://spectrum.adobe.com/page/text-field/
+  api: https://react-spectrum.adobe.com/react-spectrum/TextField.html
+  storybook: http://localhost:6006/?path=/docs/components-input--docs
+  guideline: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+  accessibility: https://www.w3.org/WAI/tutorials/forms/
 ---
 
 ## Introduction
 
-The Label component provides a semantic and accessible way to associate labels with form controls. It ensures that screen readers and other assistive technologies can correctly identify and announce labels associated with inputs, making user interfaces more inclusive and accessible.
+The Input component provides a form input field or component that visually resembles an input field.
 
 ## Demo
 
+This demo showcases the default Input component, representing a typical text field with basic styles.
+It is intended for general-purpose text entry.
+
 <ComponentPreview
-  name="label-demo"
-  title="Label"
-  description="A label associated with a form control."
+  name="input-demo"
+  className="[&_input]:max-w-xs"
+  description="A form input component."
 />
 
-In this demo, the Label component is used to associate a label with an input control. Labels are essential for accessibility, helping users understand the purpose of form elements. By default, the Label component will be associated with the control specified by the `htmlFor` attribute, linking it to the corresponding input element.
+## Variants
 
-The Label component is versatile and supports various customization options to ensure consistent design and accessibility across interfaces. It is commonly used in forms, settings, and anywhere else where controls need clear, descriptive labels. The demo highlights a basic setup with an input field, showcasing its role in creating intuitive and accessible user experiences.
+### Default Input
+
+A standard input field allowing for text entry. This variant is used when a simple text field is needed
+without any additional functionalities, enabling users to input plain text.
+
+<ComponentPreview
+  name="input-demo"
+  className="[&_input]:max-w-xs"
+  description="A form input component."
+/>
+
+### File Input
+
+An input field for uploading files. This variant includes a file browser to allow users to select files from
+their device. It is ideal for forms or applications that require file uploads, such as images or documents.
+
+<ComponentPreview
+  name="input-file"
+  className="[&_input]:max-w-xs"
+  description="A file input component."
+/>
+
+### Disabled Input
+
+An input field that is disabled, preventing user interaction. This variant is used in scenarios where the input
+is either optional or meant to be read-only under certain conditions.
+
+<ComponentPreview
+  name="input-disabled"
+  className="[&_input]:max-w-xs"
+  description="A disabled input component."
+/>
+
+### Input with Label
+
+An input field with an accompanying label for context. This variant is often used in forms where labels are
+necessary to inform the user of the expected content.
+
+<ComponentPreview
+  name="input-with-label"
+  className="[&_input]:max-w-xs"
+  description="An input component with a label."
+/>
+
+### Input with Button
+
+An input field accompanied by a button for additional functionality. This variant is useful for scenarios where
+user interaction is required alongside text input, such as searching or submitting a query.
+
+<ComponentPreview
+  name="input-with-button"
+  className="[&_input]:max-w-xs"
+  description="An input component with a button."
+/>
+
+### Input Form
+
+A structured input component within a form. This example demonstrates an input that is part of a larger form,
+integrated with other components to collect multiple fields of information.
+
+<ComponentPreview name="input-form" />
+
+### Input with Number
+
+An input field specifically designed for numeric entry. This variant restricts the input to numbers, making it
+ideal for forms that require numerical values, such as age or quantity.
+
+<ComponentPreview
+  name="input-with-number"
+  className="[&_input]:max-w-xs"
+  description="An input component for entering numbers."
+/>
+
+### Input with Phone Number
+
+An input field configured for phone number entry based on selected country. This variant provides validation
+and formatting for phone numbers, helping users enter their phone numbers correctly.
+
+<ComponentPreview
+  name="input-with-phonenumber"
+  className="[&_input]:max-w-xs"
+  description="An input component for entering phone numbers based on selected country."
+/>
 
 ## Installation
 
 <Tabs defaultValue="cli">
+
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
@@ -36,40 +122,47 @@ The Label component is versatile and supports various customization options to e
 
 <TabsContent value="cli">
 
-\`\`\`bash
-npx shadcn-ui@latest add label
-\`\`\`
+<Steps>
+
+<Step>Run the following command:</Step>
+
+```bash
+npx shadcn-ui@latest add input
+```
+
+</Steps>
 
 </TabsContent>
-<TabsContent value="manual">
-<Steps>
-<Step>Install the following dependencies:</Step>
 
-\`\`\`bash
-npm install @radix-ui/react-label
-\`\`\`
+<TabsContent value="manual">
+
+<Steps>
 
 <Step>Copy and paste the following code into your project.</Step>
-<ComponentSource name="label" />
+
+<ComponentSource name="input" />
+
 <Step>Update the import paths to match your project setup.</Step>
+
 </Steps>
+
 </TabsContent>
+
 </Tabs>
 
 ## Usage
 
-\`\`\`tsx
-import { Label } from "@/components/ui/label"
-\`\`\`
+```tsx
+import { Input } from "@/components/ui/input"
+```
 
-\`\`\`tsx
-
-<Label htmlFor="email">Your email address</Label>
-\`\`\`
+```tsx
+<Input />
+```
 
 ## Version History
 
-| Version | Editor      | Reviewer | Date      | Description     |
-| ------- | ----------- | -------- | --------- | --------------- |
-| v1.0    | shadcn      | -        | -         | Initial version |
-| v2.0    | Zhengjia Pu | Yibei Li | 1/11/2024 | Updated version |
+| Version | Editor      | Reviewer   | Date       | Description       |
+| ------- | ----------- | ---------- | ---------- | ----------------- |
+| v1.0    | shadcn      | -          | -          | Initial version   |
+| v2.0    | Zhengjia Pu | Yihan Zhao | 01/11/2024 | Updated component |
