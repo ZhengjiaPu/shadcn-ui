@@ -1,16 +1,27 @@
 ---
-title: Sonner
-description: An opinionated toast component for React.
+title: "Sonner"
+description: "An opinionated toast component for React."
 component: true
 links:
   doc: https://sonner.emilkowal.ski
+  api: https://sonner.emilkowal.ski
+  guideline: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role
+  accessibility: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role
 ---
 
-<ComponentPreview name="sonner-demo" />
+## Introduction
 
-## About
+The `Sonner` component is a customizable toast notification system for React, created by [emilkowalski\_](https://twitter.com/emilkowalski_). It provides an easy way to display temporary alerts and messages, enhancing the user experience by providing contextual feedback.
 
-Sonner is built and maintained by [emilkowalski\_](https://twitter.com/emilkowalski_).
+## Demo
+
+The demo below provides an example of the `Sonner` toast notification component. This setup shows how toast notifications can be triggered to display important information or alerts.
+
+<ComponentPreview
+  name="sonner-demo"
+  title="Basic Sonner Toast"
+  description="A toast notification component."
+/>
 
 ## Installation
 
@@ -56,7 +67,7 @@ export default function RootLayout({ children }) {
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>Install the required dependencies:</Step>
 
 ```bash
 npm install sonner next-themes
@@ -99,3 +110,12 @@ import { toast } from "sonner"
 ```tsx
 toast("Event has been created.")
 ```
+
+## Version History
+
+| Version | Editor      | Reviewer | Date      | Description     |
+| ------- | ----------- | -------- | --------- | --------------- |
+| v1.0    | shadcn      | -        | -         | Initial version |
+| v2.0    | Zhengjia Pu | Yibei Li | 1/11/2024 | Updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.

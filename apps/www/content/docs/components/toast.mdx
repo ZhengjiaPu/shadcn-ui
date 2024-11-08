@@ -1,13 +1,27 @@
 ---
-title: Toast
-description: A succinct message that is displayed temporarily.
+title: "Toast"
+description: "A succinct message that is displayed temporarily."
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/toast
   api: https://www.radix-ui.com/docs/primitives/components/toast#api-reference
+  guideline: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role
+  accessibility: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role
 ---
 
-<ComponentPreview name="toast-demo" />
+## Introduction
+
+The `Toast` component provides a concise message to notify users of an event or update. Toasts are temporary, appearing briefly at the edge of the screen before automatically disappearing. This component is ideal for confirmations, alerts, or notifications in applications where unobtrusive feedback is needed. The toast component follows accessibility standards to ensure inclusivity.
+
+## Demo
+
+Below is a demo of the `Toast` component, showing a simple toast message setup. The demo highlights the ease of displaying notifications for various events.
+
+<ComponentPreview
+  name="toast-demo"
+  title="Basic Toast"
+  description="A toast component displaying a simple message."
+/>
 
 ## Installation
 
@@ -17,6 +31,7 @@ links:
   <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
+
 <TabsContent value="cli">
 
 <Steps>
@@ -27,24 +42,6 @@ links:
 npx shadcn-ui@latest add toast
 ```
 
-<Step>Add the Toaster component</Step>
-
-```tsx title="app/layout.tsx" {1,9}
-import { Toaster } from "@/components/ui/toaster"
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <head />
-      <body>
-        <main>{children}</main>
-        <Toaster />
-      </body>
-    </html>
-  )
-}
-```
-
 </Steps>
 
 </TabsContent>
@@ -53,7 +50,7 @@ export default function RootLayout({ children }) {
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>Install the required dependencies:</Step>
 
 ```bash
 npm install @radix-ui/react-toast
@@ -73,7 +70,7 @@ npm install @radix-ui/react-toast
 
 <ComponentSource name="toast" fileName="use-toast" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>Update the import paths according to your project setup.</Step>
 
 <Step>Add the Toaster component</Step>
 
@@ -101,7 +98,7 @@ export default function RootLayout({ children }) {
 
 ## Usage
 
-The `useToast` hook returns a `toast` function that you can use to display a toast.
+The `useToast` hook provides a `toast` function that can be used to display a toast.
 
 ```tsx
 import { useToast } from "@/components/ui/use-toast"
@@ -132,22 +129,45 @@ To display multiple toasts at the same time, you can update the `TOAST_LIMIT` in
 
 </Callout>
 
-## Examples
+## Variants
 
 ### Simple
 
-<ComponentPreview name="toast-simple" />
+<ComponentPreview
+  name="toast-simple"
+  title="Simple Toast"
+  description="A basic toast without a title."
+/>
 
-### With title
+### With Title
 
-<ComponentPreview name="toast-with-title" />
+<ComponentPreview
+  name="toast-with-title"
+  title="Toast with Title"
+  description="A toast that includes a title for added context."
+/>
 
 ### With Action
 
-<ComponentPreview name="toast-with-action" />
+<ComponentPreview
+  name="toast-with-action"
+  title="Toast with Action"
+  description="A toast that includes an action button for user interaction."
+/>
 
 ### Destructive
 
 Use `toast({ variant: "destructive" })` to display a destructive toast.
 
-<ComponentPreview name="toast-destructive" />
+<ComponentPreview
+  name="toast-destructive"
+  title="Destructive Toast"
+  description="A toast for critical or destructive actions, like deleting data."
+/>
+
+## Version History
+
+| Version | Editor      | Reviewer | Date      | Description           |
+| ------- | ----------- | -------- | --------- | --------------------- |
+| v1.0    | shadcn      | -        | -         | Initial version       |
+| v2.0    | Zhengjia Pu | Yibei Li | 1/11/2024 | Updated with examples |
