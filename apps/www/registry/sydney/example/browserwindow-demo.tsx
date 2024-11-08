@@ -7,17 +7,19 @@ const StyledBrowserWindow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 500px;
+  width: 80%;
   background-color: #f9f9f9;
 `
 
 const BrowserWindow = styled.div`
-  width: 80%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   border: 1px solid #333333;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures that content respects the rounded edges */
 `
 
 const BrowserHeader = styled.div`
@@ -26,6 +28,8 @@ const BrowserHeader = styled.div`
   padding: 10px;
   background-color: #e66e00;
   border-bottom: 1px solid #333333;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 `
 
 const BrowserButtons = styled.div`
@@ -44,13 +48,22 @@ const BrowserButton = styled.span`
 const BrowserUrlBar = styled.div`
   flex: 1;
   margin-left: 10px;
-  padding: 5px 10px;
+  // padding: 5px 10px;
   border: 1px solid #333333;
   border-radius: 3px;
+  background-color: #ffffff;
   input {
     width: 100%;
+    padding: 6px 12px;
     border: none;
     background: transparent;
+    font-family: inherit;
+    color: inherit;
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 2px #3c59e7;
+      border-radius: 3px;
+    }
   }
 `
 
@@ -60,6 +73,7 @@ const BrowserContent = styled.iframe`
   border: none;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  overflow: auto;
 `
 
 // BrowserMockup Component

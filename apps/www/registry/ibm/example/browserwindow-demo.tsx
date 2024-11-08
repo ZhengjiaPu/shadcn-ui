@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from "react";
+import styled from "styled-components";
 
 // Carbon-inspired styled components
 const StyledBrowserWindow = styled.div`
@@ -7,18 +7,18 @@ const StyledBrowserWindow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 500px;
+  width: 80%;
   background-color: #f4f4f4; /* Light gray background for Carbon feel */
 `
 
 const BrowserWindow = styled.div`
-  width: 80%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   border: 1px solid #d1d1d1; /* Light border for subtle separation */
   background-color: #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  border-radius: 8px; /* Rounded corners for a modern look */
+  overflow: hidden;
 `
 
 const BrowserHeader = styled.div`
@@ -27,8 +27,6 @@ const BrowserHeader = styled.div`
   padding: 8px 16px;
   background-color: #161616; /* Dark header background */
   color: #f4f4f4; /* Light text for contrast */
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 `
 
 const BrowserButtons = styled.div`
@@ -47,18 +45,19 @@ const BrowserButton = styled.span`
 const BrowserUrlBar = styled.div`
   flex: 1;
   margin-left: 16px;
-  padding: 6px 12px;
+  // padding: 6px 12px;
   border: 1px solid #8d8d8d; /* Border color matching Carbon's gray */
-  border-radius: 4px;
   background-color: #f4f4f4;
   input {
     width: 100%;
+    padding: 6px 12px;
     border: none;
     background: transparent;
     font-family: inherit;
     color: #161616;
     &:focus {
       outline: none;
+      box-shadow: 0 0 0 2px #0f62fe;
     }
   }
 `
@@ -67,16 +66,15 @@ const BrowserContent = styled.iframe`
   width: 100%;
   height: calc(100% - 48px);
   border: none;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  overflow: auto;
 `
 
 // BrowserMockup Component
 const BrowserMockup = () => {
-  const [url, setUrl] = useState("https://www.example.com")
+  const [url, setUrl] = useState("https://www.example.com");
 
   const handleUrlChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUrl(event.target.value)
+    setUrl(event.target.value);
   }
 
   return (
@@ -103,4 +101,4 @@ const BrowserMockup = () => {
   )
 }
 
-export default BrowserMockup
+export default BrowserMockup;

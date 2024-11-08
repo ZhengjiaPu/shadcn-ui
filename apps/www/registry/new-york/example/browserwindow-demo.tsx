@@ -6,16 +6,17 @@ const StyledBrowserWindow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 500px;
+  width: 80%;
 `
 
 const BrowserWindow = styled.div`
-  width: 80%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   border: 1px solid #ccc;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 `
 
 const BrowserHeader = styled.div`

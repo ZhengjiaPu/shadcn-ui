@@ -6,8 +6,8 @@ const StyledBrowserWindow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 500px;
+  width: 80%;
 `;
 
 const BrowserWindow = styled.div<{ width: string; height: string; backgroundColor: string; borderColor: string }>`
@@ -16,6 +16,7 @@ const BrowserWindow = styled.div<{ width: string; height: string; backgroundColo
   border: 1px solid ${(props) => props.borderColor};
   background-color: ${(props) => props.backgroundColor};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 `;
 
 const BrowserHeader = styled.div`
