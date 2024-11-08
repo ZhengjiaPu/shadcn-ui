@@ -12,5 +12,16 @@ export default function ProgressDemo() {
     return () => clearTimeout(timer)
   }, [])
 
-  return <Progress value={progress} className="w-[60%]" />
+  return (
+    <div className="w-[60%] h-4 bg-gray-200 rounded-none overflow-hidden">
+      {" "}
+      {/* 灰色背景设置在外层容器 */}
+      <div
+        className="h-full bg-blue-600 transition-all duration-300 ease-in-out"
+        style={{
+          width: `${progress}%`, // 控制蓝色部分的宽度
+        }}
+      />
+    </div>
+  )
 }

@@ -1,15 +1,27 @@
 ---
-title: Progress
-description: Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+title: "Progress"
+description: "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/progress
   api: https://www.radix-ui.com/docs/primitives/components/progress#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-progress--docs
+  guideline: https://react-spectrum.adobe.com/react-aria/ProgressBar.html
+  accessibility: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Progressbar_Role
 ---
+
+## Introduction
+
+The `Progress` component is an interface element designed to visually represent the completion state of a task or process. This component is ideal for showing progress indicators in applications, especially in scenarios involving downloads, uploads, or task completion statuses. Following accessibility standards, it provides an inclusive experience for all users.
+
+## Demo
+
+The demo below provides an example of the `Progress` component in its basic form. This setup shows a progress bar indicating the current percentage of completion.
 
 <ComponentPreview
   name="progress-demo"
-  description="A progress bar component."
+  title="Basic Progress"
+  description="A progress bar component displaying completion percentage."
 />
 
 ## Installation
@@ -22,9 +34,15 @@ links:
 </TabsList>
 <TabsContent value="cli">
 
+<Steps>
+
+<Step>Run the following command:</Step>
+
 ```bash
 npx shadcn-ui@latest add progress
 ```
+
+</Steps>
 
 </TabsContent>
 
@@ -32,7 +50,7 @@ npx shadcn-ui@latest add progress
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>Install the required dependencies:</Step>
 
 ```bash
 npm install @radix-ui/react-progress
@@ -42,7 +60,7 @@ npm install @radix-ui/react-progress
 
 <ComponentSource name="progress" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>Update the import paths according to your project structure.</Step>
 
 </Steps>
 
@@ -59,3 +77,12 @@ import { Progress } from "@/components/ui/progress"
 ```tsx
 <Progress value={33} />
 ```
+
+## Version History
+
+| Version | Editor      | Reviewer | Date      | Description     |
+| ------- | ----------- | -------- | --------- | --------------- |
+| v1.0    | shadcn      | -        | -         | Initial version |
+| v2.0    | Zhengjia Pu | Yibei Li | 1/11/2024 | Updated version |
+
+Provide Version, Editor, Reviewer, Date, Description, Status here.
