@@ -1,6 +1,4 @@
-// progress-index.tsx
 import * as React from "react"
-import { Progress } from "@/registry/default/ui/progress"
 
 interface ProgressDemoProps {
   progressValue: number
@@ -9,7 +7,7 @@ interface ProgressDemoProps {
 
 export default function ProgressDemo({
   progressValue = 35,
-  progressColor = "#2563eb", 
+  progressColor = "#2563eb",
 }: ProgressDemoProps) {
   const [progress, setProgress] = React.useState(progressValue)
 
@@ -20,12 +18,11 @@ export default function ProgressDemo({
 
   return (
     <div className="w-full max-w-[800px] h-4 bg-gray-200 rounded-full overflow-hidden">
-      <Progress
-        value={progress}
-        className="h-full w-full transition-all duration-300 ease-in-out"
+      <div
+        className="h-full transition-all duration-300 ease-in-out"
         style={{
-          transform: `translateX(${progress - 100}%)`, 
-          backgroundColor: progressColor, 
+          width: `${progress}%`,
+          backgroundColor: progressColor,
         }}
       />
       <div className="text-right text-sm text-gray-700 mt-1">

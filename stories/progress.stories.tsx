@@ -1,4 +1,3 @@
-// progress.stories.tsx
 import { Meta, StoryObj } from "@storybook/react"
 import ProgressDemo from "./progress-index"
 
@@ -13,7 +12,7 @@ const meta: Meta<typeof ProgressDemo> = {
     },
     progressColor: {
       control: "color",
-      defaultValue: "#2563eb", 
+      defaultValue: "#2563eb",
       description: "The color of the progress bar.",
     },
   },
@@ -36,7 +35,7 @@ export const Default: Story = {
     progressColor: "#2563eb",
   },
   render: (args) => (
-    <div className="w-[800px] rounded-md overflow-hidden mx-auto">
+    <div className="w-[800px] rounded-full overflow-hidden mx-auto">
       <ProgressDemo {...args} />
     </div>
   ),
