@@ -3,7 +3,6 @@ import * as React from "react"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -17,26 +16,11 @@ import {
 
 export function TabsDemo() {
   return (
-    <Tabs defaultValue="recent" className="w-[500px] h-[500px]">
-      <TabsList className="grid w-full grid-cols-3">
-        <TabsTrigger
-          value="recent"
-          className="relative data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-[2px] hover:after:bg-orange-600"
-        >
-          Recent
-        </TabsTrigger>
-        <TabsTrigger
-          value="popular"
-          className="relative data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-[2px] hover:after:bg-orange-600"
-        >
-          Popular
-        </TabsTrigger>
-        <TabsTrigger
-          value="trending"
-          className="relative data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-[2px] hover:after:bg-orange-600"
-        >
-          Trending
-        </TabsTrigger>
+    <Tabs defaultValue="recent" className="w-[400px] h-[500px]">
+      <TabsList className="grid-cols-3">
+        <TabsTrigger value="recent">Recent</TabsTrigger>
+        <TabsTrigger value="popular">Popular</TabsTrigger>
+        <TabsTrigger value="trending">Trending</TabsTrigger>
       </TabsList>
       <TabsContent value="recent" className="h-[440px] overflow-y-auto">
         <Card className="mb-4">

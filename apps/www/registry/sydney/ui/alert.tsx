@@ -1,40 +1,45 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
 const alertVariants = cva(
-  "relative w-full rounded-lg border px-4 py-5 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground [&>svg~*]:pl-7",
+  "relative w-full rounded-lg border p-4 flex items-center space-x-2 transition-colors duration-300",
   {
     variants: {
       variant: {
-        default: "bg-background text-foreground",
-        destructive:
-          "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
-        information:
-          "border-blue-500/50 text-blue-500 dark:border-blue-500 [&>svg]:text-blue-500",
-        warning:
-          "border-yellow-500/50 text-yellow-500 dark:border-yellow-500 [&>svg]:text-yellow-500",
+        info: " border-blue-50 bg-blue-100 hover:bg-blue-200 hover:text-blue-800 transition-colors duration-300 ",
         success:
-          "border-green-500/50 text-green-500 dark:border-green-500 [&>svg]:text-green-500",
+          "border-green-50 bg-green-100 hover:bg-green-200 hover:text-green-800 transition-colors duration-300 ",
+        warning:
+          "border-yellow-50 bg-yellow-100 hover:bg-yellow-200 hover:text-yellow-800 transition-colors duration-300 ",
+        error:
+          "border-red-50 bg-red-100 hover:bg-red-200 hover:text-red-800 transition-colors duration-300 ",
+        default: "border-blue-50 bg-gray-100 text-gray-800",
+      },
+      hoverEffect: {
+        true: "hover:bg-opacity-75",
+        false: "",
       },
     },
     defaultVariants: {
       variant: "default",
+      hoverEffect: false,
     },
   }
 )
-const variantAnimations = {
+
+const alertAnimations: Record<string, Variants> = {
   default: {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
   },
-  destructive: {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1 },
+  success: {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
   },
-  information: {
+  info: {
     initial: { x: -100, opacity: 0 },
     animate: { x: 0, opacity: 1 },
   },
@@ -42,46 +47,45 @@ const variantAnimations = {
     initial: { x: 100, opacity: 0 },
     animate: { x: 0, opacity: 1 },
   },
-  success: {
-    initial: { opacity: 0, y: -20 },
-    animate: { opacity: 1, y: 0 },
+  error: {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
   },
 }
 
 const Alert = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
->(({ className, variant, ...props }, ref) => (
-  <div
-    ref={ref}
-    role="alert"
-    className={cn(alertVariants({ variant }), className)}
-    {...props}
-  />
-))
+  React.HTMLAttributes<HTMLDivElement> &
+    VariantProps<typeof alertVariants> & {
+      animate?: boolean
+    }
+>(({ className, variant, hoverEffect, animate = false, ...props }, ref) => {
+  const motionProps = animate ? alertAnimations[variant || "default"] : null
+
+  const alertContent = (
+    <div
+      ref={ref}
+      role="alert"
+      className={cn(alertVariants({ variant, hoverEffect }), className)}
+      {...props}
+    />
+  )
+
+  return animate ? (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="initial"
+      variants={motionProps}
+      transition={{ repeat: Infinity, repeatType: "loop", duration: 2 }}
+    >
+      {alertContent}
+    </motion.div>
+  ) : (
+    alertContent
+  )
+})
 Alert.displayName = "Alert"
-
-// const Alert = React.forwardRef<
-//   HTMLDivElement,
-//   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants> & { animations?: keyof typeof variantAnimations }
-// >(({ className, variant = 'default', animations = 'none', ...props }, ref) => {
-//   const animation = variantAnimations[animations];
-
-//   return (
-//     <motion.div
-//       ref={ref}
-//       role="alert"
-//       initial={animation.initial}
-//       animate={animation.animate}
-//       transition={animation.transition}
-//       className={cn(alertVariants({ variant }), className)}
-//       {...props}
-//     >
-//       {props.children}
-//     </motion.div>
-//   );
-// });
-// Alert.displayName = "Alert";
 
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
@@ -89,7 +93,7 @@ const AlertTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h5
     ref={ref}
-    className={cn("mb-1 font-medium leading-none tracking-tight", className)}
+    className={cn("font-semibold leading-none tracking-tight", className)}
     {...props}
   />
 ))

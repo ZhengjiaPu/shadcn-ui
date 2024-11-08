@@ -6,57 +6,21 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/sydney/ui/card"
+} from "@/registry/ibm/ui/card"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/sydney/ui/tabs"
+} from "@/registry/ibm/ui/tabs"
 
 export function TabsDemo() {
   return (
     <Tabs defaultValue="recent" className="w-[400px] h-[500px]">
-      <TabsList className="flex w-full h-[60px] border-b border-gray-300">
-        <TabsTrigger
-          value="recent"
-          className="
-            w-full text-center text-lg text-gray-500 hover:text-black 
-            data-[state=active]:text-black 
-            data-[state=active]:font-bold 
-            data-[state=active]:border-b-2 
-            data-[state=active]:border-blue-500 
-            data-[state=active]:rounded-none
-          "
-        >
-          Recent
-        </TabsTrigger>
-        <TabsTrigger
-          value="popular"
-          className="
-            w-full text-center text-lg text-gray-500 hover:text-black 
-            data-[state=active]:text-black 
-            data-[state=active]:font-bold 
-            data-[state=active]:border-b-2 
-            data-[state=active]:border-blue-500 
-            data-[state=active]:rounded-none
-          "
-        >
-          Popular
-        </TabsTrigger>
-        <TabsTrigger
-          value="trending"
-          className="
-            w-full text-center text-lg text-gray-500 hover:text-black 
-            data-[state=active]:text-black 
-            data-[state=active]:font-bold 
-            data-[state=active]:border-b-2 
-            data-[state=active]:border-blue-500 
-            data-[state=active]:rounded-none
-          "
-        >
-          Trending
-        </TabsTrigger>
+      <TabsList>
+        <TabsTrigger value="recent">Recent</TabsTrigger>
+        <TabsTrigger value="popular">Popular</TabsTrigger>
+        <TabsTrigger value="trending">Trending</TabsTrigger>
       </TabsList>
       <TabsContent value="recent" className="h-[440px] overflow-y-auto">
         <Card className="mb-4">

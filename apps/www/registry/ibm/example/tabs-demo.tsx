@@ -1,4 +1,4 @@
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/ibm/ui/button"
 import {
   Card,
   CardContent,
@@ -6,59 +6,23 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from "@/registry/ibm/ui/card"
+import { Input } from "@/registry/ibm/ui/input"
+import { Label } from "@/registry/ibm/ui/label"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/default/ui/tabs"
+} from "@/registry/ibm/ui/tabs"
 
 export default function TabsDemo() {
   return (
     <Tabs defaultValue="account" className="w-[400px]">
-      <TabsList className="flex space-x-4 border-b border-gray-300">
-        <TabsTrigger
-          value="account"
-          className="
-            text-gray-500 hover:text-black 
-            data-[state=active]:text-black 
-            data-[state=active]:font-bold 
-            data-[state=active]:border 
-            data-[state=active]:border-blue-500 
-            data-[state=active]:rounded-none
-            px-4 py-2"
-        >
-          Dashboard
-        </TabsTrigger>
-        <TabsTrigger
-          value="monitoring"
-          className="
-            text-gray-500 hover:text-black 
-            data-[state=active]:text-black 
-            data-[state=active]:font-bold 
-            data-[state=active]:border 
-            data-[state=active]:border-blue-500 
-            data-[state=active]:rounded-none
-            px-4 py-2"
-        >
-          Monitoring
-        </TabsTrigger>
-        <TabsTrigger
-          value="activity"
-          className="
-            text-gray-500 hover:text-black 
-            data-[state=active]:text-black 
-            data-[state=active]:font-bold 
-            data-[state=active]:border 
-            data-[state=active]:border-blue-500 
-            data-[state=active]:rounded-none
-            px-4 py-2"
-        >
-          Activity
-        </TabsTrigger>
+      <TabsList>
+        <TabsTrigger value="account">Dashboard</TabsTrigger>
+        <TabsTrigger value="monitoring">Monitoring</TabsTrigger>
+        <TabsTrigger value="activity">Activity</TabsTrigger>
       </TabsList>
 
       <TabsContent value="account">

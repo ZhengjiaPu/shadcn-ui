@@ -1,10 +1,6 @@
 import { RocketIcon } from "@radix-ui/react-icons"
 
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@/registry/new-york/ui/alert"
+import { Alert, AlertDescription, AlertTitle } from "@/registry/sydney/ui/alert"
 
 export default function AlertDemo() {
   return (
