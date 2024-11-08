@@ -170,11 +170,21 @@ export function BasicComment() {
                 value={commentText}
                 placeholder="Type your comment here."
                 onChange={(e) => setCommentText(e.target.value)}
+                onFocus={(e) => {
+                  e.target.style.borderColor = "#0f62fe";
+                  e.target.style.boxShadow = "0 0 0 2px rgba(15, 98, 254, 0.3)";
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = "#d1d1d1";
+                  e.target.style.boxShadow = "none";
+                }}
                 style={{
                   border: "1px solid #d1d1d1",
                   padding: "0.5rem",
                   color: "#161616",
                   fontFamily: "IBM Plex Sans, sans-serif",
+                  borderRadius: "0px",
+                  transition: "border-color 0.15s ease, box-shadow 0.15s ease",
                 }}
               />
               <div className="flex justify-end space-x-2">

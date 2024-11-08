@@ -55,7 +55,12 @@ export function BasicComment() {
       <Card className="mb-4" style={{ borderColor: "#EAEAEA" }}>
         <CardHeader
           className="flex flex-col p-4"
-          style={{ borderBottom: "1px solid #EAEAEA" }}
+          style={{ 
+            backgroundColor: "#FF6F00",
+            borderBottom: "1px solid #EAEAEA",
+            borderTopLeftRadius: "8px",
+            borderTopRightRadius: "8px",
+          }}
         >
           <div className="flex items-center mb-2">
             <Avatar style={{ marginRight: "10px" }}>
@@ -64,7 +69,7 @@ export function BasicComment() {
             <div className="flex flex-col">
               <Label
                 style={{
-                  fontFamily: "Apercu Pro",
+                  fontFamily: "Cabin, sans-serif",
                   fontWeight: "bold",
                   fontSize: "1.05rem",
                   color: "#333333",
@@ -77,9 +82,9 @@ export function BasicComment() {
           <div className="flex flex-col" style={{ marginLeft: "50px" }}>
             <Label
               style={{
-                fontFamily: "Apercu Pro",
+                fontFamily: "Lato, sans-serif",
                 fontSize: "0.85rem",
-                color: "gray",
+                color: "#333333",
               }}
             >
               {message.description}
@@ -90,7 +95,7 @@ export function BasicComment() {
           <div
             className="text-left"
             style={{
-              fontFamily: "Lyon Display",
+              fontFamily: "Cabin, sans-serif",
               fontSize: "0.95rem",
               color: "#333333",
               marginTop: "20px",
