@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { InfoCircledIcon } from "@radix-ui/react-icons"
 
-import { Button } from "@/registry/sydney/ui/button"
-import Messages from "@/registry/sydney/ui/messages"
+import { Button } from "@/registry/ibm/ui/button"
+import Messages from "@/registry/ibm/ui/messages"
 
 export function MessageNormal() {
   const [isVisible, setIsVisible] = useState(false)
@@ -26,7 +26,7 @@ export function MessageNormal() {
     >
       <Button
         onClick={showMessage}
-        className="bg-blue-600 hover:bg-blue-800 shadow-md text-white px-4 py-2 border-none"
+        className="bg-blue-600 hover:bg-blue-800 shadow-md text-white px-4 py-2 border-none rounded-none"
       >
         Display normal message
       </Button>
@@ -38,10 +38,9 @@ export function MessageNormal() {
             />
           }
           description="This is a normal message!"
-          duration={10000}
+          duration={1000}
           isVisible={isVisible}
           hideMessage={hideMessage}
-          className="border border-blue-600 px-4 py-2"
         />
       )}
     </div>

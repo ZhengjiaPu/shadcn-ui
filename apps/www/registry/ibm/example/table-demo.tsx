@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/default/ui/table"
+} from "@/registry/ibm/ui/table"
 
 const invoices = [
   {
@@ -54,43 +54,32 @@ const invoices = [
   },
 ]
 
-export default function TableDemo() {
+export default function DefaultTableDemo() {
   return (
-    <Table className="shadow-lg">
-      <TableCaption className="text-gray-600">
-        A list of your recent invoices.
-      </TableCaption>
-      <TableHeader className="bg-gray-200">
+    <Table variant="default">
+      <TableCaption>A list of your recent invoices.</TableCaption>
+      <TableHeader>
         <TableRow>
-          <TableHead className="font-bold text-black">Invoice</TableHead>
-          <TableHead className="font-bold text-black">Status</TableHead>
-          <TableHead className="font-bold text-black">Method</TableHead>
-          <TableHead className="font-bold text-black text-right">
-            Amount
-          </TableHead>
+          <TableHead>Invoice</TableHead>
+          <TableHead>Status</TableHead>
+          <TableHead>Method</TableHead>
+          <TableHead className="text-right">Amount</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {invoices.map((invoice) => (
-          <TableRow
-            key={invoice.invoice}
-            className="bg-white text-gray-600 hover:bg-gray-200 hover:text-black"
-          >
-            <TableCell className="font-medium">{invoice.invoice}</TableCell>
+          <TableRow key={invoice.invoice}>
+            <TableCell>{invoice.invoice}</TableCell>
             <TableCell>{invoice.paymentStatus}</TableCell>
             <TableCell>{invoice.paymentMethod}</TableCell>
             <TableCell className="text-right">{invoice.totalAmount}</TableCell>
           </TableRow>
         ))}
       </TableBody>
-      <TableFooter className="bg-gray-200">
+      <TableFooter>
         <TableRow>
-          <TableCell colSpan={3} className="font-bold text-black">
-            Total
-          </TableCell>
-          <TableCell className="text-right font-bold text-black">
-            $2,500.00
-          </TableCell>
+          <TableCell colSpan={3}>Total</TableCell>
+          <TableCell className="text-right">$2,500.00</TableCell>
         </TableRow>
       </TableFooter>
     </Table>

@@ -1,4 +1,4 @@
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/sydney/ui/button"
 import {
   Card,
   CardContent,
@@ -6,32 +6,22 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from "@/registry/sydney/ui/card"
+import { Input } from "@/registry/sydney/ui/input"
+import { Label } from "@/registry/sydney/ui/label"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/default/ui/tabs"
+} from "@/registry/sydney/ui/tabs"
 
 export default function TabsDemo() {
   return (
     <Tabs defaultValue="account" className="w-[400px]">
-      <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger
-          value="account"
-          className="data-[state=active]:bg-orange-600 data-[state=active]:text-white"
-        >
-          Account
-        </TabsTrigger>
-        <TabsTrigger
-          value="password"
-          className="data-[state=active]:bg-orange-600 data-[state=active]:text-white"
-        >
-          Password
-        </TabsTrigger>
+      <TabsList className="grid-cols-2">
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
       </TabsList>
       <TabsContent value="account">
         <Card>

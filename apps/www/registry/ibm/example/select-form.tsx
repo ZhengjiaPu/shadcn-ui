@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/ibm/ui/button"
 import {
   Form,
   FormControl,
@@ -14,15 +14,15 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
+} from "@/registry/ibm/ui/form"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/default/ui/select"
-import { toast } from "@/registry/default/ui/use-toast"
+} from "@/registry/ibm/ui/select"
+import { toast } from "@/registry/ibm/ui/use-toast"
 
 const FormSchema = z.object({
   email: z
@@ -59,29 +59,14 @@ export default function SelectForm() {
               <FormLabel>Email</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger className="w-full border border-gray-300 focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-200 hover:bg-gray-200 transition-colors rounded-none">
+                  <SelectTrigger>
                     <SelectValue placeholder="Select a verified email to display" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent className="border border-gray-300 rounded-none mt-1 max-h-60 overflow-y-auto rounded-none">
-                  <SelectItem
-                    value="m@example.com"
-                    className="text-black hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white"
-                  >
-                    m@example.com
-                  </SelectItem>
-                  <SelectItem
-                    value="m@google.com"
-                    className="text-black hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white"
-                  >
-                    m@google.com
-                  </SelectItem>
-                  <SelectItem
-                    value="m@support.com"
-                    className="text-black hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white"
-                  >
-                    m@support.com
-                  </SelectItem>
+                <SelectContent>
+                  <SelectItem value="m@example.com">m@example.com</SelectItem>
+                  <SelectItem value="m@google.com">m@google.com</SelectItem>
+                  <SelectItem value="m@support.com">m@support.com</SelectItem>
                 </SelectContent>
               </Select>
               <FormDescription>

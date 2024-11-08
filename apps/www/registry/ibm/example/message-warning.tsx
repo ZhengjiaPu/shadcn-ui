@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { ExclamationTriangleIcon } from "@radix-ui/react-icons"
 
-import { Button } from "@/registry/sydney/ui/button"
-import Messages from "@/registry/sydney/ui/messages"
+import { Button } from "@/registry/ibm/ui/button"
+import Messages from "@/registry/ibm/ui/messages"
 
 export function MessageWarning() {
   const [isVisible, setIsVisible] = useState(false)
@@ -25,7 +25,7 @@ export function MessageWarning() {
     >
       <Button
         onClick={showMessage}
-        className="bg-blue-600 hover:bg-blue-800 shadow-md text-white px-4 py-2 border-none"
+        className="bg-blue-600 hover:bg-blue-800 shadow-md text-white px-4 py-2 border-none rounded-none"
       >
         Display warning message
       </Button>
@@ -36,10 +36,9 @@ export function MessageWarning() {
           />
         }
         description="This is a warning message!"
-        duration={30000}
+        duration={3000}
         isVisible={isVisible}
         hideMessage={hideMessage}
-        className="border border-blue-600 px-4 py-2"
       />
     </div>
   )
