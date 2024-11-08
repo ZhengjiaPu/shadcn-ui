@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from "react"
+import styled from "styled-components"
 
 // Carbon-inspired styled components
 const StyledBrowserWindow = styled.div`
@@ -71,10 +71,10 @@ const BrowserContent = styled.iframe`
 
 // BrowserMockup Component
 const BrowserMockup = () => {
-  const [url, setUrl] = useState("https://www.example.com");
+  const [url, setUrl] = useState("https://www.example.com")
 
   const handleUrlChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUrl(event.target.value);
+    setUrl(event.target.value)
   }
 
   return (
@@ -101,4 +101,4 @@ const BrowserMockup = () => {
   )
 }
 
-export default BrowserMockup;
+export default BrowserMockup
