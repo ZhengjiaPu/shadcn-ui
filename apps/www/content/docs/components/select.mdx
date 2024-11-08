@@ -1,17 +1,18 @@
 ---
 title: Select
-description: Displays a list of options for the user to pick from—triggered by a button.
+description: A versatile select component for organizing and displaying categorized lists in a compact, scrollable format with an orange-themed interface.
 component: true
-featured: true
 links:
-  doc: https://www.radix-ui.com/docs/primitives/components/select
-  api: https://www.radix-ui.com/docs/primitives/components/select#api-reference
+  doc: https://www.radix-ui.com/primitives/docs/components/select
+  api: https://www.radix-ui.com/primitives/docs/components/select#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-select--docs
+  guideline: https://react-spectrum.adobe.com/react-spectrum/Picker.html
+  accessibility:
 ---
 
-<ComponentPreview
-  name="select-demo"
-  description="A select component with a list of options."
-/>
+## Introduction
+
+The `Select` component in our UI library is designed to offer an organized, accessible, and interactive selection experience. It supports grouping of options and can handle extensive lists with a scrollable interface, making it ideal for applications with large datasets or complex selection needs. This component provides flexible customization options and is suitable for a variety of use cases, from basic dropdowns to more intricate, form-integrated selection interfaces.
 
 ## Installation
 
@@ -78,7 +79,18 @@ import {
 
 ## Examples
 
+### Demo
+
+A basic select component with categorized options. This example organizes items under relevant headings, allowing users to quickly find and select options within each category.
+
+<ComponentPreview
+  name="select-demo"
+  description="A select component with a list of options."
+/>
+
 ### Scrollable
+
+This variant is optimized for extensive lists by introducing scrollable option groups, making it easy for users to navigate through large sets of data. Each category remains visually distinct to enhance organization within the dropdown.
 
 <ComponentPreview
   name="select-scrollable"
@@ -87,4 +99,20 @@ import {
 
 ### Form
 
+The component is also compatible with form inputs, making it easy to incorporate within forms to capture user selections. This example demonstrates how to integrate the select component into a form, complete with validation and custom messages.
+
 <ComponentPreview name="select-form" />
+
+## Reference
+
+The design and functionality of the Select component follow established accessibility and usability guidelines, ensuring it is fully navigable by keyboard and compatible with screen readers. Our implementation considers:
+
+W3C Accessibility Guidelines - Provides focus management, keyboard interaction, and screen reader support for a seamless user experience.
+
+Adobe Spectrum Design Guidelines - Ensures the component is organized, intuitive, and efficient for large datasets and diverse use cases.
+
+## Version History
+
+| Version | Editor   | Reviewer    | Date       | Description     |
+| ------- | -------- | ----------- | ---------- | --------------- |
+| v2.0    | Yibei Li | Zhengjia Pu | 27/10/2024 | updated version |

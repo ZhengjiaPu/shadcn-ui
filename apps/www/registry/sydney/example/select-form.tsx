@@ -59,14 +59,29 @@ export default function SelectForm() {
               <FormLabel>Email</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger>
+                  <SelectTrigger className="w-full border border-orange-500 focus:border-orange-600 focus:outline-none focus:ring focus:ring-orange-200 hover:bg-orange-100 transition-colors ">
                     <SelectValue placeholder="Select a verified email to display" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent>
-                  <SelectItem value="m@example.com">m@example.com</SelectItem>
-                  <SelectItem value="m@google.com">m@google.com</SelectItem>
-                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                <SelectContent className="border border-orange-500 mt-1 max-h-60 overflow-y-auto ">
+                  <SelectItem
+                    value="m@example.com"
+                    className="text-black hover:bg-orange-500 hover:text-white focus:bg-orange-500 focus:text-white"
+                  >
+                    m@example.com
+                  </SelectItem>
+                  <SelectItem
+                    value="m@google.com"
+                    className="text-black hover:bg-orange-500 hover:text-white focus:bg-orange-500 focus:text-white"
+                  >
+                    m@google.com
+                  </SelectItem>
+                  <SelectItem
+                    value="m@support.com"
+                    className="text-black hover:bg-orange-500 hover:text-white focus:bg-orange-500 focus:text-white"
+                  >
+                    m@support.com
+                  </SelectItem>
                 </SelectContent>
               </Select>
               <FormDescription>
@@ -77,7 +92,12 @@ export default function SelectForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button
+          type="submit"
+          className="bg-orange-500 hover:bg-orange-700 text-white px-4 py-2"
+        >
+          Submit
+        </Button>
       </form>
     </Form>
   )
