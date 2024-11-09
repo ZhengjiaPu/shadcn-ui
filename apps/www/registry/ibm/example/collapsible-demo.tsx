@@ -34,7 +34,7 @@ export default function CollapsibleDemo() {
         </CollapsibleTrigger>
       </div>
       <div
-        className="rounded-md border px-4 py-2 text-sm shadow-sm"
+        className="rounded-none border px-4 py-2 text-sm shadow-sm"
         style={{ fontFamily: "Segoe UI" }}
       >
         @radix-ui/primitives
@@ -44,13 +44,13 @@ export default function CollapsibleDemo() {
         style={{ fontFamily: "Segoe UI" }}
       >
         <div
-          className="rounded-md border px-4 py-2 text-sm shadow-sm"
+          className="rounded-none border px-4 py-2 text-sm shadow-sm"
           style={{ fontFamily: "Segoe UI" }}
         >
           @radix-ui/colors
         </div>
         <div
-          className="rounded-md border px-4 py-2 text-sm shadow-sm"
+          className="rounded-none border px-4 py-2 text-sm shadow-sm"
           style={{ fontFamily: "Segoe UI" }}
         >
           @stitches/react

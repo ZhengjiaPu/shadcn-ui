@@ -30,7 +30,7 @@ export function PaginationDemo() {
   // Define paginationLinkStyle with a type for isHovered
   const paginationLinkStyle = (isHovered: boolean) => ({
     border: "none",
-    borderRadius: "4px",
+    borderRadius: "0px",
     padding: "8px 12px",
     cursor: "pointer",
     textDecoration: "none",

@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/ibm/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -14,7 +14,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york/ui/command"
+} from "@/registry/ibm/ui/command"
 import {
   Form,
   FormControl,
@@ -23,13 +23,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/new-york/ui/form"
+} from "@/registry/ibm/ui/form"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
-import { toast } from "@/registry/new-york/ui/use-toast"
+} from "@/registry/ibm/ui/popover"
+import { toast } from "@/registry/ibm/ui/use-toast"
 
 const languages = [
   { label: "English", value: "en" },

@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { useMediaQuery } from "@/hooks/use-media-query"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/ibm/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -11,17 +11,13 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york/ui/command"
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/registry/new-york/ui/drawer"
+} from "@/registry/ibm/ui/command"
+import { Drawer, DrawerContent, DrawerTrigger } from "@/registry/ibm/ui/drawer"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from "@/registry/ibm/ui/popover"
 
 type Status = {
   value: string
