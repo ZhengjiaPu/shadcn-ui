@@ -18,7 +18,7 @@ import {
   Users,
 } from "lucide-react"
 
-import { Button } from "@/registry/sydney/ui/button"
+import { Button } from "@/registry/ibm/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -32,7 +32,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/sydney/ui/dropdown-menu"
+} from "@/registry/ibm/ui/dropdown-menu"
 
 export function DropdownMenuwithIcon() {
   const openGitHub = () => {

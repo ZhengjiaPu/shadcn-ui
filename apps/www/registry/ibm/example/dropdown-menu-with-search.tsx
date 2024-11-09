@@ -2,14 +2,14 @@
 
 import * as React from "react"
 
-import { Button } from "@/registry/sydney/ui/button"
+import { Button } from "@/registry/ibm/ui/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/sydney/ui/dropdown-menu"
+} from "@/registry/ibm/ui/dropdown-menu"
 
 export function DropdownMenuSelect() {
   const [selectedOptions, setSelectedOptions] = React.useState<string[]>([])

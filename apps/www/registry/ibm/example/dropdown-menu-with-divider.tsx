@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { Button } from "@/registry/sydney/ui/button"
+import { Button } from "@/registry/ibm/ui/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -10,7 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/sydney/ui/dropdown-menu"
+} from "@/registry/ibm/ui/dropdown-menu"
 
 export function DropdownMenuwithDividers() {
   const [selectedCar, setSelectedCar] = React.useState("Select a car")
