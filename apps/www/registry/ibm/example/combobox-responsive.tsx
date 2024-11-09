@@ -12,11 +12,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/registry/ibm/ui/command"
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/registry/ibm/ui/drawer"
+import { Drawer, DrawerContent, DrawerTrigger } from "@/registry/ibm/ui/drawer"
 import {
   Popover,
   PopoverContent,
