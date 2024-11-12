@@ -1,10 +1,19 @@
 ---
 title: Command
-description: Fast, composable, unstyled command menu for React.
+description: A fast, composable, unstyled command menu for React.
 component: true
 links:
   doc: https://cmdk.paco.me
+  api: https://cmdk.paco.me
+  storybook: http://localhost:6006/?path=/docs/components-command--docs
+  guideline: https://react-spectrum.adobe.com/react-spectrum/ActionMenu.html
 ---
+
+## Introduction
+
+The Command component is a fast, composable, and unstyled command menu designed specifically for React. It utilizes the cmdk library, breaking down command functionality into modular components, enabling developers to build a flexible command menu by combining various subcomponents. With accessibility in mind, this component supports keyboard navigation and is highly customizable, making it ideal for creating dynamic search, command input, and various interaction scenarios.
+
+## Demo
 
 <ComponentPreview
   name="command-demo"
@@ -17,81 +26,27 @@ links:
 
 The `<Command />` component uses the [`cmdk`](https://cmdk.paco.me) component by [pacocoursey](https://twitter.com/pacocoursey).
 
-## Installation
+## Variants
 
-<Tabs defaultValue="cli">
+### Normal command
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-<TabsContent value="cli">
-
-```bash
-npx shadcn-ui@latest add command
-```
-
-</TabsContent>
-
-<TabsContent value="manual">
-
-<Steps>
-
-<Step>Install the following dependencies:</Step>
-
-```bash
-npm install cmdk
-```
-
-<Step>Copy and paste the following code into your project.</Step>
-
-<ComponentSource name="command" />
-
-<Step>Update the import paths to match your project setup.</Step>
-
-</Steps>
-
-</TabsContent>
-
-</Tabs>
-
-## Usage
-
-```tsx
-import {
-  Command,
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
-} from "@/components/ui/command"
-```
-
-```tsx
-<Command>
-  <CommandInput placeholder="Type a command or search..." />
-  <CommandList>
-    <CommandEmpty>No results found.</CommandEmpty>
-    <CommandGroup heading="Suggestions">
-      <CommandItem>Calendar</CommandItem>
-      <CommandItem>Search Emoji</CommandItem>
-      <CommandItem>Calculator</CommandItem>
-    </CommandGroup>
-    <CommandSeparator />
-    <CommandGroup heading="Settings">
-      <CommandItem>Profile</CommandItem>
-      <CommandItem>Billing</CommandItem>
-      <CommandItem>Settings</CommandItem>
-    </CommandGroup>
-  </CommandList>
-</Command>
-```
-
-## Examples
+<ComponentPreview
+  name="command-demo"
+  align="start"
+  className="[&_.preview>div]:max-w-[450px]"
+  description="A command menu"
+/>
+The `CommandDemo` component provides a user-friendly command interface, ideal for
+applications needing quick access to common actions or settings. This command menu
+could be effectively used in scenarios like productivity apps, project management
+tools, or educational platforms, where users frequently need to access or search
+through various commands or features. When a user starts typing in the `CommandInput`
+field, the list dynamically filters items based on the input, showing only relevant
+commands. Selecting a command (by clicking or using keyboard navigation) triggers
+the corresponding action, while a disabled command like "Calculator" is non-interactive
+and cannot be selected. If no results match the input, a "No results found" message
+appears. This interactive command interface provides a streamlined and accessible
+way to perform various actions within the application.
 
 ### Dialog
 
@@ -99,40 +54,26 @@ import {
   name="command-dialog"
   description="A command menu in a dialog"
 />
+The `CommandDialog` provides a responsive command dialog, activated by pressing ⌘
++ J (or Ctrl + J on Windows). This dialog allows users to quickly access features
+or settings, making it ideal for applications requiring frequent navigation or multitasking
+support, such as productivity suites, note-taking apps, or dashboard interfaces.
+Upon pressing the shortcut, the `CommandDialog` opens, allowing users to start typing
+in the CommandInput field to filter options. Selecting an item, either by clicking
+or navigating with the keyboard, triggers the corresponding command. If no items
+match the input, a "No results found" message appears. This dialog streamlines user
+interactions, enabling quick access to essential features without leaving the main
+interface.
 
 To show the command menu in a dialog, use the `<CommandDialog />` component.
-
-```tsx
-export function CommandMenu() {
-  const [open, setOpen] = React.useState(false)
-
-  React.useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault()
-        setOpen((open) => !open)
-      }
-    }
-    document.addEventListener("keydown", down)
-    return () => document.removeEventListener("keydown", down)
-  }, [])
-
-  return (
-    <CommandDialog open={open} onOpenChange={setOpen}>
-      <CommandInput placeholder="Type a command or search..." />
-      <CommandList>
-        <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Suggestions">
-          <CommandItem>Calendar</CommandItem>
-          <CommandItem>Search Emoji</CommandItem>
-          <CommandItem>Calculator</CommandItem>
-        </CommandGroup>
-      </CommandList>
-    </CommandDialog>
-  )
-}
-```
 
 ### Combobox
 
 You can use the `<Command />` component as a combobox. See the [Combobox](/docs/components/combobox) page for more information.
+
+## Version History
+
+| Version | Editor     | Reviewer    | Date      | Description     |
+| ------- | ---------- | ----------- | --------- | --------------- |
+| v1.0    | shadcn     | shadcn      | -         | Initial version |
+| v2.0    | Yihan Zhao | Zhengjia Pu | 1/11/2024 | updated version |

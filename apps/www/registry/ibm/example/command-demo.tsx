@@ -16,11 +16,11 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/default/ui/command"
+} from "@/registry/ibm/ui/command"
 
 export default function CommandDemo() {
   return (
-    <Command className="rounded-lg border shadow-md">
+    <Command className="border shadow-md">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
@@ -35,7 +35,7 @@ export default function CommandDemo() {
           </CommandItem>
           <CommandItem disabled>
             <Calculator className="mr-2 h-4 w-4" />
-            <span>Calculator</span>
+            <span>Calculator - disabled</span>
           </CommandItem>
         </CommandGroup>
         <CommandSeparator />
