@@ -1,0 +1,90 @@
+---
+title: Modal
+description: A versatile component for presenting information or interactions within a dialog box overlay.
+component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/dialog
+  api: https://www.radix-ui.com/docs/primitives/components/dialog#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-modal--docs
+---
+
+## Introduction
+
+The `Modal` component provides a flexible interface for displaying critical information, confirmations, forms, or images in a centered overlay. This component includes several variants, each designed for different use cases such as login, confirmation, and informational modals. Built with accessibility in mind, it follows WAI-ARIA design patterns and includes custom animations for smooth opening and closing interactions.
+
+## Demo
+
+<ComponentPreview
+  name="modal-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="A basic modal example"
+/>
+
+## Variants
+
+### modal-demo
+
+<ComponentPreview
+  name="modal-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Displays informational content regarding personal information privacy."
+/>
+
+The `NormalModal` variant provides users with information about privacy policies. Users can accept or decline the information with appropriate feedback provided upon their choice.
+
+### modal-confirm
+
+<ComponentPreview
+  name="modal-confirm"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="A confirmation modal for submitting applications."
+/>
+
+The `ConfirmModal` variant prompts users to confirm actions such as submitting applications. It includes a `Confirm` button with feedback upon clicking, and a `Cancel` option, making it suitable for scenarios that require user acknowledgment before proceeding.
+
+### modal-notice
+
+<ComponentPreview
+  name="modal-notice"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="A notice modal to prevent unwanted actions."
+/>
+
+The `NoticeModal` variant is a simpler confirmation modal with only a `Cancel` option, designed to prompt users to reconsider or acknowledge the information without taking further action.
+
+### modal-login
+
+<ComponentPreview
+  name="modal-login"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="A login and sign-up modal with email and password fields."
+/>
+
+The `LoginModal` variant supports both login and sign-up modes. Users can switch between the two modes, each including fields for email and password. The modal provides immediate feedback on login or sign-up attempts, handling both successful submissions and validation errors.
+
+### modal-signup
+
+<ComponentPreview
+  name="modal-signup"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="A sign-up modal for creating a student account."
+/>
+
+The `SignupModal` variant facilitates account creation, allowing users to enter their email and sign up with feedback provided after submission. It is ideal for onboarding new users to the system.
+
+### modal-pic
+
+<ComponentPreview
+  name="modal-pic"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="A modal displaying an image with accompanying description."
+/>
+
+The `PictureModal` variant includes an image element alongside descriptive content, making it suitable for scenarios where visual context is necessary, such as viewing specific information in a gallery or tutorial format.
+
+## Version History
+
+| Version | Editor      | Reviewer    | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |
+| v2.0    | Yihan Zhao  | Zhengjia Pu | 1/11/2024  | updated version |
