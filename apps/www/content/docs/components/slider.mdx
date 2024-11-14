@@ -5,9 +5,23 @@ component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/slider
   api: https://www.radix-ui.com/docs/primitives/components/slider#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-slider--docs
 ---
 
+## Introduction
+
+This `Slider` component is a customizable range slider built using Radix UI's Slider primitives. It allows users to select a value within a defined range by moving a draggable "thumb" along a "track." The component supports various customization options, including the background color of the track, the color of the filled portion of the track, and the color of the thumb, all of which can be dynamically styled using Tailwind CSS utility classes. Additionally, the slider's size (small, medium, or large) can be specified, adjusting both the height of the track and the size of the thumb. This component is fully responsive and designed for smooth interaction, making it ideal for user interfaces that require precise value selection within a specified range.
+
+## Demo
+
 <ComponentPreview name="slider-demo" description="A slider component." />
+This Demo is an interactive range slider designed in the IBM style, allowing users
+to select values within a specified range. When the slider is active (being dragged),
+the track fills with a highlighted blue color, and the thumb (handle) also changes
+to blue with a border, providing visual feedback during interaction. In its default
+state, the track and thumb appear in black. This component ensures smooth and intuitive
+interaction, with styles that adapt based on user actions, making it suitable for
+precise value selection scenarios in user interfaces.
 
 ## Installation
 
@@ -56,3 +70,10 @@ import { Slider } from "@/components/ui/slider"
 ```tsx
 <Slider defaultValue={[33]} max={100} step={1} />
 ```
+
+## Version History
+
+| Version | Editor     | Reviewer    | Date      | Description     |
+| ------- | ---------- | ----------- | --------- | --------------- |
+| v1.0    | Shadcnui   | Shadcnui    | -         | Initial version |
+| v2.0    | Yihan Zhao | Zhengjia Pu | 1/11/2024 | updated version |
