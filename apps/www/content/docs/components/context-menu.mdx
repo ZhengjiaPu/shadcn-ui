@@ -5,12 +5,28 @@ component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/context-menu
   api: https://www.radix-ui.com/docs/primitives/components/context-menu#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-contextmenu--docs
 ---
+
+## Introduction
+
+The `ContextMenu` component provides a dynamic right-click menu with customizable options, ideal for web applications needing context-specific interactions. Built on Radix UI, it offers a flexible structure for defining actions, checkboxes, radio buttons, and nested submenus, making it highly adaptable for complex menu needs.
+
+With built-in support for icons, separators, and labels, `ContextMenu` allows developers to style items easily using Tailwind CSS classes, ensuring a seamless and intuitive user experience. Its customizable trigger and portal-based rendering make it both accessible and visually consistent, fitting well in interactive and desktop-like web applications.
+
+## Demo
 
 <ComponentPreview
   name="context-menu-demo"
   description="A context menu with sub menu items."
 />
+This Demo showcases a right-click context menu with various interactive elements,
+designed for intuitive access to multiple options, including basic actions, a submenu,
+checkboxes, and a radio selection group. Right-clicking on the defined area labeled
+"Right click here" opens a dropdown menu styled with accessible items and sections
+that cater to different interactions.
+
+Within the menu, standard actions like "Back," "Forward" (disabled), and "Reload" are displayed alongside keyboard shortcuts, providing quick navigation options. A nested "More Tools" submenu allows access to additional tools such as "Save Page As" and "Developer Tools," extending the menu’s utility. The menu also includes checkbox options, such as "Show Bookmarks Bar," which can be toggled on or off, and a radio group labeled "People," where users can select a single name from the group. Each item features a subtle background change on hover, enhancing user feedback and interactivity. The focus and hover effects are customizable through Tailwind CSS classes, ensuring adaptability to different design aesthetics.
 
 ## Installation
 
@@ -72,3 +88,10 @@ import {
   </ContextMenuContent>
 </ContextMenu>
 ```
+
+## Version History
+
+| Version | Editor     | Reviewer | Date      | Description     |
+| ------- | ---------- | -------- | --------- | --------------- |
+| v1.0    | Shadcnui   | Shadcnui | -         | Initial version |
+| v2.0    | Yihan Zhao | Yibei Li | 1/11/2024 | updated version |
