@@ -1809,6 +1809,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "panel-demo": {
+      name: "panel-demo",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/default/example/panel-demo")),
+      source: "",
+      files: ["registry/default/example/panel-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "panel-fail": {
+      name: "panel-fail",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/default/example/panel-fail")),
+      source: "",
+      files: ["registry/default/example/panel-fail.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "progress-demo": {
       name: "progress-demo",
       type: "components:example",
@@ -5722,6 +5744,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/popover-demo")),
       source: "",
       files: ["registry/new-york/example/popover-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "panel-demo": {
+      name: "panel-demo",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/new-york/example/panel-demo")),
+      source: "",
+      files: ["registry/new-york/example/panel-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "panel-fail": {
+      name: "panel-fail",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/new-york/example/panel-fail")),
+      source: "",
+      files: ["registry/new-york/example/panel-fail.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -9643,6 +9687,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "panel-demo": {
+      name: "panel-demo",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/sydney/example/panel-demo")),
+      source: "",
+      files: ["registry/sydney/example/panel-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "panel-fail": {
+      name: "panel-fail",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/sydney/example/panel-fail")),
+      source: "",
+      files: ["registry/sydney/example/panel-fail.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "progress-demo": {
       name: "progress-demo",
       type: "components:example",
@@ -13556,6 +13622,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/ibm/example/popover-demo")),
       source: "",
       files: ["registry/ibm/example/popover-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "panel-demo": {
+      name: "panel-demo",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/ibm/example/panel-demo")),
+      source: "",
+      files: ["registry/ibm/example/panel-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "panel-fail": {
+      name: "panel-fail",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/ibm/example/panel-fail")),
+      source: "",
+      files: ["registry/ibm/example/panel-fail.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

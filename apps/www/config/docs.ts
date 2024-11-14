@@ -268,6 +268,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Panel",
+          href: "/docs/components/panel",
+          items: [],
+        },
+        {
           title: "Pagination",
           href: "/docs/components/pagination",
           items: [],

@@ -1,0 +1,68 @@
+---
+title: Panel
+description: The panel component is a visible container used on confirmation or results pages to highlight important content.
+component: true
+links:
+  doc: https://design-system.service.gov.uk/components/panel/
+  api:
+  storybook: http://localhost:6006/?path=/docs/components-panel--docs
+  guideline:
+  accessibility:
+---
+
+## Introduction
+
+The `Panel` component is a key UI element used to display important status updates, confirmation messages, or alerts to users on results or confirmation pages. This component is designed to provide visual emphasis for essential information, guiding users’ attention to completion statuses or errors. Built with a card-based layout, the Panel component adheres to the [GOV.UK](https://design-system.service.gov.uk/components/panel/) Design System principles, ensuring a clear, accessible, and user-friendly presentation of information. Each panel serves a specific purpose: while the SuccessPanel conveys successful task completion, the FailPanel indicates an error or failure. Both panels are styled to reinforce the significance of their messages through focused content, distinct color schemes, and clear typography.
+
+## Demo
+
+<ComponentPreview
+  name="panel-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="An accordion with three items"
+/>
+This `Demo` is designed to confirm successful actions or completed tasks in a professional
+and straightforward layout. This panel utilizes a Card structure, containing a header
+with a bold, centered title "Application Complete" to provide immediate feedback
+about the successful outcome. The panel also includes a CardDescription that displays
+a unique reference number, such as "KDU3957KF," which users can retain for future
+reference. Styled with a white background and a calm, blue-accented header, the SuccessPanel
+visually communicates success in a clean and effective manner, reinforcing positive
+feedback for users upon completion of a task.
+
+## Variants
+
+### failed panel
+
+<ComponentPreview
+  name="panel-fail"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="An accordion with three items"
+/>
+The `FailPanel` is structured to communicate errors or unsuccessful outcomes in a
+concise and approachable way. Featuring a red-accented header and compact card layout,
+this panel’s design immediately signals an issue to the user. The main content includes
+a brief message, "Please try again," offering straightforward guidance. Additionally,
+a "Back" button allows users to navigate back to a previous step, facilitating easy
+correction or retry options. The styling of the FailPanel is purposeful, using color
+and centered content alignment to convey the error’s nature while maintaining a user-friendly
+interface. The FailPanel is static and serves a purely informational purpose. It
+does not contain interactive elements that affect functionality but does include
+a "Back" button to guide users on possible next steps. The panel’s content, centered
+both vertically and horizontally, is straightforward, aiming to communicate the failure
+clearly and succinctly.
+
+## Installation
+
+Ensure that your project includes all necessary dependencies for the Panel component. If they are not already installed, you can add them using npm with the following command:
+
+```bash
+npx shadcn-ui@latest add card
+```
+
+## Version History
+
+| Version | Editor     | Reviewer    | Date       | Description     |
+| ------- | ---------- | ----------- | ---------- | --------------- |
+| v1.0    | Xinyu Chen | Yuqing Wu   | 15/04/2024 | Initial version |
+| v2.0    | Yihan Zhao | Zhengjia Pu | 1/11/2024  | updated version |
