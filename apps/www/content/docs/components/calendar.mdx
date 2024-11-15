@@ -4,17 +4,20 @@ description: A date field component that allows users to enter and edit date.
 component: true
 links:
   doc: https://react-day-picker.js.org
+  storybook: http://localhost:6006/?path=/docs/components-calendar--docs
 ---
+
+## Introduction
+
+The CalendarDemo component is a React functional component designed to showcase a calendar component with toast functionality. It imports the Calendar component from a UI library and the useToast hook along with associated Toaster and ToastAction components for displaying toast notifications. The calendar allows users to select a single date, and upon selection, a toast notification is triggered to display the selected date.
+
+## Demo
 
 <ComponentPreview
   name="calendar-demo"
   title="Calendar"
   description="A calendar showing the current date."
 />
-
-## About
-
-The `Calendar` component is built on top of [React DayPicker](https://react-day-picker.js.org).
 
 ## Installation
 
@@ -77,14 +80,11 @@ return (
 )
 ```
 
-See the [React DayPicker](https://react-day-picker.js.org) documentation for more information.
+See the [React DayPicker](https://react-day-picker.js.org) documentation for more information. You can use the `<Calendar>` component to build a date picker. See the [Date Picker](/docs/components/date-picker) page for more information.
 
-## Date Picker
+## Version
 
-You can use the `<Calendar>` component to build a date picker. See the [Date Picker](/docs/components/date-picker) page for more information.
-
-## Examples
-
-### Form
-
-<ComponentPreview name="calendar-form" />
+| Version | Editor      | Reviewer   | Date       | Description                   | Status          |
+| ------- | ----------- | ---------- | ---------- | ----------------------------- | --------------- |
+| v1.0    | Yutong Shi  | Yutong Shi | 25/04/2024 | Initial version created       | Initial version |
+| v2.0    | Yilin Xiang | Yihan Zhao | 04/11/2024 | Content updates and revisions | Updated version |
