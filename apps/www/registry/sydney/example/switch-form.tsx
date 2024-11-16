@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/sydney/ui/button"
 import {
   Form,
   FormControl,
@@ -12,9 +12,9 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/registry/default/ui/form"
-import { Switch } from "@/registry/default/ui/switch"
-import { toast } from "@/registry/default/ui/use-toast"
+} from "@/registry/sydney/ui/form"
+import { Switch } from "@/registry/sydney/ui/switch"
+import { toast } from "@/registry/sydney/ui/use-toast"
 
 const FormSchema = z.object({
   marketing_emails: z.boolean().default(false).optional(),
@@ -44,7 +44,9 @@ export default function SwitchForm() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
         <div>
-          <h3 className="mb-4 text-lg font-medium">Email Notifications</h3>
+          <h3 className="mb-4 text-lg font-medium font-sans text-charcoal">
+            Email Notifications
+          </h3>
           <div className="space-y-4">
             <FormField
               control={form.control}
@@ -52,10 +54,10 @@ export default function SwitchForm() {
               render={({ field }) => (
                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
-                    <FormLabel className="text-base">
+                    <FormLabel className="text-base font-sans text-charcoal">
                       Marketing emails
                     </FormLabel>
-                    <FormDescription>
+                    <FormDescription className="text-sm font-serif text-gray-600">
                       Receive emails about new products, features, and more.
                     </FormDescription>
                   </div>
@@ -74,8 +76,10 @@ export default function SwitchForm() {
               render={({ field }) => (
                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
-                    <FormLabel className="text-base">Security emails</FormLabel>
-                    <FormDescription>
+                    <FormLabel className="text-base font-sans text-charcoal">
+                      Security emails
+                    </FormLabel>
+                    <FormDescription className="text-sm font-serif text-gray-600">
                       Receive emails about your account security.
                     </FormDescription>
                   </div>
@@ -92,7 +96,9 @@ export default function SwitchForm() {
             />
           </div>
         </div>
-        <Button type="submit">Submit</Button>
+        <Button className="font-sans" type="submit">
+          Submit
+        </Button>
       </form>
     </Form>
   )
