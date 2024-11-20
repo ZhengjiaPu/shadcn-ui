@@ -14,9 +14,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
-import { Toaster } from "@/registry/default/ui/toaster"
-import { useToast } from "@/registry/default/ui/use-toast"
+} from "@/registry/ibm/ui/dropdown-menu"
+import { Toaster } from "@/registry/ibm/ui/toaster"
+import { useToast } from "@/registry/ibm/ui/use-toast"
 
 export function BreadcrumbBasic() {
   const { toast } = useToast()
