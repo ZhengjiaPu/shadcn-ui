@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
+} from "@/registry/sydney/ui/breadcrumb"
 
 export default function BreadcrumbCollapsed() {
   return (

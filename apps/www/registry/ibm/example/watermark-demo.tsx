@@ -1,6 +1,6 @@
 import React from "react"
 
-import Watermark from "@/registry/default/ui/watermark"
+import Watermark from "@/registry/ibm/ui/watermark"
 
 const WatermarkNormal = () => (
   <Watermark content=" Watermark" count={9} fontSize={28} opacity={0.1}>

@@ -13,8 +13,8 @@ import {
   FormMessage,
 } from "@/registry/default/ui/form"
 import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group"
-import { toast } from "@/registry/default/ui/use-toast"
 import { Button } from "@/registry/ibm/ui/button"
+import { toast } from "@/registry/ibm/ui/use-toast"
 
 const FormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {

@@ -3,7 +3,7 @@
 import * as React from "react"
 import { DotsHorizontalIcon } from "@radix-ui/react-icons"
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/ibm/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -11,7 +11,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york/ui/command"
+} from "@/registry/ibm/ui/command"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,7 +24,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
+} from "@/registry/ibm/ui/dropdown-menu"
 
 const labels = [
   "feature",

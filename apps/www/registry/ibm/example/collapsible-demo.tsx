@@ -3,12 +3,12 @@
 import * as React from "react"
 import { CaretSortIcon } from "@radix-ui/react-icons"
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/ibm/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/new-york/ui/collapsible"
+} from "@/registry/ibm/ui/collapsible"
 
 export default function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false)
