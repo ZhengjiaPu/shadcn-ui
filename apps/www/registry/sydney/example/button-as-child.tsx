@@ -1,10 +1,10 @@
 import Link from "next/link"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/sydney/ui/button"
 
 export default function ButtonAsChild() {
   return (
-    <Button asChild className="bg-orange-600 text-white hover:bg-orange-700">
+    <Button asChild>
       <Link href="/login">Login</Link>
     </Button>
   )

@@ -1,12 +1,5 @@
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/sydney/ui/button"
 
 export default function ButtonOutline() {
-  return (
-    <Button
-      variant="outline"
-      className="bg-white text-orange-600 border border-orange-600 hover:bg-orange-100"
-    >
-      Outline
-    </Button>
-  )
+  return <Button variant="outline">Outline</Button>
 }
