@@ -1798,21 +1798,10 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "popover-demo": {
-      name: "popover-demo",
-      type: "components:example",
-      registryDependencies: ["popover"],
-      component: React.lazy(() => import("@/registry/default/example/popover-demo")),
-      source: "",
-      files: ["registry/default/example/popover-demo.tsx"],
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "panel-demo": {
       name: "panel-demo",
       type: "components:example",
-      registryDependencies: ["card"],
+      registryDependencies: ["panel"],
       component: React.lazy(() => import("@/registry/default/example/panel-demo")),
       source: "",
       files: ["registry/default/example/panel-demo.tsx"],
@@ -1823,10 +1812,21 @@ export const Index: Record<string, any> = {
     "panel-fail": {
       name: "panel-fail",
       type: "components:example",
-      registryDependencies: ["card"],
+      registryDependencies: ["panel"],
       component: React.lazy(() => import("@/registry/default/example/panel-fail")),
       source: "",
       files: ["registry/default/example/panel-fail.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "popover-demo": {
+      name: "popover-demo",
+      type: "components:example",
+      registryDependencies: ["popover"],
+      component: React.lazy(() => import("@/registry/default/example/popover-demo")),
+      source: "",
+      files: ["registry/default/example/popover-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -1926,6 +1926,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/scroll-area-horizontal-demo")),
       source: "",
       files: ["registry/default/example/scroll-area-horizontal-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "search-demo": {
+      name: "search-demo",
+      type: "components:example",
+      registryDependencies: ["search"],
+      component: React.lazy(() => import("@/registry/default/example/search-demo")),
+      source: "",
+      files: ["registry/default/example/search-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "search-icon": {
+      name: "search-icon",
+      type: "components:example",
+      registryDependencies: ["search"],
+      component: React.lazy(() => import("@/registry/default/example/search-icon")),
+      source: "",
+      files: ["registry/default/example/search-icon.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -5737,21 +5759,10 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "popover-demo": {
-      name: "popover-demo",
-      type: "components:example",
-      registryDependencies: ["popover"],
-      component: React.lazy(() => import("@/registry/new-york/example/popover-demo")),
-      source: "",
-      files: ["registry/new-york/example/popover-demo.tsx"],
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "panel-demo": {
       name: "panel-demo",
       type: "components:example",
-      registryDependencies: ["card"],
+      registryDependencies: ["panel"],
       component: React.lazy(() => import("@/registry/new-york/example/panel-demo")),
       source: "",
       files: ["registry/new-york/example/panel-demo.tsx"],
@@ -5762,10 +5773,21 @@ export const Index: Record<string, any> = {
     "panel-fail": {
       name: "panel-fail",
       type: "components:example",
-      registryDependencies: ["card"],
+      registryDependencies: ["panel"],
       component: React.lazy(() => import("@/registry/new-york/example/panel-fail")),
       source: "",
       files: ["registry/new-york/example/panel-fail.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "popover-demo": {
+      name: "popover-demo",
+      type: "components:example",
+      registryDependencies: ["popover"],
+      component: React.lazy(() => import("@/registry/new-york/example/popover-demo")),
+      source: "",
+      files: ["registry/new-york/example/popover-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -5865,6 +5887,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/scroll-area-horizontal-demo")),
       source: "",
       files: ["registry/new-york/example/scroll-area-horizontal-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "search-demo": {
+      name: "search-demo",
+      type: "components:example",
+      registryDependencies: ["search"],
+      component: React.lazy(() => import("@/registry/new-york/example/search-demo")),
+      source: "",
+      files: ["registry/new-york/example/search-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "search-icon": {
+      name: "search-icon",
+      type: "components:example",
+      registryDependencies: ["search"],
+      component: React.lazy(() => import("@/registry/new-york/example/search-icon")),
+      source: "",
+      files: ["registry/new-york/example/search-icon.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -9676,21 +9720,10 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "popover-demo": {
-      name: "popover-demo",
-      type: "components:example",
-      registryDependencies: ["popover"],
-      component: React.lazy(() => import("@/registry/sydney/example/popover-demo")),
-      source: "",
-      files: ["registry/sydney/example/popover-demo.tsx"],
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "panel-demo": {
       name: "panel-demo",
       type: "components:example",
-      registryDependencies: ["card"],
+      registryDependencies: ["panel"],
       component: React.lazy(() => import("@/registry/sydney/example/panel-demo")),
       source: "",
       files: ["registry/sydney/example/panel-demo.tsx"],
@@ -9701,10 +9734,21 @@ export const Index: Record<string, any> = {
     "panel-fail": {
       name: "panel-fail",
       type: "components:example",
-      registryDependencies: ["card"],
+      registryDependencies: ["panel"],
       component: React.lazy(() => import("@/registry/sydney/example/panel-fail")),
       source: "",
       files: ["registry/sydney/example/panel-fail.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "popover-demo": {
+      name: "popover-demo",
+      type: "components:example",
+      registryDependencies: ["popover"],
+      component: React.lazy(() => import("@/registry/sydney/example/popover-demo")),
+      source: "",
+      files: ["registry/sydney/example/popover-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -9804,6 +9848,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/sydney/example/scroll-area-horizontal-demo")),
       source: "",
       files: ["registry/sydney/example/scroll-area-horizontal-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "search-demo": {
+      name: "search-demo",
+      type: "components:example",
+      registryDependencies: ["search"],
+      component: React.lazy(() => import("@/registry/sydney/example/search-demo")),
+      source: "",
+      files: ["registry/sydney/example/search-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "search-icon": {
+      name: "search-icon",
+      type: "components:example",
+      registryDependencies: ["search"],
+      component: React.lazy(() => import("@/registry/sydney/example/search-icon")),
+      source: "",
+      files: ["registry/sydney/example/search-icon.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -13615,21 +13681,10 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "popover-demo": {
-      name: "popover-demo",
-      type: "components:example",
-      registryDependencies: ["popover"],
-      component: React.lazy(() => import("@/registry/ibm/example/popover-demo")),
-      source: "",
-      files: ["registry/ibm/example/popover-demo.tsx"],
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "panel-demo": {
       name: "panel-demo",
       type: "components:example",
-      registryDependencies: ["card"],
+      registryDependencies: ["panel"],
       component: React.lazy(() => import("@/registry/ibm/example/panel-demo")),
       source: "",
       files: ["registry/ibm/example/panel-demo.tsx"],
@@ -13640,10 +13695,21 @@ export const Index: Record<string, any> = {
     "panel-fail": {
       name: "panel-fail",
       type: "components:example",
-      registryDependencies: ["card"],
+      registryDependencies: ["panel"],
       component: React.lazy(() => import("@/registry/ibm/example/panel-fail")),
       source: "",
       files: ["registry/ibm/example/panel-fail.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "popover-demo": {
+      name: "popover-demo",
+      type: "components:example",
+      registryDependencies: ["popover"],
+      component: React.lazy(() => import("@/registry/ibm/example/popover-demo")),
+      source: "",
+      files: ["registry/ibm/example/popover-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -13743,6 +13809,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/ibm/example/scroll-area-horizontal-demo")),
       source: "",
       files: ["registry/ibm/example/scroll-area-horizontal-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "search-demo": {
+      name: "search-demo",
+      type: "components:example",
+      registryDependencies: ["search"],
+      component: React.lazy(() => import("@/registry/ibm/example/search-demo")),
+      source: "",
+      files: ["registry/ibm/example/search-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "search-icon": {
+      name: "search-icon",
+      type: "components:example",
+      registryDependencies: ["search"],
+      component: React.lazy(() => import("@/registry/ibm/example/search-icon")),
+      source: "",
+      files: ["registry/ibm/example/search-icon.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

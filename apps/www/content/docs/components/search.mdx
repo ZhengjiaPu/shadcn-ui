@@ -1,0 +1,56 @@
+---
+title: Search
+description: Search component is an input component that can provide users to type words in the search bar and then by clicking the search button, user can get the corresponding results.
+component: true
+links:
+  doc:
+  api:
+  storybook: http://localhost:6006/?path=/docs/components-search--docs
+  guideline:
+  accessibility:
+---
+
+## Introduction
+
+The `Search` component is an interactive UI element designed to allow users to quickly find content by typing keywords into a search field. It provides real-time feedback through a toast notification once the search is initiated and validates user input to ensure at least two characters are entered. This component is ideal for applications where content discovery and keyword-based search functionality are essential. Built with accessibility and user experience in mind, the Search component adheres to modern design principles, offering clear input validation messages and actionable feedback.
+
+## Demo
+
+<ComponentPreview
+  name="search-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="search demo"
+/>
+This `demo` provides a user-friendly interface where users can input keywords to
+perform a search. If the entered text is less than two characters, a red validation
+message appears beneath the input field, prompting the user to "Enter at least 2
+characters." Upon entering a valid query and clicking the search button, a toast
+notification is displayed with the entered keyword, confirming the search initiation.
+The search action redirects users to a Google Search results page pre-populated with
+the query, offering a seamless and intuitive experience.{" "}
+
+## Variants
+
+### search with icon
+
+<ComponentPreview
+  name="search-icon"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="search icon"
+/>
+The `RadixSearch` component provides an interactive search input field with a search
+button, designed to handle user queries efficiently while providing immediate feedback
+via toast notifications. When a user clicks the search button:
+
+If the input field is empty, a destructive toast notification appears with an error message, prompting the user to fill in the required content.
+If a valid search query is entered (at least one non-whitespace character), a toast notification confirms the initiation of the search and displays the search term.
+The component visually organizes content using a flex layout and ensures accessibility with focus ring styling for the input field.
+This component supports real-time feedback, error handling, and a clean user experience, making it ideal for scenarios where immediate user input validation and feedback are required. Variations can include changes to toast styles, input placeholder text, or additional search handling logic.
+
+## Version History
+
+| Version | Editor          | Reviewer        | Date         | Description                    |
+| ------- | --------------- | --------------- | ------------ | ------------------------------ |
+| v1.0    | Hsiangwen Cheng | Hsiangwen Cheng | 22 Sept 2023 | version 1                      |
+| v2.0    | Yuqing Wu       | Yuqing Wu       | 16 Apr 2024  | version 2                      |
+| v3.0    | Yihan Zhao      | Zhengjia Pu     | 1 Nov 2024   | updated version with storybook |
