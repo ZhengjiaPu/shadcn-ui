@@ -1,12 +1,5 @@
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/sydney/ui/button"
 
 export default function ButtonSecondary() {
-  return (
-    <Button
-      variant="secondary"
-      className="bg-white text-orange-600 border border-orange-600 hover:bg-orange-100"
-    >
-      Secondary
-    </Button>
-  )
+  return <Button variant="secondary">Secondary</Button>
 }

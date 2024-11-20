@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "@/registry/default/ui/button"
-import { useToast } from "@/registry/default/ui/use-toast"
+import { Button } from "@/registry/ibm/ui/button"
+import { useToast } from "@/registry/ibm/ui/use-toast"
 
 export default function ToastSimple() {
   const { toast } = useToast()

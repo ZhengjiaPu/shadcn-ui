@@ -1,12 +1,5 @@
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/sydney/ui/button"
 
 export default function ButtonLink() {
-  return (
-    <Button
-      variant="link"
-      className="text-black hover:text-orange-600 hover:underline hover:underline-offset-4"
-    >
-      Link
-    </Button>
-  )
+  return <Button variant="link">Link</Button>
 }
