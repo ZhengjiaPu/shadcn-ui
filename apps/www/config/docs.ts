@@ -213,6 +213,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "File Upload",
+          href: "/docs/components/fileUpload",
+          items: [],
+        },
+        {
           title: "Form",
           href: "/docs/components/form",
           items: [],

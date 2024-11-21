@@ -1227,4 +1227,19 @@ export const examples: Registry = [
     type: "components:example",
     files: ["example/watermark-demo.tsx"],
   },
+  {
+    name: "fileUpload-demo",
+    type: "components:example",
+    files: ["example/fileUpload-demo.tsx"],
+  },
+  {
+    name: "fileUpload-format",
+    type: "components:example",
+    files: ["example/fileUpload-format.tsx"],
+  },
+  {
+    name: "fileUpload-preview",
+    type: "components:example",
+    files: ["example/fileUpload-preview.tsx"],
+  },
 ]

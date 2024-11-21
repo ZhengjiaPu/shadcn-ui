@@ -1,0 +1,66 @@
+---
+title: File Upload
+description: File upload component allow users to choose local files and upload them to server.
+component: true
+links:
+  doc: https://react-spectrum.adobe.com/react-aria/FileTrigger.html
+  api:
+  storybook: http://localhost:6006/?path=/docs/components-fileupload--docs
+  guideline:
+---
+
+## Introduction
+
+This `fileUpload` component provides a file upload interface allowing users to select and upload files. It consists of a button labeled "Choose File" that triggers the file selection dialog when clicked. After selecting a file, the name of the chosen file is displayed next to the button. Additionally, a "Upload File" button appears below the selected file name, allowing users to initiate the upload process.
+
+## Demo
+
+<ComponentPreview
+  name="fileUpload-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="An accordion with three items"
+/>
+File Selection: Clicking on the "Choose File" button opens the file selection dialog,
+allowing users to select a file from their device. After selecting a file, its name
+is displayed next to the button.{" "}
+
+File Upload: Once a file is selected, the "Upload
+File" button becomes visible, allowing users to upload the selected file. Clicking
+on the "Upload File" button triggers the upload process, which typically involves
+sending the file data to a server for processing.
+
+## variant
+
+### fileUpload with format
+
+<ComponentPreview
+  name="fileUpload-format"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="An accordion with three items"
+/>
+This component provides a file upload interface allowing users to select and upload
+files. It consists of a button labeled "Choose File" that triggers the file selection
+dialog when clicked. After selecting a file, the name of the chosen file is displayed
+next to the button. Additionally, a "Upload File" button appears below the selected
+file name, allowing users to initiate the upload process.
+
+### fileUpload with preview
+
+<ComponentPreview
+  name="fileUpload-preview"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="An accordion with three items"
+/>
+This component facilitates file upload with a preview feature, allowing users to
+select and preview images before uploading them. It consists of an input element
+for file selection, a button labeled "Choose File" to trigger the file selection
+dialog, and an image preview section to display the selected image.
+
+## Version History
+
+| Version | Editor       | Reviewer     | Date        | Description     |
+| ------- | ------------ | ------------ | ----------- | --------------- |
+| v1.0    | Nuojin Zhang | Nuojin Zhang | 09 Apr 2024 | React version   |
+| v2.0    | Nuojin Zhang | Nuojin Zhang | 25 Apr 2024 | Documentation   |
+| v3.0    | Yuqing Wu    | Yuqing Wu    | 25 Apr 2024 | Peer review     |
+| v4.0    | Yihan Zhao   | Zhengjia Pu  | 1 Nov 2024  | updated version |
