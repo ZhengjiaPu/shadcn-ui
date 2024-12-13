@@ -210,6 +210,59 @@ Please ensure that the tests are passing when submitting a pull request. If you'
 2. update the route path in `apps/www/config/docs.ts` file, to add a route path to that component in the documentation site.
 3. run `pnpm build:registry` to update the component registry
 
+### Workflow for Adding a New Component
+
+1. add the component in `apps/www/registry/{style}/ui` folder, and examples in `apps/www/registry/{style}/example`, for **all styles**.
+
+2. Add entries to `apps/www/registry/example.ts`:
+
+```ts
+{
+  name: "your-component-demo",
+  type: "components:example",
+  registryDependencies: ["your-component", "other-related-componenent"],
+  files: ["example/your-component-demo.tsx"],
+},
+```
+
+3. Add a page in `apps/www/content/docs` and update `apps/www/config/docs.ts`:
+
+```ts
+{
+  title: "Your Component",
+  href: "/docs/components/your-component",
+  items: [],
+},
+```
+
+4. Run `pnpm build:registry` to update the registry and ensure all new components and examples are registered correctly.
+
+5. Run `pnpm --filter=www dev` to make adjustments to the code or documentation based on your testing.
+
+#### Workflow for Adding a New Variant for a Component
+1. add the variant example in `apps/www/registry/{style}/example`, for **all styles**.
+2. Add an entry for your component variant in `apps/www/registry/example.ts`: 
+```ts
+{
+  name: "your-component-variant", 
+  type: "components:example",
+  registryDependencies: ["your-component", "other-related-componenent"],
+  files: ["example/your-component-VariantName.tsx"], 
+},
+```
+3. Update the related doc in `apps/www/content/docs/component`. Add content in `.mdx` file like this (structure may vary depending on the page):
+```
+### Variant Name
+
+Explanation
+
+<ComponentPreview
+  name="your-component-variant"
+  description="  "
+/>
+```
+4. Run `pnpm build:registry`
+
 ### Add documentation content
 
 add documentation files in `apps/www/content/docs/`, in mdx format. (please refer to the folder structure explanation above, and the DOCUMENTATION.md file for doc template)
@@ -217,6 +270,40 @@ add documentation files in `apps/www/content/docs/`, in mdx format. (please refe
 ### Add a new style
 
 copy the original styls folder (any of them, copy the entire folder), and update the component registry, then update `apps/www/public/schema.json` file.
+
+#### Workflow for Adding a New Style
+
+1. Navigate to the `apps/www/registry` directory. Select an existing style folder (e.g., `default` or `new-york`). Copy the entire folder and rename it to your new style name.
+
+The folder structure should look like this after adding a new style:
+
+```bash
+apps
+└── www
+    └── registry
+        ├── default
+        │   ├── block
+        │   ├── example
+        │   └── ui
+        ├── ...
+        └── your-new-style
+            ├── block
+            ├── example
+            └── ui
+```
+
+2. Update the `apps/www/registry/styles.ts` file. Add a new entry for your style in the following format (Ensure the `name` matches the folder name created in Step 1.):
+
+```ts
+{
+  name: "your-new-style",
+  label: "Your New Style",
+},
+```
+
+3. Run `pnpm build:registry` to update the registry. This will compile the registry and ensure the changes are reflected.
+
+4. Run `pnpm --filter=www dev` to verify the changes. Update relevant files (usually in the ui folder) for the new style.
 
 ### Add a new theme
 
