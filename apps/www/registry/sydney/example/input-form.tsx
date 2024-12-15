@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/sydney/ui/button"
 import {
   Form,
   FormControl,
@@ -13,9 +13,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
-import { Input } from "@/registry/default/ui/input"
-import { toast } from "@/registry/default/ui/use-toast"
+} from "@/registry/sydney/ui/form"
+import { Input } from "@/registry/sydney/ui/input"
+import { toast } from "@/registry/sydney/ui/use-toast"
 
 const FormSchema = z.object({
   username: z.string().min(2, {
@@ -52,11 +52,7 @@ export default function InputForm() {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input
-                  placeholder="shadcn"
-                  {...field}
-                  className="border border-orange-600 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600" // Sydney style
-                />
+                <Input placeholder="shadcn" {...field} />
               </FormControl>
               <FormDescription>
                 This is your public display name.
@@ -65,12 +61,7 @@ export default function InputForm() {
             </FormItem>
           )}
         />
-        <Button
-          type="submit"
-          className="bg-orange-600 text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-50" // Sydney button style
-        >
-          Submit
-        </Button>
+        <Button type="submit">Submit</Button>
       </form>
     </Form>
   )

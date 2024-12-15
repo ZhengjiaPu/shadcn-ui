@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/sydney/ui/button"
 import {
   Form,
   FormControl,
@@ -13,13 +13,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
+} from "@/registry/sydney/ui/form"
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/default/ui/input-otp"
-import { toast } from "@/registry/default/ui/use-toast"
+} from "@/registry/sydney/ui/input-otp"
+import { toast } from "@/registry/sydney/ui/use-toast"
 
 const FormSchema = z.object({
   pin: z.string().min(6, {
@@ -54,57 +54,28 @@ export default function InputOTPForm() {
           name="pin"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-gray-700 font-semibold">
-                One-Time Password
-              </FormLabel>
+              <FormLabel>One-Time Password</FormLabel>
               <FormControl>
-                <InputOTP
-                  maxLength={6}
-                  {...field}
-                  className="flex items-center gap-2"
-                >
-                  <InputOTPGroup className="flex gap-2">
-                    <InputOTPSlot
-                      index={0}
-                      className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-                    />
-                    <InputOTPSlot
-                      index={1}
-                      className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-                    />
-                    <InputOTPSlot
-                      index={2}
-                      className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-                    />
-                    <InputOTPSlot
-                      index={3}
-                      className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-                    />
-                    <InputOTPSlot
-                      index={4}
-                      className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-                    />
-                    <InputOTPSlot
-                      index={5}
-                      className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-                    />
+                <InputOTP maxLength={6} {...field}>
+                  <InputOTPGroup>
+                    <InputOTPSlot index={0} />
+                    <InputOTPSlot index={1} />
+                    <InputOTPSlot index={2} />
+                    <InputOTPSlot index={3} />
+                    <InputOTPSlot index={4} />
+                    <InputOTPSlot index={5} />
                   </InputOTPGroup>
                 </InputOTP>
               </FormControl>
-              <FormDescription className="text-gray-500">
+              <FormDescription>
                 Please enter the one-time password sent to your phone.
               </FormDescription>
-              <FormMessage className="text-red-600" />
+              <FormMessage />
             </FormItem>
           )}
         />
 
-        <Button
-          type="submit"
-          className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-md transition-colors"
-        >
-          Submit
-        </Button>
+        <Button type="submit">Submit</Button>
       </form>
     </Form>
   )
