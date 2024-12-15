@@ -1,15 +1,14 @@
 import * as React from "react"
 
-import { Button } from "@/registry/default/ui/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/registry/default/ui/dropdown-menu"
-import { Input } from "@/registry/default/ui/input"
+import { Button } from "@/registry/ibm/ui/button"
+import { Input } from "@/registry/ibm/ui/input"
 
-// InputPhoneNumber component styled for IBM's design
 export function InputPhoneNumber() {
   const [selectedCountry, setSelectedCountry] = React.useState("+61")
   const [phoneNumber, setPhoneNumber] = React.useState("")
@@ -41,12 +40,7 @@ export function InputPhoneNumber() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" // IBM style for button
-        >
-          {selectedCountry}
-        </Button>
+        <Button variant="outline">{selectedCountry}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuCheckboxItem
@@ -61,6 +55,7 @@ export function InputPhoneNumber() {
         >
           United Kingdom (+44)
         </DropdownMenuCheckboxItem>
+
         <DropdownMenuCheckboxItem
           checked={selectedCountry === "+61"}
           onCheckedChange={() => handleCountrySelect("+61")}
@@ -76,11 +71,11 @@ export function InputPhoneNumber() {
       </DropdownMenuContent>
 
       <Input
-        type="text" // Change type to text for better formatting
+        type="number"
         placeholder="123-456-7890"
         value={phoneNumber}
         onChange={handlePhoneNumberChange}
-        className="border border-blue-600 bg-white text-blue-600 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 w-1/2" // IBM style for input
+        style={{ width: "50%" }}
       />
     </DropdownMenu>
   )

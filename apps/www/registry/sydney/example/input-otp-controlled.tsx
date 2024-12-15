@@ -6,53 +6,32 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/default/ui/input-otp"
+} from "@/registry/sydney/ui/input-otp"
 
 export default function InputOTPControlled() {
   const [value, setValue] = React.useState("")
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2">
       <InputOTP
         maxLength={6}
         value={value}
         onChange={(value) => setValue(value)}
-        className="flex items-center gap-2"
       >
-        <InputOTPGroup className="flex gap-2">
-          <InputOTPSlot
-            index={0}
-            className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-          />
-          <InputOTPSlot
-            index={1}
-            className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-          />
-          <InputOTPSlot
-            index={2}
-            className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-          />
-          <InputOTPSlot
-            index={3}
-            className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-          />
-          <InputOTPSlot
-            index={4}
-            className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-          />
-          <InputOTPSlot
-            index={5}
-            className="w-12 h-12 bg-white border-2 border-orange-600 text-orange-600 rounded-md text-xl text-center focus:border-orange-700 focus:outline-none transition-colors"
-          />
+        <InputOTPGroup>
+          <InputOTPSlot index={0} />
+          <InputOTPSlot index={1} />
+          <InputOTPSlot index={2} />
+          <InputOTPSlot index={3} />
+          <InputOTPSlot index={4} />
+          <InputOTPSlot index={5} />
         </InputOTPGroup>
       </InputOTP>
-      <div className="text-center text-sm text-gray-700">
+      <div className="text-center text-sm">
         {value === "" ? (
           <>Enter your one-time password.</>
         ) : (
-          <>
-            You entered: <span className="font-semibold">{value}</span>
-          </>
+          <>You entered: {value}</>
         )}
       </div>
     </div>
