@@ -1,7 +1,7 @@
 import React from "react"
 
-import { Button } from "@/registry/default/ui/button"
-import { Statistic } from "@/registry/default/ui/statistic"
+import { Button } from "@/registry/sydney/ui/button"
+import { Statistic } from "@/registry/sydney/ui/statistic"
 
 function StatisticNormal() {
   return (
@@ -49,12 +49,7 @@ function StatisticNormal() {
 
       {/* Fourth cell: Recharge button in the bottom-right */}
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Button
-          className="!bg-orange-600 text-white hover:!bg-orange-700 active:!bg-black"
-          style={{ marginTop: "10px" }}
-        >
-          Recharge
-        </Button>
+        <Button>Recharge</Button>
       </div>
     </div>
   )

@@ -4,8 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/default/ui/button"
-import { Checkbox } from "@/registry/default/ui/checkbox"
+import { Button } from "@/registry/sydney/ui/button"
+import { Checkbox } from "@/registry/sydney/ui/checkbox"
 import {
   Form,
   FormControl,
@@ -14,8 +14,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
-import { toast } from "@/registry/default/ui/use-toast"
+} from "@/registry/sydney/ui/form"
+import { toast } from "@/registry/sydney/ui/use-toast"
 
 const items = [
   {
@@ -120,12 +120,7 @@ export default function CheckboxReactHookFormMultiple() {
             </FormItem>
           )}
         />
-        <Button
-          type="submit"
-          className="w-full py-2 px-4 bg-orange-500 hover:bg-orange-700 text-white"
-        >
-          Submit
-        </Button>
+        <Button type="submit">Submit</Button>
       </form>
     </Form>
   )

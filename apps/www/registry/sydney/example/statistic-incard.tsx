@@ -1,11 +1,11 @@
 import React from "react"
 
-import { Card } from "@/registry/default/ui/card"
+import { Card } from "@/registry/sydney/ui/card"
 import {
   ArrowDownOutlined,
   ArrowUpOutlined,
   Statistic,
-} from "@/registry/default/ui/statistic"
+} from "@/registry/sydney/ui/statistic"
 
 function IncardStatistic() {
   const titleStyle: React.CSSProperties = {

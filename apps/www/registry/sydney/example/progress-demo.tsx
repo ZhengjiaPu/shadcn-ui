@@ -2,6 +2,8 @@
 
 import * as React from "react"
 
+import { Progress } from "@/registry/sydney/ui/progress"
+
 export default function ProgressDemo() {
   const [progress, setProgress] = React.useState(13)
 
@@ -10,14 +12,5 @@ export default function ProgressDemo() {
     return () => clearTimeout(timer)
   }, [])
 
-  return (
-    <div className="w-[60%] h-4 bg-gray-200 rounded-full overflow-hidden">
-      <div
-        className="h-full bg-orange-600 transition-all duration-300 ease-in-out"
-        style={{
-          width: `${progress}%`,
-        }}
-      />
-    </div>
-  )
+  return <Progress value={progress} className="w-[60%]" />
 }

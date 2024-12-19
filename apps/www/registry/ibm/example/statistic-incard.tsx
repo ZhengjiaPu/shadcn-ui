@@ -1,35 +1,47 @@
 import React from "react"
 
-import { Card } from "@/registry/default/ui/card"
+import { Card } from "@/registry/ibm/ui/card"
 import {
   ArrowDownOutlined,
   ArrowUpOutlined,
   Statistic,
-} from "@/registry/default/ui/statistic"
+} from "@/registry/ibm/ui/statistic"
 
 function IncardStatistic() {
+  // Style for the title text in each card
+  const titleStyle: React.CSSProperties = {
+    marginTop: "6px",
+    textAlign: "center" as "center",
+    marginBottom: "4px",
+    color: "#333333",
+    fontWeight: "bold",
+    display: "flex",
+    justifyContent: "center" as "center",
+    fontSize: "1.1rem", // Increase font size for the title
+  }
+
+  // Style for the active statistic value
+  const valueStyleActive: React.CSSProperties = {
+    color: "#347300",
+    fontSize: "1.4rem", // Increase font size for the value
+  }
+
+  // Style for the idle statistic value
+  const valueStyleIdle: React.CSSProperties = {
+    color: "#a10f00",
+    fontSize: "1.4rem", // Increase font size for the value
+  }
+
+  // Style for each card to reduce padding and bring content closer to edges
   const cardStyle: React.CSSProperties = {
-    width: "180px",
-    height: "95px",
+    width: "160px",
+    height: "90px",
+    padding: "10px", // Reduce padding to bring edges closer to content
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    borderColor: "#D1D5DB", // tailwind gray-300
-    backgroundColor: "#F3F4F6", // tailwind gray-100
-    borderRadius: "0px", // 直角边框
   }
-
-  const titleStyle: React.CSSProperties = {
-    marginTop: "10px",
-    textAlign: "center" as "center",
-    marginBottom: "6px",
-    color: "#333333",
-    fontWeight: "bold",
-  }
-
-  const valueStyleActive: React.CSSProperties = { color: "#2563EB" } // tailwind blue-600
-  const valueStyleIdle: React.CSSProperties = { color: "#DC2626" } // tailwind red-600
 
   return (
     <div
@@ -48,7 +60,9 @@ function IncardStatistic() {
           precision={2}
           valueStyle={valueStyleActive}
           prefix={
-            <span style={{ fontSize: "1.25rem", color: "#2563EB" }}>
+            <span style={{ fontSize: "1.2rem" }}>
+              {" "}
+              {/* Wrapper to adjust icon size */}
               <ArrowUpOutlined />
             </span>
           }
@@ -64,7 +78,9 @@ function IncardStatistic() {
           precision={2}
           valueStyle={valueStyleIdle}
           prefix={
-            <span style={{ fontSize: "1.25rem", color: "#DC2626" }}>
+            <span style={{ fontSize: "1.2rem" }}>
+              {" "}
+              {/* Wrapper to adjust icon size */}
               <ArrowDownOutlined />
             </span>
           }

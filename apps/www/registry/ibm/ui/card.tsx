@@ -8,7 +8,10 @@ const Card = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("border bg-card text-card-foreground shadow-sm", className)}
+    className={cn(
+      "bg-gray-100 border border-gray-300 shadow-sm rounded-none", // Gray background, border, no rounded corners
+      className
+    )}
     {...props}
   />
 ))
@@ -20,20 +23,23 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn(
+      "flex flex-col p-6 bg-blue-600 text-white", // Blue background for header, white text
+      className
+    )}
     {...props}
   />
 ))
 CardHeader.displayName = "CardHeader"
 
 const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
+  HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
     className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
+      "text-xl font-semibold leading-none tracking-tight", // Title styling similar to IBM's style
       className
     )}
     {...props}
@@ -47,7 +53,10 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn(
+      "text-sm text-gray-500", // Light gray text for description
+      className
+    )}
     {...props}
   />
 ))
@@ -57,7 +66,14 @@ const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+  <div
+    ref={ref}
+    className={cn(
+      "p-6 pt-0", // Padding for content
+      className
+    )}
+    {...props}
+  />
 ))
 CardContent.displayName = "CardContent"
 
@@ -67,7 +83,10 @@ const CardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
+    className={cn(
+      "flex items-center p-6 pt-0 border-t border-gray-300", // Footer border to match IBM-like style
+      className
+    )}
     {...props}
   />
 ))
