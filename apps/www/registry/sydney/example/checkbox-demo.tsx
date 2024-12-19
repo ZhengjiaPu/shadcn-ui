@@ -2,9 +2,9 @@
 
 import React from "react"
 
-import { Checkbox } from "@/registry/default/ui/checkbox"
-import { Toaster } from "@/registry/default/ui/toaster"
-import { useToast } from "@/registry/default/ui/use-toast"
+import { Checkbox } from "@/registry/sydney/ui/checkbox"
+import { Toaster } from "@/registry/sydney/ui/toaster"
+import { useToast } from "@/registry/sydney/ui/use-toast"
 
 export default function CheckboxDemo() {
   const { toast } = useToast()
@@ -24,7 +24,6 @@ export default function CheckboxDemo() {
           <Checkbox
             id="Default checkbox"
             onClick={() => handleCheckboxClick("Default checkbox")}
-            className="text-orange-500 checked:bg-orange-500 checked:border-orange-500"
           />
           <label
             htmlFor="Default checkbox"
