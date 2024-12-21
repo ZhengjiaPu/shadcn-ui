@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 
-import { ScrollArea, ScrollBar } from "@/registry/default/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "@/registry/sydney/ui/scroll-area"
 
 export interface Artwork {
   artist: string
@@ -38,9 +38,9 @@ export default function ScrollAreaHorizontalDemo() {
                 height={400}
               />
             </div>
-            <figcaption className="pt-2 text-xs text-muted-foreground">
+            <figcaption className="pt-2 text-xs font-serif text-muted-foreground">
               Photo by{" "}
-              <span className="font-semibold text-foreground">
+              <span className="font-sans font-semibold text-foreground">
                 {artwork.artist}
               </span>
             </figcaption>

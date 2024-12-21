@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 
-import { ScrollArea, ScrollBar } from "@/registry/ibm/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "@/registry/default/ui/scroll-area"
 
 export interface Artwork {
   artist: string
@@ -25,11 +25,11 @@ export const works: Artwork[] = [
 
 export default function ScrollAreaHorizontalDemo() {
   return (
-    <ScrollArea className="w-96 whitespace-nowrap border">
+    <ScrollArea className="w-96 whitespace-nowrap rounded-md border">
       <div className="flex w-max space-x-4 p-4">
         {works.map((artwork) => (
           <figure key={artwork.artist} className="shrink-0">
-            <div className="overflow-hidden">
+            <div className="overflow-hidden rounded-md">
               <Image
                 src={artwork.art}
                 alt={`Photo by ${artwork.artist}`}
