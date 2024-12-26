@@ -326,6 +326,48 @@ export const examples: Registry = [
     files: ["example/carousel-images.tsx"],
   },
   {
+    name: "chart-bar-demo",
+    type: "components:example",
+    files: ["example/chart-bar-demo.tsx"],
+  },
+  {
+    name: "chart-bar-demo-grid",
+    type: "components:example",
+    files: ["example/chart-bar-demo-grid.tsx"],
+  },
+  {
+    name: "chart-bar-demo-axis",
+    type: "components:example",
+    files: ["example/chart-bar-demo-axis.tsx"],
+  },
+  {
+    name: "chart-bar-demo-tooltip",
+    type: "components:example",
+    files: ["example/chart-bar-demo-tooltip.tsx"],
+  },
+  {
+    name: "chart-bar-demo-legend",
+    type: "components:example",
+    files: ["example/chart-bar-demo-legend.tsx"],
+  },
+  {
+    name: "chart-tooltip-demo",
+    type: "components:example",
+    files: ["example/chart-tooltip-demo.tsx"],
+  },
+  {
+    name: "chat-demo",
+    type: "components:example",
+    registryDependencies: ["card"],
+    files: ["example/chat-demo.tsx"],
+  },
+  {
+    name: "chat-attachment",
+    type: "components:example",
+    registryDependencies: ["card"],
+    files: ["example/chat-attachment.tsx"],
+  },
+  {
     name: "checkbox-demo",
     type: "components:example",
     registryDependencies: ["checkbox"],
@@ -524,6 +566,21 @@ export const examples: Registry = [
     files: ["example/dropdown-menu-with-search.tsx"],
   },
   {
+    name: "fileUpload-demo",
+    type: "components:example",
+    files: ["example/fileUpload-demo.tsx"],
+  },
+  {
+    name: "fileUpload-format",
+    type: "components:example",
+    files: ["example/fileUpload-format.tsx"],
+  },
+  {
+    name: "fileUpload-preview",
+    type: "components:example",
+    files: ["example/fileUpload-preview.tsx"],
+  },
+  {
     name: "hover-card-demo",
     type: "components:example",
     registryDependencies: ["hover-card"],
@@ -668,6 +725,31 @@ export const examples: Registry = [
     files: ["example/menubar-demo.tsx"],
   },
   {
+    name: "message-demo",
+    type: "components:example",
+    files: ["example/message-demo.tsx"],
+  },
+  {
+    name: "message-duration",
+    type: "components:example",
+    files: ["example/message-duration.tsx"],
+  },
+  {
+    name: "message-error",
+    type: "components:example",
+    files: ["example/message-error.tsx"],
+  },
+  {
+    name: "message-success",
+    type: "components:example",
+    files: ["example/message-success.tsx"],
+  },
+  {
+    name: "message-warning",
+    type: "components:example",
+    files: ["example/message-warning.tsx"],
+  },
+  {
     name: "modal-demo",
     type: "components:example",
     files: ["example/modal-demo.tsx"],
@@ -696,6 +778,11 @@ export const examples: Registry = [
     name: "modal-signup",
     type: "components:example",
     files: ["example/modal-signup.tsx"],
+  },
+  {
+    name: "mode-toggle",
+    type: "components:example",
+    files: ["example/mode-toggle.tsx"],
   },
   {
     name: "navigation-menu-demo",
@@ -1157,89 +1244,10 @@ export const examples: Registry = [
     type: "components:example",
     files: ["example/typography-table.tsx"],
   },
-  {
-    name: "mode-toggle",
-    type: "components:example",
-    files: ["example/mode-toggle.tsx"],
-  },
-  {
-    name: "message-demo",
-    type: "components:example",
-    files: ["example/message-demo.tsx"],
-  },
-  {
-    name: "message-duration",
-    type: "components:example",
-    files: ["example/message-duration.tsx"],
-  },
-  {
-    name: "message-error",
-    type: "components:example",
-    files: ["example/message-error.tsx"],
-  },
-  {
-    name: "message-success",
-    type: "components:example",
-    files: ["example/message-success.tsx"],
-  },
-  {
-    name: "message-warning",
-    type: "components:example",
-    files: ["example/message-warning.tsx"],
-  },
-  {
-    name: "cards",
-    type: "components:example",
-    files: ["example/cards/cards.tsx"],
-  },
-  {
-    name: "chart-bar-demo",
-    type: "components:example",
-    files: ["example/chart-bar-demo.tsx"],
-  },
-  {
-    name: "chart-bar-demo-grid",
-    type: "components:example",
-    files: ["example/chart-bar-demo-grid.tsx"],
-  },
-  {
-    name: "chart-bar-demo-axis",
-    type: "components:example",
-    files: ["example/chart-bar-demo-axis.tsx"],
-  },
-  {
-    name: "chart-bar-demo-tooltip",
-    type: "components:example",
-    files: ["example/chart-bar-demo-tooltip.tsx"],
-  },
-  {
-    name: "chart-bar-demo-legend",
-    type: "components:example",
-    files: ["example/chart-bar-demo-legend.tsx"],
-  },
-  {
-    name: "chart-tooltip-demo",
-    type: "components:example",
-    files: ["example/chart-tooltip-demo.tsx"],
-  },
+
   {
     name: "watermark-demo",
     type: "components:example",
     files: ["example/watermark-demo.tsx"],
-  },
-  {
-    name: "fileUpload-demo",
-    type: "components:example",
-    files: ["example/fileUpload-demo.tsx"],
-  },
-  {
-    name: "fileUpload-format",
-    type: "components:example",
-    files: ["example/fileUpload-format.tsx"],
-  },
-  {
-    name: "fileUpload-preview",
-    type: "components:example",
-    files: ["example/fileUpload-preview.tsx"],
   },
 ]

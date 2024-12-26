@@ -158,6 +158,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Chat",
+          href: "/docs/components/chat",
+          label: "New",
+          items: [],
+        },
+        {
           title: "Checkbox",
           href: "/docs/components/checkbox",
           items: [],

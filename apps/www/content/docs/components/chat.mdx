@@ -1,0 +1,50 @@
+---
+title: Chat
+description: a component for receiving and responseing messages.
+component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/chat
+  api: https://www.radix-ui.com/docs/primitives/components/accordion#api-reference
+  storybook: http://localhost:6006/?path=/docs/components-chat--docs
+---
+
+## Introduction
+
+The `Chat` component provides a simple and intuitive chat interface, ideal for applications requiring conversational interactions. This component includes a preloaded message history, real-time message input, and dynamic rendering of sent and received messages. Messages are visually distinguished with customizable styling for clarity and user focus. The `Chat` component also integrates feedback mechanisms using a toast notification system to confirm message sending, enhancing the user experience. With responsive design elements and accessible form handling, `Chat` is well-suited for use in support systems, social interactions, or any context requiring a user-friendly chat feature.
+
+## Demo
+
+<ComponentPreview
+  name="chat-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="An accordion with three items"
+/>
+This `Chat` demo allows users to interact in a simulated chat environment. Users
+can type messages in the input field and send them with the send button, triggering
+real-time updates in the chat display. Sent messages appear on the right, while received
+messages are shown on the left. A toast notification confirms each message sent,
+providing instant feedback on user actions.
+
+## Variant
+
+### chat with attachment
+
+<ComponentPreview
+  name="chat-attachment"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="An accordion with three items"
+/>
+The `AttachmentChat` demo allows users to send text messages and share file attachments
+seamlessly. Users can type messages in the input field and send them instantly, with
+messages appearing in the chat interface. Additionally, users can upload files, including
+images and other document types, by clicking the upload button. Uploaded images are
+displayed as thumbnails, while other file types appear as clickable links for preview
+or download. This enhanced functionality makes the chat interface more versatile,
+supporting both conversational and file-sharing needs in one cohesive solution.
+
+## Version history
+
+| Version | Editor     | Reviewer    | Date        | Description     |
+| ------- | ---------- | ----------- | ----------- | --------------- |
+| v1.0    | Xinyu Chen | Yuqing Wu   | 15 Apr 2024 | Initial version |
+| v2.0    | Yihan Zhao | Zhengjia Pu | 1 Nov 2024  | updated version |
