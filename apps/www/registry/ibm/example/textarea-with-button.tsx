@@ -1,5 +1,5 @@
-import { Button } from "@/registry/default/ui/button"
-import { Textarea } from "@/registry/default/ui/textarea"
+import { Button } from "@/registry/ibm/ui/button"
+import { Textarea } from "@/registry/ibm/ui/textarea"
 
 export default function TextareaWithButton() {
   return (

@@ -1,6 +1,6 @@
-import { Button } from "@/registry/default/ui/button"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+import { Button } from "@/registry/sydney/ui/button"
+import { Input } from "@/registry/sydney/ui/input"
+import { Label } from "@/registry/sydney/ui/label"
 import {
   Sheet,
   SheetClose,
@@ -10,15 +10,13 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/default/ui/sheet"
+} from "@/registry/sydney/ui/sheet"
 
 export default function SheetDemo() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" className="text-orange-500 border-orange-500">
-          Open
-        </Button>
+        <Button variant="outline">Open</Button>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
@@ -43,12 +41,7 @@ export default function SheetDemo() {
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <Button
-              type="submit"
-              className="bg-orange-500 hover:bg-orange-700 text-white"
-            >
-              Save changes
-            </Button>
+            <Button type="submit">Save changes</Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>

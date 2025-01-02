@@ -1,10 +1,10 @@
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/sydney/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/default/ui/tooltip"
+} from "@/registry/sydney/ui/tooltip"
 
 export default function TooltipDemo() {
   return (
