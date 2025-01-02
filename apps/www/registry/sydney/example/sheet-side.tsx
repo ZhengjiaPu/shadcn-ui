@@ -1,8 +1,8 @@
 "use client"
 
-import { Button } from "@/registry/default/ui/button"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+import { Button } from "@/registry/sydney/ui/button"
+import { Input } from "@/registry/sydney/ui/input"
+import { Label } from "@/registry/sydney/ui/label"
 import {
   Sheet,
   SheetClose,
@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/default/ui/sheet"
+} from "@/registry/sydney/ui/sheet"
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const
 
@@ -24,12 +24,7 @@ export default function SheetSide() {
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
           <SheetTrigger asChild>
-            <Button
-              variant="outline"
-              className="text-orange-500 border-orange-500"
-            >
-              {side}
-            </Button>
+            <Button variant="outline">{side}</Button>
           </SheetTrigger>
           <SheetContent side={side}>
             <SheetHeader>
@@ -54,12 +49,7 @@ export default function SheetSide() {
             </div>
             <SheetFooter>
               <SheetClose asChild>
-                <Button
-                  type="submit"
-                  className="bg-orange-500 hover:bg-orange-700 text-white"
-                >
-                  Save changes
-                </Button>
+                <Button type="submit">Save changes</Button>
               </SheetClose>
             </SheetFooter>
           </SheetContent>

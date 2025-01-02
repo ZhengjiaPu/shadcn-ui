@@ -2,9 +2,14 @@
 title: Textarea
 description: Displays a form textarea or a component that looks like a textarea.
 component: true
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/textarea
+  api: https://www.radix-ui.com/docs/primitives/components/textarea#api-reference
 ---
 
-<ComponentPreview name="textarea-demo" description="A textarea" />
+The Textarea component provides an interactive multi-line text input field, designed for capturing longer textual data. Whether used in forms, comments sections, or notes, this component ensures a responsive and accessible user experience. This component is perfect for scenarios such as comment sections, note-taking apps, and feedback forms. It ensures usability and accessibility while allowing developers to customize its appearance and behavior.
+
+<ComponentPreview name="textarea-demo" description="A textarea component." />
 
 ## Installation
 
@@ -26,6 +31,12 @@ npx shadcn-ui@latest add textarea
 
 <Steps>
 
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-textarea
+```
+
 <Step>Copy and paste the following code into your project.</Step>
 
 <ComponentSource name="textarea" />
@@ -45,41 +56,59 @@ import { Textarea } from "@/components/ui/textarea"
 ```
 
 ```tsx
-<Textarea />
+<Textarea placeholder="Write your thoughts here..." />
 ```
 
 ## Examples
 
 ### Default
 
-<ComponentPreview name="textarea-demo" description="A textarea" />
+The DefaultTextarea variant represents the base implementation of the textarea component. It provides a clean and straightforward multi-line text input field, suitable for capturing user inputs such as notes, messages, or descriptions.
+
+<ComponentPreview name="textarea-demo" description="A simple textarea demo." />
 
 ### Disabled
 
-<ComponentPreview name="textarea-disabled" description="A disabled textarea" />
+The DisabledTextarea variant is a non-interactive version of the textarea component. It visually communicates its disabled state using reduced opacity and a "not-allowed" cursor. This is ideal for read-only or unavailable input scenarios.
+
+<ComponentPreview
+  name="textarea-disabled"
+  description="A disabled textarea demo."
+/>
 
 ### With Label
+
+The TextareaWithLabel variant includes an accessible label paired with the textarea. This design ensures that users have clear guidance when filling out the input, especially in form-heavy interfaces.
 
 <ComponentPreview
   name="textarea-with-label"
   className="[&_div.grid]:w-full"
-  description="A textarea with a label"
+  description="A textarea paired with a label."
 />
 
 ### With Text
 
+The TextareaWithText variant includes placeholder or helper text inside the textarea, guiding users on the expected input format or content. This is ideal for providing context without requiring additional labels.
+
 <ComponentPreview
   name="textarea-with-text"
-  description="A textarea with text"
+  description="A textarea with placeholder text."
 />
 
 ### With Button
 
+The TextareaWithButton variant integrates a button next to the textarea for additional functionality, such as submitting or clearing input. This is commonly used in chat applications or feedback forms.
+
 <ComponentPreview
   name="textarea-with-button"
-  description="A textarea with a button"
+  description="A textarea with an accompanying button."
 />
 
 ### Form
 
-<ComponentPreview name="textarea-form" />
+The TextareaForm variant demonstrates the integration of the textarea component within a form. It showcases how the textarea can handle user input and be part of a larger form submission workflow.
+
+<ComponentPreview
+  name="textarea-form"
+  description="A textarea within a form demo."
+/>
